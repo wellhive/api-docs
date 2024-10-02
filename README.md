@@ -3,13 +3,32 @@ WellHive offers its customers an API for navigating patients' care across intern
 
 In this article:
 * [OpenAPI 3](#spec)
+* [Support](#support)
+* [Utilization Quotas](#quotas)
+* [Provider Payment Implications](#payment)
 * [Authentication](#authn)
 * [Common Activites and Call Sequences](#activities)
 
 # <a name="spec"></a>OpenAPI 3
 The OpenAPI 3 specification is found here: 
 
-> TODO https://wellhive.github.io/api-docs
+https://wellhive.github.io/api-docs
+
+# <a name="support"></a>Requesting Support
+Every response, both successes and errors, will include a `x-wellhive-trace-id` header.  When requesting help, including this header value in your request will allow WellHive support to trace your request and response.
+
+# <a name="quotas"></a>Utilization Quotas
+Several actions in this API require utilization quotas. Work with your WellHive account manager to establish a utilization quota for each action.
+
+* ProviderService Search
+* Drive Time Calculation
+* Slot Search
+* Appointment Book
+* Appointment Show with retrieveLatestDetails=true
+* Appointment Cancel
+
+# <a name="payment"></a>Provider Payment Implications
+For some Networks, booking an Appointment implies the Provider can expect to submit a claim back to the organization requesting the Appointment and can expect to receive payment for the services provided.  For such Networks, careful consideration is required when booking an Appointment.  At minimum, a Referral's ID or referralNumber may be required when submitting an Appointment, as indicated by the Network's requiresReferral attribute.  The API client is responsible for specifying a Referral that is in the right state and status.  The API client is also responsible for ensuring the selected ProviderService is appropriate and authorized. The API provides searchable attributes with each ProviderService for assisting in this determination such as Specialties, VisitModes, Networks, Location information, and whether the service is currently "active" and ok to schedule to (as controlled through configuration or integration).
 
 # <a name="authn"></a>Authentication
 The WellHive Care Navigation API requires use of Private Key JWT Client Authentication to confirm the API client’s identity.  In Private Key JWT, the client generates a pair of keys, public and private, to use as credentials. The client shares the public key with WellHive and uses the private key to sign the JWT. Then the JWT is provided as the client assertion in requests to the auth server in exchange for an Access Token. The access token in the response should then be used as the Bearer token in requests to the Care Navigation API.

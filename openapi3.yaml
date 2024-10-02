@@ -1,7 +1,15 @@
 openapi: 3.0.3
 info:
     title: The WellHive Care Navigation API
-    description: The API for navigating your patients' care across your internal and external networks of provider organizations and services.
+    description: |-
+        The API for navigating your patients' care across your internal and external networks of provider organizations and services.
+        	
+        For details, visit http://github.com/wellhive/api-docs.
+
+        Copyright 2024 WellHive Holdings, LLC
+    license:
+        name: MIT
+        url: https://github.com/wellhive/api-docs/blob/main/LICENSE
     version: 1.0 beta
 servers:
     - url: https://api.wellhive.com
