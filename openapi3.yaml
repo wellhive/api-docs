@@ -4,7 +4,7 @@ info:
     description: |-
         The API for navigating your patients' care across your internal and external networks of provider organizations and services.
         	
-        For details, visit http://github.com/wellhive/api-docs.
+        Find more details [here](https://github.com/wellhive/api-docs).
 
         Copyright 2024 WellHive Holdings, LLC
     license:
