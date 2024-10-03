@@ -19,7 +19,7 @@ paths:
             tags:
                 - Appointment
             summary: Appointment.search
-            description: search for Appointments; one of id, patientId, referralNumber, referralId, or nextToken are required; includes the status and details currently known by WellHive, and does not attempt to retrieve the latest from the ProviderService's system (see the 'retrieveLatestDetails' param of Appointment.show)
+            description: search for Appointments; one of id, patientId, referralNumber, or nextToken are required; includes the status and details currently known by WellHive, and does not attempt to retrieve the latest from the ProviderService's system (see the 'retrieveLatestDetails' param of Appointment.show)
             operationId: Appointment#search
             parameters:
                 - name: id
@@ -30,7 +30,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Dolorem nemo qui iure praesentium.
+                        example: Quidem eaque eos autem tempore dolorem enim.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -54,15 +54,6 @@ paths:
                   schema:
                     type: string
                     description: find Appointments by referralNumber
-                    example: "12345"
-                  example: "12345"
-                - name: referralId
-                  in: query
-                  description: find Appointments by Referral
-                  allowEmptyValue: true
-                  schema:
-                    type: string
-                    description: find Appointments by Referral
                     example: "12345"
                   example: "12345"
                 - name: onOrAfter
@@ -117,7 +108,6 @@ paths:
                                       patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                                       referral:
-                                        id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                         referralNumber: "12345"
                                       slotIds:
                                         - dba0855e-5681-411d-801c-036f4f046988
@@ -125,7 +115,7 @@ paths:
                                     - id: bfd486ae-b04e-42a7-b049-8c689b6caef2
                                       patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       referral:
-                                        id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        referralNumber: "6789"
                                       state: draft
                                 count: 2
                                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
@@ -211,7 +201,6 @@ paths:
                         example:
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             referral:
-                                id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 referralNumber: "12345"
             responses:
                 "200":
@@ -227,7 +216,7 @@ paths:
                                         id: b79e46ba-1b09-4195-ae0a-ea42baedea6e
                                         patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                         referral:
-                                            id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            referralNumber: "12345"
                                         state: draft
                 "400":
                     description: 'Bad Request: something is wrong with the request'
@@ -321,7 +310,7 @@ paths:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
                                     isLatest: true
-                                    lastRetrieved: "2004-12-16T22:34:25Z"
+                                    lastRetrieved: "2002-01-31T04:51:25Z"
                                     phone: 555-555-1000
                                     start: "2026-01-01T17:00:00Z"
                                     status: booked
@@ -331,7 +320,6 @@ paths:
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 referral:
-                                    id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                     referralNumber: "12345"
                                 slotIds:
                                     - dba0855e-5681-411d-801c-036f4f046988
@@ -430,7 +418,7 @@ paths:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
                                     isLatest: true
-                                    lastRetrieved: "2004-12-16T22:34:25Z"
+                                    lastRetrieved: "2002-01-31T04:51:25Z"
                                     phone: 555-555-1000
                                     start: "2026-01-01T17:00:00Z"
                                     status: booked
@@ -440,7 +428,6 @@ paths:
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 referral:
-                                    id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                     referralNumber: "12345"
                                 slotIds:
                                     - dba0855e-5681-411d-801c-036f4f046988
@@ -645,12 +632,9 @@ paths:
                             networkId: 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                             referral:
-                                id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 referralNumber: "12345"
                             slotIds:
-                                - Ea totam iure eaque.
-                                - Officia voluptates eaque.
-                                - Repellat tenetur et porro illum ea.
+                                - Quam deleniti consequatur.
             responses:
                 "202":
                     description: Accepted response.
@@ -664,7 +648,7 @@ paths:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
                                     isLatest: true
-                                    lastRetrieved: "2004-12-16T22:34:25Z"
+                                    lastRetrieved: "2002-01-31T04:51:25Z"
                                     phone: 555-555-1000
                                     start: "2026-01-01T17:00:00Z"
                                     status: booked
@@ -674,7 +658,6 @@ paths:
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 referral:
-                                    id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                     referralNumber: "12345"
                                 slotIds:
                                     - dba0855e-5681-411d-801c-036f4f046988
@@ -854,7 +837,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Placeat dolorem repudiandae placeat quia necessitatibus.
+                        example: Soluta alias sit amet esse aperiam.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1056,7 +1039,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Unde error.
+                        example: Quas molestiae harum mollitia.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1177,7 +1160,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Officia odit delectus neque non.
+                        example: Aut possimus et quisquam qui.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1221,7 +1204,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: At consectetur et.
+                        example: Quam accusamus qui alias.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1235,7 +1218,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Et numquam.
+                        example: Possimus quos ut vero voluptas tempora.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -1249,7 +1232,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Fuga quod.
+                        example: Est nulla qui atque eos necessitatibus.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
@@ -1629,7 +1612,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Harum delectus ut soluta.
+                        example: Aliquam nisi.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -1835,345 +1818,6 @@ paths:
                                 name: Internal Server Error
             security:
                 - jwt_header_Authorization: []
-    /care-navigation/v1/referrals:
-        get:
-            tags:
-                - Referral
-            summary: Referral.search
-            operationId: Referral#search
-            parameters:
-                - name: id
-                  in: query
-                  description: find Referrals by ID
-                  allowEmptyValue: true
-                  schema:
-                    type: array
-                    items:
-                        type: string
-                        example: Velit corporis quibusdam eaque voluptatem.
-                    description: find Referrals by ID
-                    example:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                  example:
-                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                - name: referralNumber
-                  in: query
-                  description: find a Referral by referralNumber
-                  allowEmptyValue: true
-                  schema:
-                    type: string
-                    description: find a Referral by referralNumber
-                    example: "12345"
-                  example: "12345"
-                - name: patientId
-                  in: query
-                  description: find Referrals by Patient
-                  allowEmptyValue: true
-                  schema:
-                    type: string
-                    description: find Referrals by Patient
-                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                  example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                - name: specialtyId
-                  in: query
-                  description: find Referrals by Specialty
-                  allowEmptyValue: true
-                  schema:
-                    type: array
-                    items:
-                        type: string
-                        example: Ut aut id et culpa rem.
-                    description: find Referrals by Specialty
-                    example:
-                        - 207XX0004X
-                        - 208200000X
-                  example:
-                    - 207XX0004X
-                    - 208200000X
-                - name: nextToken
-                  in: query
-                  description: the nextToken from a previous ReferralSearchResult to use for retrieving the next page, other params are ignored when this one is provided
-                  allowEmptyValue: true
-                  schema:
-                    type: string
-                    description: the nextToken from a previous ReferralSearchResult to use for retrieving the next page, other params are ignored when this one is provided
-                    example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
-                  example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
-            responses:
-                "200":
-                    description: OK response.
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ReferralSearchResult'
-                            example:
-                                count: 2
-                                nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
-                                referrals:
-                                    - id: ff826316-b95c-4888-b8bb-930598785fed
-                                      patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
-                                      referralNumber: "23456"
-                                      requested:
-                                        careCategory: Dental
-                                        specialtyIds:
-                                            - 1223G0001X
-                                      state: pending
-                                    - id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
-                                      patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
-                                      referralNumber: "34567"
-                                      requested:
-                                        careCategory: Orthopaedic Surgery
-                                      state: pending
-                                total: 5
-                "400":
-                    description: 'Bad Request: something is wrong with the request'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                message: invalid value for field xyz
-                                name: Bad Request
-                "401":
-                    description: 'Unauthorized: not authorized to make the request'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                name: Unauthorized
-                "403":
-                    description: 'Forbidden: the request is forbidden (example, the IP address is not within the Trusted Internet Connection [TIC] address range)'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                message: requests must originate from your organization's Trusted Internet Connection (TIC)
-                                name: Forbidden
-                "429":
-                    description: 'Too Many Requests: the number or rate of requests has exceeded a limit'
-                    headers:
-                        Retry-After:
-                            description: indicates how long the user agent should wait before making a follow-up request
-                            schema:
-                                type: integer
-                                description: indicates how long the user agent should wait before making a follow-up request
-                                example: "60"
-                                format: int64
-                            example: "60"
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse2'
-                            example:
-                                isTemporary: true
-                                name: Too Many Requests
-                "500":
-                    description: 'Internal Server Error: the server encountered an unexpected problem'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                isFault: true
-                                isTemporary: true
-                                name: Internal Server Error
-                "504":
-                    description: 'Gateway Timeout: timed out waiting for an external server, such as a customer''s Patient Index system'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                isTemporary: true
-                                isTimeout: true
-                                name: Gateway Timeout
-            security:
-                - jwt_header_Authorization: []
-    /care-navigation/v1/referrals/{referralId}:
-        get:
-            tags:
-                - Referral
-            summary: Referral.show
-            operationId: Referral#show
-            parameters:
-                - name: referralId
-                  in: path
-                  required: true
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    description: OK response.
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/Referral'
-                            example:
-                                id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                priority: High
-                                priorityCode: 1
-                                referralNumber: "12345"
-                                requested:
-                                    careCategory: Dental
-                                    carePlan:
-                                        date: Dental Specialty Endodontics
-                                    date: "2030-01-01"
-                                    networkIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    npi:
-                                        - "1245319599"
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                state: authorized
-                                status: approved
-                "401":
-                    description: 'Unauthorized: not authorized to make the request'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                name: Unauthorized
-                "403":
-                    description: 'Forbidden: the request is forbidden (example, the IP address is not within the Trusted Internet Connection [TIC] address range)'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                message: requests must originate from your organization's Trusted Internet Connection (TIC)
-                                name: Forbidden
-                "404":
-                    description: 'Not Found: no resource with the specified ID is found'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                name: Not Found
-                "429":
-                    description: 'Too Many Requests: the number or rate of requests has exceeded a limit'
-                    headers:
-                        Retry-After:
-                            description: indicates how long the user agent should wait before making a follow-up request
-                            schema:
-                                type: integer
-                                description: indicates how long the user agent should wait before making a follow-up request
-                                example: "60"
-                                format: int64
-                            example: "60"
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse2'
-                            example:
-                                isTemporary: true
-                                name: Too Many Requests
-                "500":
-                    description: 'Internal Server Error: the server encountered an unexpected problem'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                isFault: true
-                                isTemporary: true
-                                name: Internal Server Error
-                "504":
-                    description: 'Gateway Timeout: timed out waiting for an external server, such as a customer''s Patient Index system'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                isTemporary: true
-                                isTimeout: true
-                                name: Gateway Timeout
-            security:
-                - jwt_header_Authorization: []
-    /care-navigation/v1/referrals/notify:
-        post:
-            tags:
-                - Referral
-            summary: Referral.notify
-            description: notify WellHive of new or changed Referrals; WellHive will respond by retrieving the referral for workflow processing
-            operationId: Referral#notify
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/ReferralNotifyPayload'
-                        example:
-                            referralIds:
-                                - f66cc553-87f5-411d-bcc1-6f6f1f7d3096
-                                - febb592f-4b06-4e31-8d0b-0cac499bcc30
-            responses:
-                "200":
-                    description: OK response.
-                "400":
-                    description: 'Bad Request: something is wrong with the request'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                message: invalid value for field xyz
-                                name: Bad Request
-                "401":
-                    description: 'Unauthorized: not authorized to make the request'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                name: Unauthorized
-                "403":
-                    description: 'Forbidden: the request is forbidden (example, the IP address is not within the Trusted Internet Connection [TIC] address range)'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                message: requests must originate from your organization's Trusted Internet Connection (TIC)
-                                name: Forbidden
-                "429":
-                    description: 'Too Many Requests: the number or rate of requests has exceeded a limit'
-                    headers:
-                        Retry-After:
-                            description: indicates how long the user agent should wait before making a follow-up request
-                            schema:
-                                type: integer
-                                description: indicates how long the user agent should wait before making a follow-up request
-                                example: "60"
-                                format: int64
-                            example: "60"
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse2'
-                            example:
-                                isTemporary: true
-                                name: Too Many Requests
-                "500":
-                    description: 'Internal Server Error: the server encountered an unexpected problem'
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ErrorResponse'
-                            example:
-                                isFault: true
-                                isTemporary: true
-                                name: Internal Server Error
-            security:
-                - jwt_header_Authorization: []
     /care-navigation/v1/specialties:
         get:
             tags:
@@ -2189,7 +1833,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: In aut qui sunt.
+                        example: Reprehenderit doloribus numquam.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2370,7 +2014,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Quo quis.
+                        example: Ut aut.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2553,37 +2197,39 @@ components:
             properties:
                 city:
                     type: string
-                    example: Odio dolores dicta.
+                    example: Aut et dolorem labore nobis.
                 country:
                     type: string
-                    example: Sit a voluptas dolores fuga est delectus.
+                    example: Totam aut reiciendis dolor.
                 line:
                     type: array
                     items:
                         type: string
-                        example: Ut odit ullam velit rem quia reprehenderit.
+                        example: Perferendis libero dolorum et velit atque reiciendis.
                     description: Street name, number, direction
                     example:
-                        - Id incidunt hic provident id dolores.
-                        - Ratione consequatur consequatur.
+                        - Quo ut culpa commodi expedita.
+                        - Consequatur vel inventore.
+                        - Mollitia consectetur architecto nisi sed.
+                        - Voluptatem doloremque odit quisquam libero.
                 period:
                     $ref: '#/components/schemas/Period'
                 postalCode:
                     type: string
-                    example: Ab harum.
+                    example: Et est consectetur.
                 state:
                     type: string
-                    example: In quas amet est dolores et ab.
+                    example: Quia quaerat.
                 type:
                     type: string
-                    example: physical
+                    example: both
                     enum:
                         - postal
                         - physical
                         - both
                 use:
                     type: string
-                    example: temp
+                    example: work
                     enum:
                         - home
                         - work
@@ -2591,18 +2237,16 @@ components:
                         - old
                         - billing
             example:
-                city: Magni et blanditiis est et voluptas.
-                country: Rem ullam.
+                city: Quia nostrum vel.
+                country: Eveniet voluptatem velit doloremque.
                 line:
-                    - Magnam veniam excepturi ratione ipsa.
-                    - Odio quia numquam.
-                    - Molestiae beatae veritatis rem.
-                    - Rerum optio nihil aut eveniet.
+                    - Aut nobis et architecto dolores voluptatibus nam.
+                    - Eum maxime libero qui animi repellendus officiis.
                 period:
-                    end: "1996-06-11T00:06:49Z"
-                    start: "2002-04-30T09:31:10Z"
-                postalCode: Voluptas placeat.
-                state: Inventore reprehenderit nam corporis eum porro.
+                    end: "1999-01-27T05:13:15Z"
+                    start: "1988-06-17T06:37:32Z"
+                postalCode: Consectetur est voluptate incidunt officia enim.
+                state: Sequi voluptas dolorum eaque.
                 type: postal
                 use: work
         Appointment:
@@ -2644,7 +2288,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Nulla voluptate molestias et.
+                        example: Doloribus nam cum dolor iusto non.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -2667,7 +2311,7 @@ components:
                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                         name: Patient
                     isLatest: true
-                    lastRetrieved: "2004-12-16T22:34:25Z"
+                    lastRetrieved: "2002-01-31T04:51:25Z"
                     phone: 555-555-1000
                     start: "2026-01-01T17:00:00Z"
                     status: booked
@@ -2677,7 +2321,6 @@ components:
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referral:
-                    id: 69cd9203-5e92-47a3-aa03-94b03752872a
                     referralNumber: "12345"
                 slotIds:
                     - dba0855e-5681-411d-801c-036f4f046988
@@ -2709,20 +2352,15 @@ components:
                 referral:
                     type: object
                     properties:
-                        id:
-                            type: string
-                            example: 69cd9203-5e92-47a3-aa03-94b03752872a
                         referralNumber:
                             type: string
                             example: "12345"
                     description: a reference to a Referral
                     example:
-                        id: 69cd9203-5e92-47a3-aa03-94b03752872a
                         referralNumber: "12345"
             example:
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 referral:
-                    id: 69cd9203-5e92-47a3-aa03-94b03752872a
                     referralNumber: "12345"
             required:
                 - patientId
@@ -2738,7 +2376,7 @@ components:
                 lastRetrieved:
                     type: string
                     description: date and time when the details were last retrieved from the ProviderService
-                    example: "2009-06-28T08:28:01Z"
+                    example: "1980-11-13T01:05:53Z"
                     format: date-time
                 phone:
                     type: string
@@ -2771,7 +2409,7 @@ components:
                     id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                     name: Patient
                 isLatest: true
-                lastRetrieved: "1982-06-15T05:28:45Z"
+                lastRetrieved: "1971-12-25T19:14:28Z"
                 phone: 555-555-1000
                 start: "2026-01-01T17:00:00Z"
                 status: booked
@@ -2827,15 +2465,11 @@ components:
         AppointmentReferral:
             type: object
             properties:
-                id:
-                    type: string
-                    example: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referralNumber:
                     type: string
                     example: "12345"
             description: a reference to a Referral; set when creating or submitting the Appointment
             example:
-                id: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referralNumber: "12345"
         AppointmentSearchResult:
             type: object
@@ -2861,7 +2495,6 @@ components:
                           patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                           referral:
-                            id: 69cd9203-5e92-47a3-aa03-94b03752872a
                             referralNumber: "12345"
                           slotIds:
                             - dba0855e-5681-411d-801c-036f4f046988
@@ -2869,11 +2502,11 @@ components:
                         - id: bfd486ae-b04e-42a7-b049-8c689b6caef2
                           patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           referral:
-                            id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                            referralNumber: "6789"
                           state: draft
                 count:
                     type: integer
-                    description: the number of Referrals in this page of results
+                    description: the number of Appointments in this page of results
                     example: 2
                     format: int64
                 nextToken:
@@ -2882,7 +2515,7 @@ components:
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
                 total:
                     type: integer
-                    description: the total number of Referrals matching the search params, not guaranteed to be populated
+                    description: the total number of Appointments matching the search params, not guaranteed to be populated
                     example: 5
                     format: int64
             example:
@@ -2902,7 +2535,6 @@ components:
                       patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                       referral:
-                        id: 69cd9203-5e92-47a3-aa03-94b03752872a
                         referralNumber: "12345"
                       slotIds:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -2910,7 +2542,7 @@ components:
                     - id: bfd486ae-b04e-42a7-b049-8c689b6caef2
                       patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       referral:
-                        id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                        referralNumber: "6789"
                       state: draft
                 count: 2
                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
@@ -2938,12 +2570,11 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Quaerat molestiae.
+                        example: Cumque possimus laborum blanditiis.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
-                        - Explicabo voluptas perferendis odit molestiae.
-                        - Et ratione.
-                        - Laborum laudantium.
+                        - Voluptas maiores labore.
+                        - Alias ipsum eos quibusdam.
                     minItems: 1
             example:
                 additionalPatientAttributes:
@@ -2969,10 +2600,10 @@ components:
                 networkId: 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referral:
-                    id: 69cd9203-5e92-47a3-aa03-94b03752872a
                     referralNumber: "12345"
                 slotIds:
-                    - Autem tempore dolorem enim nemo soluta.
+                    - Quo ut.
+                    - Nemo rerum pariatur dicta.
             required:
                 - providerServiceId
                 - networkId
@@ -3033,7 +2664,7 @@ components:
                     $ref: '#/components/schemas/Period'
                 type:
                     type: string
-                    example: fax
+                    example: other
                     enum:
                         - phone
                         - fax
@@ -3044,7 +2675,7 @@ components:
                         - other
                 use:
                     type: string
-                    example: mobile
+                    example: old
                     enum:
                         - home
                         - work
@@ -3056,14 +2687,14 @@ components:
                 value:
                     type: string
                     description: The actual contact point details, e.g. the phone number
-                    example: Similique harum.
+                    example: Eveniet nemo magni et.
             example:
                 period:
-                    end: "1981-03-14T01:02:48Z"
-                    start: "2007-06-03T10:26:16Z"
-                type: fax
-                use: home
-                value: Aut officiis repellendus enim quas.
+                    end: "1975-12-22T00:35:40Z"
+                    start: "1984-02-19T20:38:09Z"
+                type: url
+                use: temp
+                value: Voluptas dolorem inventore reprehenderit nam corporis.
         DirectBooking:
             type: object
             properties:
@@ -3075,7 +2706,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: phone
+                        example: gender
                         enum:
                             - address
                             - birthdate
@@ -3108,26 +2739,23 @@ components:
                 arriveAt:
                     type: string
                     description: the date and time of arrival at each of the destinations; optional; it is an error to specify both departAt and arriveAt; if neither are specified then `now` will be used
-                    example: "2007-11-19T06:39:51Z"
+                    example: "1994-10-14T19:14:44Z"
                     format: date-time
                 departAt:
                     type: string
                     description: the date and time of departure from the origin; optional; it is an error to specify both departAt and arriveAt; if neither are specified then `now` will be used
-                    example: "1988-11-10T06:23:42Z"
+                    example: "2003-06-17T06:39:20Z"
                     format: date-time
                 destinations:
                     type: object
                     description: the set of destinations, e.g. ProviderServices' locations; the provided keys will be returned in the response; these keys can be, for example, the ProviderServices' IDs
                     example:
-                        Et pariatur aut asperiores nihil tenetur ipsum.:
-                            latitude: -77.37221625390005
-                            longitude: -147.34400560484028
-                        Minus repudiandae omnis.:
-                            latitude: -77.37221625390005
-                            longitude: -147.34400560484028
-                        Voluptatem quia nam deleniti dolor sequi explicabo.:
-                            latitude: -77.37221625390005
-                            longitude: -147.34400560484028
+                        Et sunt qui aut qui suscipit unde.:
+                            latitude: 30.809915862643123
+                            longitude: -50.10019601004999
+                        Mollitia doloribus rerum.:
+                            latitude: 30.809915862643123
+                            longitude: -50.10019601004999
                     minLength: 1
                     additionalProperties:
                         $ref: '#/components/schemas/GeoLocation'
@@ -3157,35 +2785,23 @@ components:
                 arriveAt:
                     type: string
                     description: the arriveAt specified in the request
-                    example: "2014-08-30T21:03:01Z"
+                    example: "2012-04-11T08:16:22Z"
                     format: date-time
                 departAt:
                     type: string
                     description: the departAt specified in the request
-                    example: "2009-01-13T07:44:33Z"
+                    example: "1995-07-05T03:12:03Z"
                     format: date-time
                 destinations:
                     type: object
                     description: the destination that was included with the request, each with calculated distance and drive time
                     example:
-                        Blanditiis odio sunt et et.:
-                            distanceInMiles: 13394367411731513080
-                            driveTimeInSecondsWithTraffic: 4851707480166073158
-                            driveTimeInSecondsWithoutTraffic: 9357310456775393722
-                            latitude: 82.08698582432075
-                            longitude: 70.11979437369739
-                        Cum sequi ipsum.:
-                            distanceInMiles: 13394367411731513080
-                            driveTimeInSecondsWithTraffic: 4851707480166073158
-                            driveTimeInSecondsWithoutTraffic: 9357310456775393722
-                            latitude: 82.08698582432075
-                            longitude: 70.11979437369739
-                        Temporibus ratione.:
-                            distanceInMiles: 13394367411731513080
-                            driveTimeInSecondsWithTraffic: 4851707480166073158
-                            driveTimeInSecondsWithoutTraffic: 9357310456775393722
-                            latitude: 82.08698582432075
-                            longitude: 70.11979437369739
+                        Qui odio quia.:
+                            distanceInMiles: 11403431715046719139
+                            driveTimeInSecondsWithTraffic: 2571754220687950398
+                            driveTimeInSecondsWithoutTraffic: 2822699743379965492
+                            latitude: -55.97113517967492
+                            longitude: -131.6759410997607
                     additionalProperties:
                         $ref: '#/components/schemas/GeoLocationWithDriveTime'
                 origin:
@@ -3225,14 +2841,14 @@ components:
                 message:
                     type: string
                     description: provides explanation for the error
-                    example: Aperiam voluptatem rerum voluptas dolores.
+                    example: Sequi officiis nihil fugit blanditiis dignissimos sit.
                 name:
                     type: string
                     description: name of error used by goa to encode response
-                    example: Aspernatur et porro officiis nisi.
+                    example: Et suscipit error.
                 retryAfter:
                     type: integer
-                    example: 1663316672422048150
+                    example: 8780326630254925576
                     format: int64
             description: not authorized to make the request
             example:
@@ -3253,15 +2869,15 @@ components:
                 isTimeout:
                     type: boolean
                     description: if true, indicates the error is a timeout
-                    example: false
+                    example: true
                 message:
                     type: string
                     description: provides explanation for the error
-                    example: Est similique.
+                    example: Perspiciatis itaque.
                 name:
                     type: string
                     description: name of error used by goa to encode response
-                    example: Expedita cupiditate laborum a aspernatur id et.
+                    example: Sapiente non doloribus sed doloremque.
             description: the number or rate of requests has exceeded a limit
             example:
                 isTemporary: true
@@ -3273,19 +2889,19 @@ components:
             properties:
                 latitude:
                     type: number
-                    example: -88.26472826260157
+                    example: -19.695437785756425
                     format: double
                     minimum: -90
                     maximum: 90
                 longitude:
                     type: number
-                    example: 5.3030090420251375
+                    example: 179.40864091987936
                     format: double
                     minimum: -180
                     maximum: 180
             example:
-                latitude: -19.532165822598504
-                longitude: -42.58752722078265
+                latitude: -3.6596291276073
+                longitude: 3.3766390319854622
             required:
                 - latitude
                 - longitude
@@ -3295,36 +2911,36 @@ components:
                 distanceInMiles:
                     type: integer
                     description: distance required to drive the shortest route
-                    example: 10775284123033183464
+                    example: 9430091735398634014
                     format: int64
                 driveTimeInSecondsWithTraffic:
                     type: integer
                     description: drive time including historical traffic for the specified dayAndTime
-                    example: 9983307256608483707
+                    example: 3092700886635157703
                     format: int64
                 driveTimeInSecondsWithoutTraffic:
                     type: integer
                     description: drive time as if there were no traffic
-                    example: 10988576794040795463
+                    example: 7879836353441227473
                     format: int64
                 latitude:
                     type: number
-                    example: -58.14126176960893
+                    example: 29.194144659112997
                     format: double
                     minimum: -90
                     maximum: 90
                 longitude:
                     type: number
-                    example: -38.02489969482392
+                    example: 159.20468255796564
                     format: double
                     minimum: -180
                     maximum: 180
             example:
-                distanceInMiles: 9291217016315077884
-                driveTimeInSecondsWithTraffic: 17913913935296975279
-                driveTimeInSecondsWithoutTraffic: 3860597198717471167
-                latitude: -30.374099596900113
-                longitude: 179.63734869633495
+                distanceInMiles: 4054322679318582038
+                driveTimeInSecondsWithTraffic: 2735718050608404845
+                driveTimeInSecondsWithoutTraffic: 11946932156607875142
+                latitude: 67.11655916620221
+                longitude: 101.99975756176418
             required:
                 - latitude
                 - longitude
@@ -3334,44 +2950,43 @@ components:
                 family:
                     type: string
                     description: Surname
-                    example: Nihil nostrum iste autem.
+                    example: Ea ullam non sed.
                 given:
                     type: array
                     items:
                         type: string
-                        example: Quia nihil laborum qui.
+                        example: Sint numquam sunt veritatis.
                     description: Given names (not always 'first'). Includes middle names
                     example:
-                        - Ullam sint molestiae ut.
-                        - Qui vitae.
+                        - Autem hic consequatur.
+                        - Voluptatem quis ut.
+                        - Alias deserunt praesentium ea accusantium.
                 period:
                     $ref: '#/components/schemas/Period'
                 prefix:
                     type: array
                     items:
                         type: string
-                        example: Porro quo dolores minima.
+                        example: Id et facere dicta.
                     example:
-                        - Ex eaque aut ea est.
-                        - Est maiores error ad tempore ratione similique.
-                        - Et tempora necessitatibus.
+                        - Ab nulla sit vitae ad sed vitae.
+                        - Qui mollitia praesentium nostrum id nulla odit.
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Quis ad repellat voluptas placeat cupiditate.
+                        example: Commodi voluptatem facilis officia qui voluptatem.
                     example:
-                        - Totam numquam quae quasi tempora.
-                        - Libero dolorum et velit atque.
-                        - Veniam ratione quo ut culpa.
-                        - Expedita expedita.
+                        - Id aut eum natus fuga.
+                        - Recusandae inventore vel quia aut.
+                        - Non minus.
                 text:
                     type: string
                     description: Text representation of the full name
-                    example: Voluptas et.
+                    example: Distinctio aperiam aperiam voluptatem magnam.
                 use:
                     type: string
-                    example: official
+                    example: temp
                     enum:
                         - usual
                         - official
@@ -3382,22 +2997,24 @@ components:
                         - maiden
             description: A name of a human with text, parts and usage information
             example:
-                family: Dolores nihil eaque ipsa est hic voluptatum.
+                family: Et ratione.
                 given:
-                    - Nemo quod suscipit aut eos tenetur est.
-                    - Voluptates minima aliquam officia.
-                    - Est dicta.
-                    - Provident nulla fuga dolores.
+                    - Laudantium consectetur non voluptas.
+                    - Quis nihil nostrum.
+                    - Autem explicabo quia nihil laborum.
                 period:
-                    end: "1996-06-11T00:06:49Z"
-                    start: "2002-04-30T09:31:10Z"
+                    end: "1999-01-27T05:13:15Z"
+                    start: "1988-06-17T06:37:32Z"
                 prefix:
-                    - Totam odio aut eveniet.
-                    - Nobis ea deserunt.
+                    - Deleniti ullam sint molestiae ut incidunt.
+                    - Vitae quae porro quo dolores minima.
+                    - Atque ex.
                 suffix:
-                    - Sint enim magni et explicabo saepe.
-                    - Expedita ex dignissimos.
-                text: Tempore quam nihil vero ut.
+                    - Ea est magni est maiores error ad.
+                    - Ratione similique omnis et.
+                    - Necessitatibus dolorum quis ad repellat voluptas placeat.
+                    - Eum perspiciatis totam numquam quae quasi.
+                text: Voluptas perferendis odit molestiae.
                 use: official
         IndividualProvider:
             type: object
@@ -3448,7 +3065,7 @@ components:
                     example: The Acme Health Referral Network
                 requiresReferral:
                     type: boolean
-                    description: if true, then a Referral's ID or referralNumber must be specified with the Appointment when booking with the Network
+                    description: if true, then a referralNumber must be specified with the Appointment when booking with the Network
                     example: true
             example:
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3521,17 +3138,17 @@ components:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "2010-03-18T21:03:12Z"
+                    example: "1999-04-17T23:39:12Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "2015-04-25T06:59:34Z"
+                    example: "1989-05-09T06:46:30Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "1989-02-28T05:21:11Z"
-                start: "2012-06-29T11:22:53Z"
+                end: "2013-01-06T07:26:24Z"
+                start: "2012-08-14T05:27:28Z"
         ProviderOrganization:
             type: object
             properties:
@@ -3542,7 +3159,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Voluptas sequi maiores alias impedit numquam.
+                        example: Minus molestiae beatae veritatis.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3656,7 +3273,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Soluta ad consequatur repellendus.
+                        example: Aliquam rerum.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -3962,209 +3579,6 @@ components:
                 total: 5
             required:
                 - count
-        Referral:
-            type: object
-            properties:
-                id:
-                    type: string
-                    example: 69cd9203-5e92-47a3-aa03-94b03752872a
-                patientId:
-                    type: string
-                    description: the ID of the Patient being referred
-                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority:
-                    type: string
-                    description: the priority of the Referral, passed through from the source system
-                    example: High
-                priorityCode:
-                    type: integer
-                    description: the priority code of the Referral, from 1 to 5 where 1 is the highest
-                    example: 1
-                    format: int64
-                    maximum: 1
-                referralNumber:
-                    type: string
-                    description: a value for People to use when identifying a Referral
-                    example: "12345"
-                requested:
-                    $ref: '#/components/schemas/ReferralRequestDetails'
-                state:
-                    type: string
-                    description: the lifecycle state of the Referral
-                    example: authorized
-                    enum:
-                        - pending
-                        - authorized
-                        - scheduled
-                        - completed
-                        - revoked
-                status:
-                    type: string
-                    description: the status of the Referral, passed through from the source system
-                    example: approved
-            example:
-                id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority: High
-                priorityCode: 1
-                referralNumber: "12345"
-                requested:
-                    careCategory: Dental
-                    carePlan:
-                        date: Dental Specialty Endodontics
-                    date: "2030-01-01"
-                    networkIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    npi:
-                        - "1245319599"
-                    specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                state: authorized
-                status: approved
-            required:
-                - id
-                - referralNumber
-                - state
-                - patientId
-        ReferralNotifyPayload:
-            type: object
-            properties:
-                referralIds:
-                    type: array
-                    items:
-                        type: string
-                        example: Dolores qui.
-                    description: one or more Referral IDs
-                    example:
-                        - f66cc553-87f5-411d-bcc1-6f6f1f7d3096
-                        - febb592f-4b06-4e31-8d0b-0cac499bcc30
-                    minItems: 1
-            example:
-                referralIds:
-                    - f66cc553-87f5-411d-bcc1-6f6f1f7d3096
-                    - febb592f-4b06-4e31-8d0b-0cac499bcc30
-            required:
-                - referralIds
-        ReferralRequestDetails:
-            type: object
-            properties:
-                careCategory:
-                    type: string
-                    description: the name of the requested CareCategory, passed through from the source system
-                    example: Dental
-                carePlan:
-                    type: object
-                    properties:
-                        date:
-                            type: string
-                            description: the name of the requested CarePlan, passed through from the source system
-                            example: Dental Specialty Endodontics
-                    example:
-                        date: Dental Specialty Endodontics
-                date:
-                    type: string
-                    description: the target date for an appointment
-                    example: "2030-01-01"
-                    format: date
-                networkIds:
-                    type: array
-                    items:
-                        type: string
-                        example: Pariatur et.
-                    description: the IDs of the requested Networks
-                    example:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                npi:
-                    type: array
-                    items:
-                        type: string
-                        example: Et fuga sequi corporis et.
-                    description: the NPIs of the requested Providers, of indiviual or organization type
-                    example:
-                        - "1245319599"
-                specialtyIds:
-                    type: array
-                    items:
-                        type: string
-                        example: Id quo doloremque modi deleniti qui.
-                    description: the IDs of the requested Specialties
-                    example:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-            example:
-                careCategory: Dental
-                carePlan:
-                    date: Dental Specialty Endodontics
-                date: "2030-01-01"
-                networkIds:
-                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                npi:
-                    - "1245319599"
-                specialtyIds:
-                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-        ReferralSearchResult:
-            type: object
-            properties:
-                count:
-                    type: integer
-                    description: the number of Referrals in this page of results
-                    example: 2
-                    format: int64
-                nextToken:
-                    type: string
-                    description: the nextToken param to use with Referral.search to retrieve the next page of results
-                    example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
-                referrals:
-                    type: array
-                    items:
-                        $ref: '#/components/schemas/Referral'
-                    description: Referrals that match the search
-                    example:
-                        - id: ff826316-b95c-4888-b8bb-930598785fed
-                          patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
-                          referralNumber: "23456"
-                          requested:
-                            careCategory: Dental
-                            specialtyIds:
-                                - 1223G0001X
-                          state: pending
-                        - id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
-                          patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
-                          referralNumber: "34567"
-                          requested:
-                            careCategory: Orthopaedic Surgery
-                          state: pending
-                total:
-                    type: integer
-                    description: the total number of Referrals matching the search params, not guaranteed to be populated
-                    example: 5
-                    format: int64
-            example:
-                count: 2
-                nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
-                referrals:
-                    - id: ff826316-b95c-4888-b8bb-930598785fed
-                      patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
-                      referralNumber: "23456"
-                      requested:
-                        careCategory: Dental
-                        specialtyIds:
-                            - 1223G0001X
-                      state: pending
-                    - id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
-                      patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
-                      referralNumber: "34567"
-                      requested:
-                        careCategory: Orthopaedic Surgery
-                      state: pending
-                total: 5
-            required:
-                - count
         Slot:
             type: object
             properties:
@@ -4273,7 +3687,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ipsam sunt quo provident veritatis ut qui.
+                        example: Eaque rem ullam sint voluptas placeat.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4392,8 +3806,6 @@ tags:
       description: a group of ProviderOrganizations and ProviderServices authorized to receive Appointments
     - name: ProviderOrganization
       description: a group of ProviderServices, member of one or more Networks
-    - name: Referral
-      description: an order to send a Patient to a ProviderService, ProviderOrganization, or Network; can be backed by a customer system integration
     - name: ProviderService
       description: a Service offered by Provider (individual or organization) at a Location for particular Specialties and VisitMode
     - name: Specialty
