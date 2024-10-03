@@ -28,7 +28,7 @@ Several actions in this API require utilization quotas. Work with your WellHive 
 * Appointment Cancel
 
 # <a name="payment"></a>Provider Payment Implications
-For some Networks, booking an Appointment implies the Provider can expect to submit a claim back to the organization requesting the Appointment and can expect to receive payment for the services provided.  For such Networks, careful consideration is required when booking an Appointment.  At minimum, a Referral's ID or referralNumber may be required when submitting an Appointment, as indicated by the Network's requiresReferral attribute.  The API client is responsible for specifying a Referral that is in the right state and status.  The API client is also responsible for ensuring the selected ProviderService is appropriate and authorized. The API provides searchable attributes with each ProviderService for assisting in this determination such as Specialties, VisitModes, Networks, Location information, and whether the service is currently "active" and ok to schedule to (as controlled through configuration or integration).
+For some Networks, booking an Appointment implies the Provider can expect to submit a claim back to the organization requesting the Appointment and can expect to receive payment for the services provided.  For such Networks, careful consideration is required when booking an Appointment.  At minimum, a Referral Number may be required when submitting an Appointment, as indicated by the Network's requiresReferral attribute.  The API client is responsible for specifying a Referral that is in the right state and status.  The API client is also responsible for ensuring the selected ProviderService is appropriate and authorized. The API provides searchable attributes with each ProviderService for assisting in this determination such as Specialties, VisitModes, Networks, Location information, and whether the service is currently "active" and ok to schedule to (as controlled through configuration or integration).
 
 # <a name="authn"></a>Authentication
 The WellHive Care Navigation API requires use of Private Key JWT Client Authentication to confirm the API client’s identity.  In Private Key JWT, the client generates a pair of keys, public and private, to use as credentials. The client shares the public key with WellHive and uses the private key to sign the JWT. Then the JWT is provided as the client assertion in requests to the auth server in exchange for an Access Token. The access token in the response should then be used as the Bearer token in requests to the Care Navigation API.
@@ -108,11 +108,11 @@ The sections below illustrate the API call sequences for each of these activitie
 ## 1. Start a draft Appointment
 It's recommended to create a draft Appointment and reference that Appointment when searching ProviderServices and when searching Slots.  This way search metrics are collected and associated with the Appointment and Patient.  
 
-It’s also recommended to associate a Referral with the Appointment, whether by ID or referralNumber. Doing so enables tracking search and booking activity to the Referral. In fact, some Networks require at least the referralNumber when booking, and for such Networks, the API won't allow booking without the referralNumber.  
+It’s also recommended to associate a Referral with the Appointment by referralNumber. Doing so enables tracking search and booking activity to the Referral. In fact, some Networks require at least the referralNumber when booking, and for such Networks, the API won't allow booking without the referralNumber.  
 
-Therefore, a common approach is to start by listing a Patient’s Referrals, and allowing a user to select a Referral that is ready to schedule.  Then, create a draft Appointment with the Referral ID, and use the Appointment ID when searching ProviderServices, searching Slots, and booking the Appointment.  If WellHive is not integrated with the required Referral source but the API client can obtain Referral information, then the draft Appointment can be created with the Referral’s referralNumber.
+Therefore, a common approach is to start with a Patient’s Referral that is ready to schedule and create a draft Appointment with the Referral Number. Then, use the Appointment ID when searching ProviderServices, searching Slots, and booking the Appointment.  If the API client can obtain Referral information, then the draft Appointment can be created with the Referral’s referralNumber.
 
-> ℹ️ WellHive is integrated with your Patient Index, using the same Patient ID that you do.  Therefore, you can use your normal Patient ID to do things like searching for a Patient’s Referrals and Appointments. 
+> ℹ️ WellHive is integrated with your Patient Index, using the same Patient ID that you do.  Therefore, you can use your normal Patient ID to do things like creating or searching for a Patient’s Appointments. 
 
 > ⚠️ It is up to the API client to determine which Referrals are ready to schedule.
 
@@ -122,12 +122,9 @@ sequenceDiagram
 participant c as App
 participant n as WH Care Nav API 
 
-Note right of c: Find and show Referrals to select from and schedule
-c->>+n: Referral.search(Patient ID)<br>- GET /referrals -
-n-->>-c: Referrals
 
 Note right of c: Create a draft Appointment for the selected Referral
-c->>+n: Appointment.create(Patient ID, Referral ID)<br>- POST /appointments -
+c->>+n: Appointment.create(Patient ID, Referral Number)<br>- POST /appointments -
 n-->>-c: draft Appointment
 ```
 
