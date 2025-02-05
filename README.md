@@ -191,7 +191,7 @@ end
 end
 ```
 
-## 4. Book an Appiontment into a Slot
+## 4. Book an Appointment into a Slot
 Given a Slot, an application can request to book the Appointment with the desired Network, ProviderService, and Slot.  The request is accepted by the WellHive Care Navigation API, and then processed in the background.  The application can then poll the API to find out the result, checking for the Appointment’s state to change to submitted or for an error.
 
 > ℹ️ Some ProviderServices' scheduling systems require certain Patient fields before allowing an Appointment to be booked. The application should check the ProviderService for which Patient attributes are required, prior to submitting the Appointment.  If the Patient record is missing any of required fields, the application will need to provide them as additional attributes when submitting the appointment, perhaps by prompting the user for those fields.
