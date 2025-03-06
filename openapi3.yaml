@@ -1168,6 +1168,15 @@ paths:
                   example:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                - name: npi
+                  in: query
+                  description: the National Provider ID of practitioner or group
+                  allowEmptyValue: true
+                  schema:
+                    type: string
+                    description: the National Provider ID of practitioner or group
+                    example: "1245319599"
+                  example: "1245319599"
                 - name: searchText
                   in: query
                   description: find ProviderServices matching the text
