@@ -30,7 +30,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Quidem eaque eos autem tempore dolorem enim.
+                        example: Quia qui.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -310,7 +310,7 @@ paths:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
                                     isLatest: true
-                                    lastRetrieved: "2002-01-31T04:51:25Z"
+                                    lastRetrieved: "2001-08-19T20:36:51Z"
                                     phone: 555-555-1000
                                     start: "2026-01-01T17:00:00Z"
                                     status: booked
@@ -418,7 +418,7 @@ paths:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
                                     isLatest: true
-                                    lastRetrieved: "2002-01-31T04:51:25Z"
+                                    lastRetrieved: "2001-08-19T20:36:51Z"
                                     phone: 555-555-1000
                                     start: "2026-01-01T17:00:00Z"
                                     status: booked
@@ -622,19 +622,19 @@ paths:
                                     use: home
                                 birthDate: "1977-01-01"
                                 email: jdoe@example.com
-                                gender: female
                                 name:
                                     family: Doe
                                     given:
                                         - Jane
                                         - Jill
                                 phone: 555-555-1111
+                                sex: female
                             networkId: 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                             referral:
                                 referralNumber: "12345"
                             slotIds:
-                                - Quam deleniti consequatur.
+                                - 87b0e9dd-6849-457f-9d1b-40b25584dd73
             responses:
                 "202":
                     description: Accepted response.
@@ -648,7 +648,7 @@ paths:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
                                     isLatest: true
-                                    lastRetrieved: "2002-01-31T04:51:25Z"
+                                    lastRetrieved: "2001-08-19T20:36:51Z"
                                     phone: 555-555-1000
                                     start: "2026-01-01T17:00:00Z"
                                     status: booked
@@ -837,7 +837,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Soluta alias sit amet esse aperiam.
+                        example: Et ut.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1039,7 +1039,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Quas molestiae harum mollitia.
+                        example: Molestiae a est.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1160,7 +1160,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Aut possimus et quisquam qui.
+                        example: Omnis tempore vel ipsa atque.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1213,7 +1213,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Quam accusamus qui alias.
+                        example: Quia quasi quod architecto ipsam facere.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1227,7 +1227,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Possimus quos ut vero voluptas tempora.
+                        example: Beatae quia qui et ut.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -1241,12 +1241,27 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Est nulla qui atque eos necessitatibus.
+                        example: Quam et et possimus labore amet quis.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
                   example:
                     - 207XX0004X
+                - name: sex
+                  in: query
+                  description: find ProviderServices with matching provider sex
+                  allowEmptyValue: true
+                  schema:
+                    type: string
+                    description: find ProviderServices with matching provider sex
+                    example: female
+                    enum:
+                        - male
+                        - female
+                  examples:
+                    default:
+                        summary: default
+                        value: female
                 - name: visitMode
                   in: query
                   description: find ProviderServices offering the identified VisitModes
@@ -1621,7 +1636,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Aliquam nisi.
+                        example: Fugiat voluptas sunt.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -1842,7 +1857,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Reprehenderit doloribus numquam.
+                        example: Qui aliquid amet.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2023,7 +2038,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ut aut.
+                        example: Non numquam enim esse.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2206,39 +2221,36 @@ components:
             properties:
                 city:
                     type: string
-                    example: Aut et dolorem labore nobis.
+                    example: Apopka
                 country:
                     type: string
-                    example: Totam aut reiciendis dolor.
+                    example: US
                 line:
                     type: array
                     items:
                         type: string
-                        example: Perferendis libero dolorum et velit atque reiciendis.
+                        example: Fuga ducimus accusantium rerum.
                     description: Street name, number, direction
                     example:
-                        - Quo ut culpa commodi expedita.
-                        - Consequatur vel inventore.
-                        - Mollitia consectetur architecto nisi sed.
-                        - Voluptatem doloremque odit quisquam libero.
+                        - 120 Main Street
                 period:
                     $ref: '#/components/schemas/Period'
                 postalCode:
                     type: string
-                    example: Et est consectetur.
+                    example: "12345"
                 state:
                     type: string
-                    example: Quia quaerat.
+                    example: FL
                 type:
                     type: string
-                    example: both
+                    example: postal
                     enum:
                         - postal
                         - physical
                         - both
                 use:
                     type: string
-                    example: work
+                    example: home
                     enum:
                         - home
                         - work
@@ -2246,18 +2258,17 @@ components:
                         - old
                         - billing
             example:
-                city: Quia nostrum vel.
-                country: Eveniet voluptatem velit doloremque.
+                city: Apopka
+                country: US
                 line:
-                    - Aut nobis et architecto dolores voluptatibus nam.
-                    - Eum maxime libero qui animi repellendus officiis.
+                    - 120 Main Street
                 period:
-                    end: "1999-01-27T05:13:15Z"
-                    start: "1988-06-17T06:37:32Z"
-                postalCode: Consectetur est voluptate incidunt officia enim.
-                state: Sequi voluptas dolorum eaque.
+                    end: "2002-10-23T06:36:36Z"
+                    start: "1970-12-12T07:59:31Z"
+                postalCode: "12345"
+                state: FL
                 type: postal
-                use: work
+                use: home
         Appointment:
             type: object
             properties:
@@ -2297,7 +2308,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Doloribus nam cum dolor iusto non.
+                        example: Dolor accusamus.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -2320,7 +2331,7 @@ components:
                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                         name: Patient
                     isLatest: true
-                    lastRetrieved: "2002-01-31T04:51:25Z"
+                    lastRetrieved: "2001-08-19T20:36:51Z"
                     phone: 555-555-1000
                     start: "2026-01-01T17:00:00Z"
                     status: booked
@@ -2385,7 +2396,7 @@ components:
                 lastRetrieved:
                     type: string
                     description: date and time when the details were last retrieved from the ProviderService
-                    example: "1980-11-13T01:05:53Z"
+                    example: "2001-08-19T20:36:51Z"
                     format: date-time
                 phone:
                     type: string
@@ -2418,7 +2429,7 @@ components:
                     id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                     name: Patient
                 isLatest: true
-                lastRetrieved: "1971-12-25T19:14:28Z"
+                lastRetrieved: "2001-08-19T20:36:51Z"
                 phone: 555-555-1000
                 start: "2026-01-01T17:00:00Z"
                 status: booked
@@ -2436,20 +2447,18 @@ components:
                     type: string
                     description: the Patient's contact email address
                     example: jdoe@example.com
-                gender:
-                    type: string
-                    example: female
-                    enum:
-                        - male
-                        - female
-                        - other
-                        - unknown
                 name:
                     $ref: '#/components/schemas/HumanName'
                 phone:
                     type: string
                     description: the Patient's contact phone number
                     example: 555-555-1111
+                sex:
+                    type: string
+                    example: female
+                    enum:
+                        - male
+                        - female
             description: for supplying additional Patient attributes when the Patient record is missing attributes required by the ProviderService
             example:
                 address:
@@ -2464,13 +2473,13 @@ components:
                     use: home
                 birthDate: "1977-01-01"
                 email: jdoe@example.com
-                gender: female
                 name:
                     family: Doe
                     given:
                         - Jane
                         - Jill
                 phone: 555-555-1111
+                sex: female
         AppointmentReferral:
             type: object
             properties:
@@ -2579,11 +2588,10 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Cumque possimus laborum blanditiis.
+                        example: Vero ipsam aliquam quaerat sed sint.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
-                        - Voluptas maiores labore.
-                        - Alias ipsum eos quibusdam.
+                        - 87b0e9dd-6849-457f-9d1b-40b25584dd73
                     minItems: 1
             example:
                 additionalPatientAttributes:
@@ -2599,20 +2607,19 @@ components:
                         use: home
                     birthDate: "1977-01-01"
                     email: jdoe@example.com
-                    gender: female
                     name:
                         family: Doe
                         given:
                             - Jane
                             - Jill
                     phone: 555-555-1111
+                    sex: female
                 networkId: 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referral:
                     referralNumber: "12345"
                 slotIds:
-                    - Quo ut.
-                    - Nemo rerum pariatur dicta.
+                    - 87b0e9dd-6849-457f-9d1b-40b25584dd73
             required:
                 - providerServiceId
                 - networkId
@@ -2650,6 +2657,8 @@ components:
                           name: Patient
                         - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                           name: Patient
+                        - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                          name: Patient
                 count:
                     type: integer
                     description: the number of CancelReasons returned in the Result
@@ -2673,7 +2682,7 @@ components:
                     $ref: '#/components/schemas/Period'
                 type:
                     type: string
-                    example: other
+                    example: phone
                     enum:
                         - phone
                         - fax
@@ -2684,7 +2693,7 @@ components:
                         - other
                 use:
                     type: string
-                    example: old
+                    example: home
                     enum:
                         - home
                         - work
@@ -2696,14 +2705,14 @@ components:
                 value:
                     type: string
                     description: The actual contact point details, e.g. the phone number
-                    example: Eveniet nemo magni et.
+                    example: "5555555555"
             example:
                 period:
-                    end: "1975-12-22T00:35:40Z"
-                    start: "1984-02-19T20:38:09Z"
-                type: url
-                use: temp
-                value: Voluptas dolorem inventore reprehenderit nam corporis.
+                    end: "2002-03-21T14:52:24Z"
+                    start: "1971-11-08T16:26:23Z"
+                type: phone
+                use: home
+                value: "5555555555"
         DirectBooking:
             type: object
             properties:
@@ -2715,7 +2724,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: gender
+                        example: name
                         enum:
                             - address
                             - birthdate
@@ -2748,23 +2757,20 @@ components:
                 arriveAt:
                     type: string
                     description: the date and time of arrival at each of the destinations; optional; it is an error to specify both departAt and arriveAt; if neither are specified then `now` will be used
-                    example: "1994-10-14T19:14:44Z"
+                    example: "1992-08-28T00:59:36Z"
                     format: date-time
                 departAt:
                     type: string
                     description: the date and time of departure from the origin; optional; it is an error to specify both departAt and arriveAt; if neither are specified then `now` will be used
-                    example: "2003-06-17T06:39:20Z"
+                    example: "1992-08-28T00:59:36Z"
                     format: date-time
                 destinations:
                     type: object
                     description: the set of destinations, e.g. ProviderServices' locations; the provided keys will be returned in the response; these keys can be, for example, the ProviderServices' IDs
                     example:
-                        Et sunt qui aut qui suscipit unde.:
-                            latitude: 30.809915862643123
-                            longitude: -50.10019601004999
-                        Mollitia doloribus rerum.:
-                            latitude: 30.809915862643123
-                            longitude: -50.10019601004999
+                        15417a36-c6d8-4f8c-b24e-324962bca8b6:
+                            latitude: 56.29852310748572
+                            longitude: -129.58656878932194
                     minLength: 1
                     additionalProperties:
                         $ref: '#/components/schemas/GeoLocation'
@@ -2794,23 +2800,29 @@ components:
                 arriveAt:
                     type: string
                     description: the arriveAt specified in the request
-                    example: "2012-04-11T08:16:22Z"
+                    example: "1970-03-14T09:19:26Z"
                     format: date-time
                 departAt:
                     type: string
                     description: the departAt specified in the request
-                    example: "1995-07-05T03:12:03Z"
+                    example: "1970-03-14T09:19:26Z"
                     format: date-time
                 destinations:
                     type: object
                     description: the destination that was included with the request, each with calculated distance and drive time
                     example:
-                        Qui odio quia.:
-                            distanceInMiles: 11403431715046719139
-                            driveTimeInSecondsWithTraffic: 2571754220687950398
-                            driveTimeInSecondsWithoutTraffic: 2822699743379965492
-                            latitude: -55.97113517967492
-                            longitude: -131.6759410997607
+                        00eff3f3-ecfb-41ff-9ebc-78ed811e17f9:
+                            distanceInMiles: 4
+                            driveTimeInSecondsWithTraffic: 566
+                            driveTimeInSecondsWithoutTraffic: 493
+                            latitude: -74.12870564772521
+                            longitude: -151.6240405624497
+                        69cd9203-5e92-47a3-aa03-94b03752872a:
+                            distanceInMiles: 9
+                            driveTimeInSecondsWithTraffic: 1314
+                            driveTimeInSecondsWithoutTraffic: 1039
+                            latitude: -1.7437745123171688
+                            longitude: -54.19187859370315
                     additionalProperties:
                         $ref: '#/components/schemas/GeoLocationWithDriveTime'
                 origin:
@@ -2838,26 +2850,26 @@ components:
                 isFault:
                     type: boolean
                     description: if true, indicates the error is a server-side fault
-                    example: false
+                    example: true
                 isTemporary:
                     type: boolean
                     description: if true, indicates the error is temporary
-                    example: false
+                    example: true
                 isTimeout:
                     type: boolean
                     description: if true, indicates the error is a timeout
-                    example: false
+                    example: true
                 message:
                     type: string
                     description: provides explanation for the error
-                    example: Sequi officiis nihil fugit blanditiis dignissimos sit.
+                    example: internal server error
                 name:
                     type: string
                     description: name of error used by goa to encode response
-                    example: Et suscipit error.
+                    example: Internal
                 retryAfter:
                     type: integer
-                    example: 8780326630254925576
+                    example: 90
                     format: int64
             description: not authorized to make the request
             example:
@@ -2870,11 +2882,11 @@ components:
                 isFault:
                     type: boolean
                     description: if true, indicates the error is a server-side fault
-                    example: false
+                    example: true
                 isTemporary:
                     type: boolean
                     description: if true, indicates the error is temporary
-                    example: false
+                    example: true
                 isTimeout:
                     type: boolean
                     description: if true, indicates the error is a timeout
@@ -2882,11 +2894,11 @@ components:
                 message:
                     type: string
                     description: provides explanation for the error
-                    example: Perspiciatis itaque.
+                    example: internal server error
                 name:
                     type: string
                     description: name of error used by goa to encode response
-                    example: Sapiente non doloribus sed doloremque.
+                    example: Internal
             description: the number or rate of requests has exceeded a limit
             example:
                 isTemporary: true
@@ -2898,19 +2910,19 @@ components:
             properties:
                 latitude:
                     type: number
-                    example: -19.695437785756425
+                    example: -33.570632400988536
                     format: double
                     minimum: -90
                     maximum: 90
                 longitude:
                     type: number
-                    example: 179.40864091987936
+                    example: -59.177567675152815
                     format: double
                     minimum: -180
                     maximum: 180
             example:
-                latitude: -3.6596291276073
-                longitude: 3.3766390319854622
+                latitude: -33.570632400988536
+                longitude: -59.177567675152815
             required:
                 - latitude
                 - longitude
@@ -2920,36 +2932,36 @@ components:
                 distanceInMiles:
                     type: integer
                     description: distance required to drive the shortest route
-                    example: 9430091735398634014
+                    example: 123
                     format: int64
                 driveTimeInSecondsWithTraffic:
                     type: integer
                     description: drive time including historical traffic for the specified dayAndTime
-                    example: 3092700886635157703
+                    example: 567
                     format: int64
                 driveTimeInSecondsWithoutTraffic:
                     type: integer
                     description: drive time as if there were no traffic
-                    example: 7879836353441227473
+                    example: 456
                     format: int64
                 latitude:
                     type: number
-                    example: 29.194144659112997
+                    example: -33.570632400988536
                     format: double
                     minimum: -90
                     maximum: 90
                 longitude:
                     type: number
-                    example: 159.20468255796564
+                    example: -59.177567675152815
                     format: double
                     minimum: -180
                     maximum: 180
             example:
-                distanceInMiles: 4054322679318582038
-                driveTimeInSecondsWithTraffic: 2735718050608404845
-                driveTimeInSecondsWithoutTraffic: 11946932156607875142
-                latitude: 67.11655916620221
-                longitude: 101.99975756176418
+                distanceInMiles: 123
+                driveTimeInSecondsWithTraffic: 567
+                driveTimeInSecondsWithoutTraffic: 456
+                latitude: -33.570632400988536
+                longitude: -59.177567675152815
             required:
                 - latitude
                 - longitude
@@ -2959,43 +2971,38 @@ components:
                 family:
                     type: string
                     description: Surname
-                    example: Ea ullam non sed.
+                    example: Doe
                 given:
                     type: array
                     items:
                         type: string
-                        example: Sint numquam sunt veritatis.
+                        example: Assumenda consequatur aut non deserunt.
                     description: Given names (not always 'first'). Includes middle names
                     example:
-                        - Autem hic consequatur.
-                        - Voluptatem quis ut.
-                        - Alias deserunt praesentium ea accusantium.
+                        - Jane
                 period:
                     $ref: '#/components/schemas/Period'
                 prefix:
                     type: array
                     items:
                         type: string
-                        example: Id et facere dicta.
+                        example: Qui quia voluptatem eos voluptas error vel.
                     example:
-                        - Ab nulla sit vitae ad sed vitae.
-                        - Qui mollitia praesentium nostrum id nulla odit.
+                        - Ms
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Commodi voluptatem facilis officia qui voluptatem.
+                        example: Consequatur error quod animi voluptatem.
                     example:
-                        - Id aut eum natus fuga.
-                        - Recusandae inventore vel quia aut.
-                        - Non minus.
+                        - PhD
                 text:
                     type: string
                     description: Text representation of the full name
-                    example: Distinctio aperiam aperiam voluptatem magnam.
+                    example: Jane Doe
                 use:
                     type: string
-                    example: temp
+                    example: usual
                     enum:
                         - usual
                         - official
@@ -3006,25 +3013,18 @@ components:
                         - maiden
             description: A name of a human with text, parts and usage information
             example:
-                family: Et ratione.
+                family: Doe
                 given:
-                    - Laudantium consectetur non voluptas.
-                    - Quis nihil nostrum.
-                    - Autem explicabo quia nihil laborum.
+                    - Jane
                 period:
-                    end: "1999-01-27T05:13:15Z"
-                    start: "1988-06-17T06:37:32Z"
+                    end: "2002-10-23T06:36:36Z"
+                    start: "1970-12-12T07:59:31Z"
                 prefix:
-                    - Deleniti ullam sint molestiae ut incidunt.
-                    - Vitae quae porro quo dolores minima.
-                    - Atque ex.
+                    - Ms
                 suffix:
-                    - Ea est magni est maiores error ad.
-                    - Ratione similique omnis et.
-                    - Necessitatibus dolorum quis ad repellat voluptas placeat.
-                    - Eum perspiciatis totam numquam quae quasi.
-                text: Voluptas perferendis odit molestiae.
-                use: official
+                    - PhD
+                text: Jane Doe
+                use: usual
         IndividualProvider:
             type: object
             properties:
@@ -3034,9 +3034,16 @@ components:
                 npi:
                     type: string
                     example: "1245319599"
+                sex:
+                    type: string
+                    example: female
+                    enum:
+                        - male
+                        - female
             example:
                 name: Dr. Smith
                 npi: "1245319599"
+                sex: female
         Location:
             type: object
             properties:
@@ -3147,17 +3154,17 @@ components:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "1999-04-17T23:39:12Z"
+                    example: "1986-02-03T23:27:30Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "1989-05-09T06:46:30Z"
+                    example: "1977-11-20T20:00:11Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "2013-01-06T07:26:24Z"
-                start: "2012-08-14T05:27:28Z"
+                end: "2007-09-19T14:16:41Z"
+                start: "1985-02-02T02:39:04Z"
         ProviderOrganization:
             type: object
             properties:
@@ -3168,7 +3175,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Minus molestiae beatae veritatis.
+                        example: Eius ut est suscipit.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3282,7 +3289,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Aliquam rerum.
+                        example: Voluptatum quas nam.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -3696,7 +3703,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Eaque rem ullam sint voluptas placeat.
+                        example: Ut labore ex quisquam voluptas exercitationem.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
