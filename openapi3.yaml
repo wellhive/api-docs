@@ -1258,10 +1258,7 @@ paths:
                     enum:
                         - male
                         - female
-                  examples:
-                    default:
-                        summary: default
-                        value: female
+                  example: female
                 - name: visitMode
                   in: query
                   description: find ProviderServices offering the identified VisitModes
