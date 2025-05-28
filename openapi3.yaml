@@ -723,7 +723,7 @@ paths:
             tags:
                 - DriveTime
             summary: DriveTime.calculate
-            description: calculate drive times from the origin to each of the destinations
+            description: calculate drive times from the origin to each of the destinations; if any destination's route cannot be calculated it will be returned in the response with no route information
             operationId: DriveTime#calculate
             requestBody:
                 required: true
@@ -1495,6 +1495,7 @@ paths:
                             example:
                                 appointmentTypes:
                                     - id: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      isSelfSchedulable: true
                                       name: Initial Consult
                                 contactDetails:
                                     - system: phone
@@ -2763,12 +2764,13 @@ components:
                     format: date-time
                 destinations:
                     type: object
-                    description: the set of destinations, e.g. ProviderServices' locations; the provided keys will be returned in the response; these keys can be, for example, the ProviderServices' IDs
+                    description: the set of destinations, e.g. ProviderServices' locations; identified by unique keys matching locations in the response; these keys can be, for example, the ProviderServices' IDs; limited to 100 destinations per request
                     example:
                         15417a36-c6d8-4f8c-b24e-324962bca8b6:
                             latitude: 56.29852310748572
                             longitude: -129.58656878932194
                     minLength: 1
+                    maxLength: 100
                     additionalProperties:
                         $ref: '#/components/schemas/GeoLocation'
                 origin:
@@ -3246,6 +3248,7 @@ components:
                         $ref: '#/components/schemas/AppointmentType'
                     example:
                         - id: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isSelfSchedulable: true
                           name: Initial Consult
                     minItems: 1
                 contactDetails:
@@ -3315,6 +3318,7 @@ components:
             example:
                 appointmentTypes:
                     - id: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                      isSelfSchedulable: true
                       name: Initial Consult
                 contactDetails:
                     - system: phone

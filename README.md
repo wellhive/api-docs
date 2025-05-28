@@ -208,7 +208,7 @@ c->>+n: Appointment.submit(Appointment ID, Network ID, ProviderService ID, Slot 
 n-->>-c: accepted
 
 Note right of c: Poll until the Appointment transitions to submitted or errored
-loop until Appointment's state changes to submitted or errorReason is populated
+loop until Appointment's state changes to submitted or error field is populated
 c->>+n: Appointment.show(Appointment ID)<br>- GET /appointments/{appointmentId} -
 n-->>-c: Appointment
 end
@@ -261,7 +261,7 @@ c->>+n: Appointment.cancel(Appointment ID, CancelReason ID)<br> - POST /appointm
 n-->>-c: accepted
 
 Note right of c: Poll until cancelled or errored
-loop until Appointment's state changes to cancelled or errorReason is populated
+loop until Appointment's state changes to cancelled or error field is populated
 c->>+n: Appointment.show(Appointment ID)<br> - GET /appointments/{appointmentId} -
 n-->>-c: Appointment
 end
