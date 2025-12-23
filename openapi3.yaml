@@ -30,7 +30,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Consequatur tempora beatae dignissimos dignissimos ad voluptas.
+                        example: Fuga molestias necessitatibus qui sapiente ea et.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -886,7 +886,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Aut iusto soluta quia sed quia dolorem.
+                        example: Ea eveniet neque tempore ex quia porro.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1088,7 +1088,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Nobis ut qui consequatur est itaque vel.
+                        example: Magni itaque ut consequatur.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1217,7 +1217,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Vitae magnam consequatur quo eligendi.
+                        example: Voluptas qui.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1270,7 +1270,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Sit sapiente id est aut voluptatibus.
+                        example: Itaque rerum tempora consectetur id exercitationem.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1284,7 +1284,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ratione sed ab vitae laborum.
+                        example: Unde ut autem consequuntur perspiciatis.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -1298,7 +1298,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Maxime nisi qui accusamus optio.
+                        example: Qui voluptates officia consequatur.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
@@ -1709,7 +1709,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ipsa qui autem error.
+                        example: Perspiciatis est distinctio dignissimos.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -1928,6 +1928,7 @@ paths:
             tags:
                 - Referral
             summary: Referral.search
+            description: search for Referrals; one of id, externalId, referralNumber, patientId, or nextToken are required
             operationId: Referral#search
             parameters:
                 - name: id
@@ -1938,7 +1939,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Dicta sequi velit ut fugiat quia ad.
+                        example: Ab quia repellendus accusamus aut quia.
                     description: find Referrals by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1954,7 +1955,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Sapiente odio ut enim consequatur aliquam officiis.
+                        example: Aperiam aspernatur aspernatur repudiandae.
                     description: find a Referral by externalId
                     example:
                         - va-7655-78876545
@@ -1980,22 +1981,6 @@ paths:
                     description: find Referrals by Patient
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                   example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                - name: specialtyId
-                  in: query
-                  description: find Referrals by Specialty
-                  allowEmptyValue: true
-                  schema:
-                    type: array
-                    items:
-                        type: string
-                        example: A et.
-                    description: find Referrals by Specialty
-                    example:
-                        - 207XX0004X
-                        - 208200000X
-                  example:
-                    - 207XX0004X
-                    - 208200000X
                 - name: nextToken
                   in: query
                   description: the nextToken from a previous ReferralSearchResult to use for retrieving the next page, other params are ignored when this one is provided
@@ -2016,22 +2001,60 @@ paths:
                                 count: 2
                                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
                                 referrals:
-                                    - externalId: va-7655-78876545
+                                    - CarePlan:
+                                        description: Care plan description for Dentist
+                                        name: Dental Specialty Endodontics
+                                        serviceCategory: Dentist
+                                        serviceOptions:
+                                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                              description: Initial evaluation for this episode of care
+                                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                              specialtyIds:
+                                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                        specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                      Date: "2025-12-18"
+                                      assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      careCategory: Dental
+                                      externalId: va-7655-78876545
                                       id: ff826316-b95c-4888-b8bb-930598785fed
                                       patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
+                                      priority: Routine
+                                      priorityCode: 1
                                       referralNumber: "23456"
-                                      requested:
-                                        careCategory: Dental
-                                        specialtyIds:
-                                            - 1223G0001X
                                       state: pending
-                                    - externalId: va-8765-87651234
+                                      status: approved
+                                    - CarePlan:
+                                        description: Care plan description for Dentist
+                                        name: Dental Specialty Endodontics
+                                        serviceCategory: Dentist
+                                        serviceOptions:
+                                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                              description: Initial evaluation for this episode of care
+                                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                              specialtyIds:
+                                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                        specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                      Date: "2025-12-18"
+                                      assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      careCategory: Dental
+                                      externalId: va-8765-87651234
                                       id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
                                       patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
+                                      priority: Routine
+                                      priorityCode: 1
                                       referralNumber: "34567"
-                                      requested:
-                                        careCategory: Orthopaedic Surgery
                                       state: pending
+                                      status: approved
                                 total: 5
                 "400":
                     description: 'Bad Request: something is wrong with the request'
@@ -2112,35 +2135,30 @@ paths:
                         schema:
                             $ref: '#/components/schemas/ReferralCreatePayload'
                         example:
+                            assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            careCategory: Dental
+                            carePlan:
+                                description: Care plan description for Dentist
+                                name: Dental Specialty Endodontics
+                                serviceCategory: Dentist
+                                serviceOptions:
+                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      description: Initial evaluation for this episode of care
+                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                specialtyIds:
+                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                            date: "2030-01-01"
                             externalId: va-7655-78876545
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
                             referralNumber: "12345"
-                            requested:
-                                careCategory: Dental
-                                carePlan:
-                                    description: Care plan description for Dentist
-                                    name: Dental Specialty Endodontics
-                                    serviceCategory: Dentist
-                                    serviceOptions:
-                                        - description: Initial evaluation for this episode of care
-                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                          specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
-                                networkIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                npi:
-                                    - "1245319599"
-                                specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             state: authorized
                             status: approved
             responses:
@@ -2151,36 +2169,31 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/Referral'
                             example:
+                                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                careCategory: Dental
+                                carePlan:
+                                    description: Care plan description for Dentist
+                                    name: Dental Specialty Endodontics
+                                    serviceCategory: Dentist
+                                    serviceOptions:
+                                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          description: Initial evaluation for this episode of care
+                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                          specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                    specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
-                                requested:
-                                    careCategory: Dental
-                                    carePlan:
-                                        description: Care plan description for Dentist
-                                        name: Dental Specialty Endodontics
-                                        serviceCategory: Dentist
-                                        serviceOptions:
-                                            - description: Initial evaluation for this episode of care
-                                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                              specialtyIds:
-                                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                        specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    date: "2030-01-01"
-                                    networkIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    npi:
-                                        - "1245319599"
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 state: authorized
                                 status: approved
                 "400":
@@ -2252,6 +2265,7 @@ paths:
             tags:
                 - Referral
             summary: Referral.show
+            description: retrieve a Referral by ID
             operationId: Referral#show
             parameters:
                 - name: referralId
@@ -2267,36 +2281,31 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/Referral'
                             example:
+                                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                careCategory: Dental
+                                carePlan:
+                                    description: Care plan description for Dentist
+                                    name: Dental Specialty Endodontics
+                                    serviceCategory: Dentist
+                                    serviceOptions:
+                                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          description: Initial evaluation for this episode of care
+                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                          specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                    specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
-                                requested:
-                                    careCategory: Dental
-                                    carePlan:
-                                        description: Care plan description for Dentist
-                                        name: Dental Specialty Endodontics
-                                        serviceCategory: Dentist
-                                        serviceOptions:
-                                            - description: Initial evaluation for this episode of care
-                                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                              specialtyIds:
-                                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                        specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    date: "2030-01-01"
-                                    networkIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    npi:
-                                        - "1245319599"
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 state: authorized
                                 status: approved
                 "401":
@@ -2373,9 +2382,11 @@ paths:
             parameters:
                 - name: referralId
                   in: path
+                  description: the WellHive referral identifier
                   required: true
                   schema:
                     type: string
+                    description: the WellHive referral identifier
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
                   example: 69cd9203-5e92-47a3-aa03-94b03752872a
             requestBody:
@@ -2385,35 +2396,30 @@ paths:
                         schema:
                             $ref: '#/components/schemas/ReferralUpdatePayload'
                         example:
+                            assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            careCategory: Dental
+                            carePlan:
+                                description: Care plan description for Dentist
+                                name: Dental Specialty Endodontics
+                                serviceCategory: Dentist
+                                serviceOptions:
+                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      description: Initial evaluation for this episode of care
+                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                specialtyIds:
+                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                            date: "2030-01-01"
                             externalId: va-7655-78876545
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
                             referralNumber: "12345"
-                            requested:
-                                careCategory: Dental
-                                carePlan:
-                                    description: Care plan description for Dentist
-                                    name: Dental Specialty Endodontics
-                                    serviceCategory: Dentist
-                                    serviceOptions:
-                                        - description: Initial evaluation for this episode of care
-                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                          specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
-                                networkIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                npi:
-                                    - "1245319599"
-                                specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             state: authorized
                             status: approved
             responses:
@@ -2424,36 +2430,31 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/Referral'
                             example:
+                                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                careCategory: Dental
+                                carePlan:
+                                    description: Care plan description for Dentist
+                                    name: Dental Specialty Endodontics
+                                    serviceCategory: Dentist
+                                    serviceOptions:
+                                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          description: Initial evaluation for this episode of care
+                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                          specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                    specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
-                                requested:
-                                    careCategory: Dental
-                                    carePlan:
-                                        description: Care plan description for Dentist
-                                        name: Dental Specialty Endodontics
-                                        serviceCategory: Dentist
-                                        serviceOptions:
-                                            - description: Initial evaluation for this episode of care
-                                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                              specialtyIds:
-                                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                        specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    date: "2030-01-01"
-                                    networkIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    npi:
-                                        - "1245319599"
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 state: authorized
                                 status: approved
                 "400":
@@ -2525,7 +2526,7 @@ paths:
             tags:
                 - Referral
             summary: Referral.updateOrCreate
-            description: Create a Referral or update an existing Referral;
+            description: create a Referral or update an existing Referral; externalId is required;
             operationId: Referral#updateOrCreate
             requestBody:
                 required: true
@@ -2534,36 +2535,30 @@ paths:
                         schema:
                             $ref: '#/components/schemas/ReferralUpsertPayload'
                         example:
+                            assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            careCategory: Dental
+                            carePlan:
+                                description: Care plan description for Dentist
+                                name: Dental Specialty Endodontics
+                                serviceCategory: Dentist
+                                serviceOptions:
+                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                      description: Initial evaluation for this episode of care
+                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                specialtyIds:
+                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                            date: "2030-01-01"
                             externalId: va-7655-78876545
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
-                            referralId: 69cd9203-5e92-47a3-aa03-94b03752872a
                             referralNumber: "12345"
-                            requested:
-                                careCategory: Dental
-                                carePlan:
-                                    description: Care plan description for Dentist
-                                    name: Dental Specialty Endodontics
-                                    serviceCategory: Dentist
-                                    serviceOptions:
-                                        - description: Initial evaluation for this episode of care
-                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                          specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
-                                networkIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                npi:
-                                    - "1245319599"
-                                specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             state: authorized
                             status: approved
             responses:
@@ -2574,36 +2569,31 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/Referral'
                             example:
+                                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                careCategory: Dental
+                                carePlan:
+                                    description: Care plan description for Dentist
+                                    name: Dental Specialty Endodontics
+                                    serviceCategory: Dentist
+                                    serviceOptions:
+                                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          description: Initial evaluation for this episode of care
+                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                          specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                    specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
-                                requested:
-                                    careCategory: Dental
-                                    carePlan:
-                                        description: Care plan description for Dentist
-                                        name: Dental Specialty Endodontics
-                                        serviceCategory: Dentist
-                                        serviceOptions:
-                                            - description: Initial evaluation for this episode of care
-                                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                              specialtyIds:
-                                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                        specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    date: "2030-01-01"
-                                    networkIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    npi:
-                                        - "1245319599"
-                                    specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 state: authorized
                                 status: approved
                 "400":
@@ -2685,7 +2675,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Blanditiis consequatur.
+                        example: Quia eum consequatur tempora beatae.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2874,7 +2864,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Modi rerum.
+                        example: Dignissimos ad voluptas animi.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3065,7 +3055,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ea et quae ea eveniet neque tempore.
+                        example: Autem sit quis et hic debitis ea.
                     description: Street name, number, direction
                     example:
                         - 120 Main Street
@@ -3144,7 +3134,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ad voluptas sunt est fugiat facere.
+                        example: Explicabo ducimus dolorum cupiditate molestias laudantium fugit.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -3424,7 +3414,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ut error perspiciatis ipsam molestiae.
+                        example: Doloremque necessitatibus repellat atque et non.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
                         - 87b0e9dd-6849-457f-9d1b-40b25584dd73
@@ -3495,6 +3485,10 @@ components:
                           name: Patient
                         - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                           name: Patient
+                        - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                          name: Patient
+                        - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                          name: Patient
                 count:
                     type: integer
                     description: the number of CancelReasons returned in the Result
@@ -3524,7 +3518,7 @@ components:
                     example: Dental Specialty Endodontics
                 serviceCategory:
                     type: string
-                    description: the service category of the requested CarePlan
+                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: Dentist
                 serviceOptions:
                     type: array
@@ -3532,7 +3526,9 @@ components:
                         $ref: '#/components/schemas/ServiceOption'
                     description: the service options of the requested CarePlan
                     example:
-                        - description: Initial evaluation for this episode of care
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          description: Initial evaluation for this episode of care
                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3541,8 +3537,8 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Quia repellendus accusamus aut quia.
-                    description: the specialty ids of the requested CarePlan
+                        example: Quae inventore nihil quibusdam.
+                    description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -3551,7 +3547,9 @@ components:
                 name: Dental Specialty Endodontics
                 serviceCategory: Dentist
                 serviceOptions:
-                    - description: Initial evaluation for this episode of care
+                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                      description: Initial evaluation for this episode of care
                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
                       specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3608,7 +3606,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: address
+                        example: name
                         enum:
                             - address
                             - birthdate
@@ -3861,7 +3859,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Possimus qui.
+                        example: Et amet hic inventore.
                     description: Given names (not always 'first'). Includes middle names
                     example:
                         - Jane
@@ -3871,14 +3869,14 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Minus porro omnis voluptatem vero.
+                        example: Voluptatem sit deleniti sequi.
                     example:
                         - Ms
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Sint sapiente optio similique et est.
+                        example: Provident maiores quam.
                     example:
                         - PhD
                 text:
@@ -4039,17 +4037,17 @@ components:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "2010-01-30T12:52:05Z"
+                    example: "1981-01-04T21:03:07Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "1974-04-16T18:25:26Z"
+                    example: "2008-08-08T15:15:32Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "1983-11-23T02:54:56Z"
-                start: "1999-08-04T15:03:40Z"
+                end: "1986-04-21T03:43:34Z"
+                start: "1978-09-04T16:57:41Z"
         ProviderOrganization:
             type: object
             properties:
@@ -4060,7 +4058,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Porro qui magni itaque ut consequatur consequatur.
+                        example: Culpa at.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4176,7 +4174,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Qui voluptates officia consequatur.
+                        example: Nemo similique praesentium repellat.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -4487,11 +4485,32 @@ components:
         Referral:
             type: object
             properties:
+                assignedNetworkId:
+                    type: string
+                    description: the ID of the Network being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId:
+                    type: string
+                    description: the ID of the Provider Service being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory:
+                    type: string
+                    description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dental
+                carePlan:
+                    $ref: '#/components/schemas/CarePlan'
+                date:
+                    type: string
+                    description: the target date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 externalId:
                     type: string
+                    description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
                 id:
                     type: string
+                    description: the WellHive referral identifier
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
                 patientId:
                     type: string
@@ -4499,20 +4518,19 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority:
                     type: string
-                    description: the priority of the Referral, passed through from the source system
+                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
                     example: 1
                     format: int64
-                    maximum: 1
+                    minimum: 1
+                    maximum: 5
                 referralNumber:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
-                requested:
-                    $ref: '#/components/schemas/ReferralRequestDetails'
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4525,39 +4543,34 @@ components:
                         - revoked
                 status:
                     type: string
-                    description: the status of the Referral, passed through from the source system
+                    description: a free text label for status; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: approved
             example:
+                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory: Dental
+                carePlan:
+                    description: Care plan description for Dentist
+                    name: Dental Specialty Endodontics
+                    serviceCategory: Dentist
+                    serviceOptions:
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          description: Initial evaluation for this episode of care
+                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                    specialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                date: "2030-01-01"
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
                 referralNumber: "12345"
-                requested:
-                    careCategory: Dental
-                    carePlan:
-                        description: Care plan description for Dentist
-                        name: Dental Specialty Endodontics
-                        serviceCategory: Dentist
-                        serviceOptions:
-                            - description: Initial evaluation for this episode of care
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    date: "2030-01-01"
-                    networkIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    npi:
-                        - "1245319599"
-                    specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 state: authorized
                 status: approved
             required:
@@ -4568,8 +4581,28 @@ components:
         ReferralCreatePayload:
             type: object
             properties:
+                assignedNetworkId:
+                    type: string
+                    description: the ID of the Network being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId:
+                    type: string
+                    description: the ID of the Provider Service being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory:
+                    type: string
+                    description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dental
+                carePlan:
+                    $ref: '#/components/schemas/CarePlan'
+                date:
+                    type: string
+                    description: the target date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 externalId:
                     type: string
+                    description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
                 patientId:
                     type: string
@@ -4577,20 +4610,19 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority:
                     type: string
-                    description: the priority of the Referral, passed through from the source system
+                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
                     example: 1
                     format: int64
-                    maximum: 1
+                    minimum: 1
+                    maximum: 5
                 referralNumber:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
-                requested:
-                    $ref: '#/components/schemas/ReferralRequestDetails'
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4603,92 +4635,20 @@ components:
                         - revoked
                 status:
                     type: string
-                    description: the status of the Referral, passed through from the source system
+                    description: a free text label for status; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: approved
             example:
-                externalId: va-7655-78876545
-                patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority: High
-                priorityCode: 1
-                referralNumber: "12345"
-                requested:
-                    careCategory: Dental
-                    carePlan:
-                        description: Care plan description for Dentist
-                        name: Dental Specialty Endodontics
-                        serviceCategory: Dentist
-                        serviceOptions:
-                            - description: Initial evaluation for this episode of care
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    date: "2030-01-01"
-                    networkIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    npi:
-                        - "1245319599"
-                    specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                state: authorized
-                status: approved
-            required:
-                - referralNumber
-                - patientId
-                - requested
-        ReferralRequestDetails:
-            type: object
-            properties:
-                careCategory:
-                    type: string
-                    description: the name of the requested CareCategory, passed through from the source system
-                    example: Dental
-                carePlan:
-                    $ref: '#/components/schemas/CarePlan'
-                date:
-                    type: string
-                    description: the target date for an appointment
-                    example: "2030-01-01"
-                    format: date
-                networkIds:
-                    type: array
-                    items:
-                        type: string
-                        example: Itaque rerum tempora consectetur id exercitationem.
-                    description: the IDs of the requested Networks
-                    example:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                npi:
-                    type: array
-                    items:
-                        type: string
-                        example: Unde ut autem consequuntur perspiciatis.
-                    description: the NPIs of the requested Providers, of individual or organization type
-                    example:
-                        - "1245319599"
-                specialtyIds:
-                    type: array
-                    items:
-                        type: string
-                        example: Voluptas qui.
-                    description: the IDs of the requested Specialties
-                    example:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-            example:
+                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 careCategory: Dental
                 carePlan:
                     description: Care plan description for Dentist
                     name: Dental Specialty Endodontics
                     serviceCategory: Dentist
                     serviceOptions:
-                        - description: Initial evaluation for this episode of care
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          description: Initial evaluation for this episode of care
                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4697,14 +4657,16 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 date: "2030-01-01"
-                networkIds:
-                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                npi:
-                    - "1245319599"
-                specialtyIds:
-                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                externalId: va-7655-78876545
+                patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                priority: High
+                priorityCode: 1
+                referralNumber: "12345"
+                state: authorized
+                status: approved
+            required:
+                - referralNumber
+                - patientId
         ReferralSearchResult:
             type: object
             properties:
@@ -4723,22 +4685,60 @@ components:
                         $ref: '#/components/schemas/Referral'
                     description: Referrals that match the search
                     example:
-                        - externalId: va-7655-78876545
+                        - CarePlan:
+                            description: Care plan description for Dentist
+                            name: Dental Specialty Endodontics
+                            serviceCategory: Dentist
+                            serviceOptions:
+                                - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                  assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                  description: Initial evaluation for this episode of care
+                                  externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                  specialtyIds:
+                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                            specialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          Date: "2025-12-18"
+                          assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          careCategory: Dental
+                          externalId: va-7655-78876545
                           id: ff826316-b95c-4888-b8bb-930598785fed
                           patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
+                          priority: Routine
+                          priorityCode: 1
                           referralNumber: "23456"
-                          requested:
-                            careCategory: Dental
-                            specialtyIds:
-                                - 1223G0001X
                           state: pending
-                        - externalId: va-8765-87651234
+                          status: approved
+                        - CarePlan:
+                            description: Care plan description for Dentist
+                            name: Dental Specialty Endodontics
+                            serviceCategory: Dentist
+                            serviceOptions:
+                                - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                  assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                  description: Initial evaluation for this episode of care
+                                  externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                  specialtyIds:
+                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                            specialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          Date: "2025-12-18"
+                          assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          careCategory: Dental
+                          externalId: va-8765-87651234
                           id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
                           patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
+                          priority: Routine
+                          priorityCode: 1
                           referralNumber: "34567"
-                          requested:
-                            careCategory: Orthopaedic Surgery
                           state: pending
+                          status: approved
                 total:
                     type: integer
                     description: the total number of Referrals matching the search params, not guaranteed to be populated
@@ -4748,30 +4748,88 @@ components:
                 count: 2
                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
                 referrals:
-                    - externalId: va-7655-78876545
+                    - CarePlan:
+                        description: Care plan description for Dentist
+                        name: Dental Specialty Endodontics
+                        serviceCategory: Dentist
+                        serviceOptions:
+                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              description: Initial evaluation for this episode of care
+                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                              specialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                        specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                      Date: "2025-12-18"
+                      assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                      careCategory: Dental
+                      externalId: va-7655-78876545
                       id: ff826316-b95c-4888-b8bb-930598785fed
                       patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
+                      priority: Routine
+                      priorityCode: 1
                       referralNumber: "23456"
-                      requested:
-                        careCategory: Dental
-                        specialtyIds:
-                            - 1223G0001X
                       state: pending
-                    - externalId: va-8765-87651234
+                      status: approved
+                    - CarePlan:
+                        description: Care plan description for Dentist
+                        name: Dental Specialty Endodontics
+                        serviceCategory: Dentist
+                        serviceOptions:
+                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              description: Initial evaluation for this episode of care
+                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                              specialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                        specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                      Date: "2025-12-18"
+                      assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                      careCategory: Dental
+                      externalId: va-8765-87651234
                       id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
                       patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
+                      priority: Routine
+                      priorityCode: 1
                       referralNumber: "34567"
-                      requested:
-                        careCategory: Orthopaedic Surgery
                       state: pending
+                      status: approved
                 total: 5
             required:
                 - count
         ReferralUpdatePayload:
             type: object
             properties:
+                assignedNetworkId:
+                    type: string
+                    description: the ID of the Network being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId:
+                    type: string
+                    description: the ID of the Provider Service being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory:
+                    type: string
+                    description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dental
+                carePlan:
+                    $ref: '#/components/schemas/CarePlan'
+                date:
+                    type: string
+                    description: the target date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 externalId:
                     type: string
+                    description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
                 patientId:
                     type: string
@@ -4779,20 +4837,19 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority:
                     type: string
-                    description: the priority of the Referral, passed through from the source system
+                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
                     example: 1
                     format: int64
-                    maximum: 1
+                    minimum: 1
+                    maximum: 5
                 referralNumber:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
-                requested:
-                    $ref: '#/components/schemas/ReferralRequestDetails'
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4805,49 +4862,63 @@ components:
                         - revoked
                 status:
                     type: string
-                    description: the status of the Referral, passed through from the source system
+                    description: a free text label for status; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: approved
             example:
+                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory: Dental
+                carePlan:
+                    description: Care plan description for Dentist
+                    name: Dental Specialty Endodontics
+                    serviceCategory: Dentist
+                    serviceOptions:
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          description: Initial evaluation for this episode of care
+                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                    specialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                date: "2030-01-01"
                 externalId: va-7655-78876545
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
                 referralNumber: "12345"
-                requested:
-                    careCategory: Dental
-                    carePlan:
-                        description: Care plan description for Dentist
-                        name: Dental Specialty Endodontics
-                        serviceCategory: Dentist
-                        serviceOptions:
-                            - description: Initial evaluation for this episode of care
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    date: "2030-01-01"
-                    networkIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    npi:
-                        - "1245319599"
-                    specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 state: authorized
                 status: approved
             required:
                 - referralNumber
                 - patientId
-                - requested
         ReferralUpsertPayload:
             type: object
             properties:
+                assignedNetworkId:
+                    type: string
+                    description: the ID of the Network being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId:
+                    type: string
+                    description: the ID of the Provider Service being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory:
+                    type: string
+                    description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dental
+                carePlan:
+                    $ref: '#/components/schemas/CarePlan'
+                date:
+                    type: string
+                    description: the target date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 externalId:
                     type: string
+                    description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
                 patientId:
                     type: string
@@ -4855,23 +4926,19 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority:
                     type: string
-                    description: the priority of the Referral, passed through from the source system
+                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
                     example: 1
                     format: int64
-                    maximum: 1
-                referralId:
-                    type: string
-                    example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                    minimum: 1
+                    maximum: 5
                 referralNumber:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
-                requested:
-                    $ref: '#/components/schemas/ReferralRequestDetails'
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4884,48 +4951,50 @@ components:
                         - revoked
                 status:
                     type: string
-                    description: the status of the Referral, passed through from the source system
+                    description: a free text label for status; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: approved
             example:
+                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                careCategory: Dental
+                carePlan:
+                    description: Care plan description for Dentist
+                    name: Dental Specialty Endodontics
+                    serviceCategory: Dentist
+                    serviceOptions:
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          description: Initial evaluation for this episode of care
+                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                    specialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                date: "2030-01-01"
                 externalId: va-7655-78876545
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
-                referralId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referralNumber: "12345"
-                requested:
-                    careCategory: Dental
-                    carePlan:
-                        description: Care plan description for Dentist
-                        name: Dental Specialty Endodontics
-                        serviceCategory: Dentist
-                        serviceOptions:
-                            - description: Initial evaluation for this episode of care
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    date: "2030-01-01"
-                    networkIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    npi:
-                        - "1245319599"
-                    specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 state: authorized
                 status: approved
             required:
+                - externalId
                 - referralNumber
                 - patientId
-                - requested
         ServiceOption:
             type: object
             properties:
+                assignedNetworkId:
+                    type: string
+                    description: the ID of the Network being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId:
+                    type: string
+                    description: the ID of the Provider Service being referred
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 description:
                     type: string
                     description: the description of the ServiceOption
@@ -4938,12 +5007,14 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Aperiam aspernatur aspernatur repudiandae.
-                    description: the specialty ids of the ServiceOption
+                        example: Est dolorem inventore qui reprehenderit ut.
+                    description: the specialty ids of the ServiceOption; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
             example:
+                assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 description: Initial evaluation for this episode of care
                 externalId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 specialtyIds:
@@ -5051,7 +5122,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Est distinctio dignissimos ut quia.
+                        example: Voluptatem dignissimos voluptate sunt doloribus.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
