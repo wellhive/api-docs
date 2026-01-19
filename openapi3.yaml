@@ -2790,7 +2790,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/Specialty'
+                                $ref: '#/components/schemas/SpecialtyResult'
                             example:
                                 id: 207XX0004X
                                 name: Orthopaedic Surgery - Foot and Ankle Surgery
@@ -3214,7 +3214,7 @@ components:
             type: object
             properties:
                 cancelReason:
-                    $ref: '#/components/schemas/Specialty'
+                    $ref: '#/components/schemas/CancelReason'
                 isLatest:
                     type: boolean
                     description: indicates whether these details were just successfully retrieved from ProviderService; if false, lastRetrieved indicates when these details were last successfully retrieved
@@ -3473,13 +3473,26 @@ components:
             required:
                 - id
                 - name
+        CancelReason:
+            type: object
+            properties:
+                id:
+                    type: string
+                    example: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                name:
+                    type: string
+                    description: the name of the CancelReason, one of "Patient", "Provider", or "Other"
+                    example: Patient
+            example:
+                id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                name: Patient
         CancelReasonsResult:
             type: object
             properties:
                 cancelReasons:
                     type: array
                     items:
-                        $ref: '#/components/schemas/Specialty'
+                        $ref: '#/components/schemas/CancelReason'
                     example:
                         - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                           name: Patient
@@ -5189,6 +5202,18 @@ components:
                 total: 5
             required:
                 - count
+        SpecialtyResult:
+            type: object
+            properties:
+                id:
+                    type: string
+                    example: 207XX0004X
+                name:
+                    type: string
+                    example: Orthopaedic Surgery - Foot and Ankle Surgery
+            example:
+                id: 207XX0004X
+                name: Orthopaedic Surgery - Foot and Ankle Surgery
         SpecialtySearchResult:
             type: object
             properties:
