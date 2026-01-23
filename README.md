@@ -160,7 +160,7 @@ loop until User finds the ProviderServices they need
 c->>+n: ProviderService.search(Appointment ID, Network IDs, Patient lat/long, max distance from lat/long, ...)<br>- GET /provider-services -
 n-->>-c: ProviderServices
 
-Note right of c: Optionally, calculate DriveTimes.  Consider caching DriveTimes during a user's search session to reduce DriveTime costs.
+Note right of c: Optionally, calculate DriveTimes.  Consider caching DriveTimes during a user's search session to reduce the DriveTime Calculation quota utilization.
 opt calculate DriveTimes
 c->>+n: <br>DriveTime.calculate(origin, destinations)<br>POST /drive-times
 n-->-c: DriveTimes
@@ -230,7 +230,7 @@ n-->>-c: Appointments
 loop for each returned Appointment
 c->>c: collect Appointment's<br>ProviderService ID<br>into providerServiceIds
 
-Note right of c: Optionally, retrieve latest appointmentDetails from the Provider's external system.  This does incur a cost.  See Pricing.
+Note right of c: Optionally, retrieve latest appointmentDetails from the Provider's external system.  This does affect the utilization quota for Appointment Show.
 opt if Appointment.state == submitted
 c->>+n: Appointment.show(Appointment ID, retrieveLatestDetails=true)
 n-->>-c: Appointment

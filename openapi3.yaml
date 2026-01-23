@@ -30,7 +30,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Fuga molestias necessitatibus qui sapiente ea et.
+                        example: Ea eveniet neque tempore ex quia porro.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -94,6 +94,9 @@ paths:
                             example:
                                 appointments:
                                     - appointmentDetails:
+                                        appointmentType:
+                                            id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                                            name: New Patient
                                         cancelReason:
                                             id: 3b13a8cb-d4f3-4678-8bed-7fa3931c0c40
                                             name: Patient
@@ -300,11 +303,11 @@ paths:
             parameters:
                 - name: retrieveLatestDetails
                   in: query
-                  description: instruct WellHive to retrieve latest appointmentDetails (e.g. status) from the ProviderService's external system; defaults to false; note there is a cost associated, see Pricing
+                  description: instruct WellHive to retrieve latest appointmentDetails (e.g. status) from the ProviderService's external system; defaults to false; note this affects the utilization quota for Appointment Show
                   allowEmptyValue: true
                   schema:
                     type: boolean
-                    description: instruct WellHive to retrieve latest appointmentDetails (e.g. status) from the ProviderService's external system; defaults to false; note there is a cost associated, see Pricing
+                    description: instruct WellHive to retrieve latest appointmentDetails (e.g. status) from the ProviderService's external system; defaults to false; note this affects the utilization quota for Appointment Show
                     default: false
                     example: false
                   example: false
@@ -322,6 +325,9 @@ paths:
                                 $ref: '#/components/schemas/Appointment'
                             example:
                                 appointmentDetails:
+                                    appointmentType:
+                                        id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                                        name: New Patient
                                     cancelReason:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
@@ -439,6 +445,9 @@ paths:
                                 $ref: '#/components/schemas/Appointment'
                             example:
                                 appointmentDetails:
+                                    appointmentType:
+                                        id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                                        name: New Patient
                                     cancelReason:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
@@ -677,6 +686,9 @@ paths:
                                 $ref: '#/components/schemas/Appointment'
                             example:
                                 appointmentDetails:
+                                    appointmentType:
+                                        id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                                        name: New Patient
                                     cancelReason:
                                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                                         name: Patient
@@ -886,7 +898,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ea eveniet neque tempore ex quia porro.
+                        example: Odit similique voluptatem dignissimos voluptate sunt doloribus.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1088,7 +1100,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Magni itaque ut consequatur.
+                        example: Fuga molestias necessitatibus qui sapiente ea et.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1217,7 +1229,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Voluptas qui.
+                        example: Aperiam aspernatur aspernatur repudiandae.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1270,7 +1282,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Itaque rerum tempora consectetur id exercitationem.
+                        example: Voluptas qui.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1284,7 +1296,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Unde ut autem consequuntur perspiciatis.
+                        example: Itaque rerum tempora consectetur id exercitationem.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -1298,7 +1310,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Qui voluptates officia consequatur.
+                        example: Unde ut autem consequuntur perspiciatis.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
@@ -1709,7 +1721,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Perspiciatis est distinctio dignissimos.
+                        example: Qui voluptates officia consequatur.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -1939,7 +1951,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ab quia repellendus accusamus aut quia.
+                        example: Magni itaque ut consequatur.
                     description: find Referrals by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1955,7 +1967,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Aperiam aspernatur aspernatur repudiandae.
+                        example: Ab quia repellendus accusamus aut quia.
                     description: find a Referral by externalId
                     example:
                         - va-7655-78876545
@@ -2016,7 +2028,6 @@ paths:
                                         specialtyIds:
                                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                      Date: "2025-12-18"
                                       assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       careCategory: Dental
@@ -2026,6 +2037,7 @@ paths:
                                       priority: Routine
                                       priorityCode: 1
                                       referralNumber: "23456"
+                                      requestedDate: "2025-12-18"
                                       state: pending
                                       status: approved
                                     - CarePlan:
@@ -2043,7 +2055,6 @@ paths:
                                         specialtyIds:
                                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                      Date: "2025-12-18"
                                       assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       careCategory: Dental
@@ -2053,6 +2064,7 @@ paths:
                                       priority: Routine
                                       priorityCode: 1
                                       referralNumber: "34567"
+                                      requestedDate: "2025-12-18"
                                       state: pending
                                       status: approved
                                 total: 5
@@ -2153,12 +2165,12 @@ paths:
                                 specialtyIds:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                            date: "2030-01-01"
                             externalId: va-7655-78876545
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
                             referralNumber: "12345"
+                            requestedDate: "2030-01-01"
                             state: authorized
                             status: approved
             responses:
@@ -2187,13 +2199,13 @@ paths:
                                     specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                requestedDate: "2030-01-01"
                                 state: authorized
                                 status: approved
                 "400":
@@ -2299,13 +2311,13 @@ paths:
                                     specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                requestedDate: "2030-01-01"
                                 state: authorized
                                 status: approved
                 "401":
@@ -2414,12 +2426,12 @@ paths:
                                 specialtyIds:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                            date: "2030-01-01"
                             externalId: va-7655-78876545
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
                             referralNumber: "12345"
+                            requestedDate: "2030-01-01"
                             state: authorized
                             status: approved
             responses:
@@ -2448,13 +2460,13 @@ paths:
                                     specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                requestedDate: "2030-01-01"
                                 state: authorized
                                 status: approved
                 "400":
@@ -2553,12 +2565,12 @@ paths:
                                 specialtyIds:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                            date: "2030-01-01"
                             externalId: va-7655-78876545
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
                             referralNumber: "12345"
+                            requestedDate: "2030-01-01"
                             state: authorized
                             status: approved
             responses:
@@ -2587,13 +2599,13 @@ paths:
                                     specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                date: "2030-01-01"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                requestedDate: "2030-01-01"
                                 state: authorized
                                 status: approved
                 "400":
@@ -2675,7 +2687,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Quia eum consequatur tempora beatae.
+                        example: Perspiciatis est distinctio dignissimos.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2864,7 +2876,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Dignissimos ad voluptas animi.
+                        example: Quia eum consequatur tempora beatae.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3055,7 +3067,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Autem sit quis et hic debitis ea.
+                        example: Asperiores non est at autem sit.
                     description: Street name, number, direction
                     example:
                         - 120 Main Street
@@ -3134,7 +3146,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Explicabo ducimus dolorum cupiditate molestias laudantium fugit.
+                        example: Sit a beatae hic explicabo ducimus.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -3153,6 +3165,9 @@ components:
                     minLength: 1
             example:
                 appointmentDetails:
+                    appointmentType:
+                        id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                        name: New Patient
                     cancelReason:
                         id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                         name: Patient
@@ -3213,6 +3228,8 @@ components:
         AppointmentDetails:
             type: object
             properties:
+                appointmentType:
+                    $ref: '#/components/schemas/AppointmentType'
                 cancelReason:
                     $ref: '#/components/schemas/CancelReason'
                 isLatest:
@@ -3251,6 +3268,9 @@ components:
                         - unknown
             description: Appointment details as reported by the ProviderService
             example:
+                appointmentType:
+                    id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                    name: New Patient
                 cancelReason:
                     id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                     name: Patient
@@ -3325,6 +3345,9 @@ components:
                     description: Appointments that match the search
                     example:
                         - appointmentDetails:
+                            appointmentType:
+                                id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                                name: New Patient
                             cancelReason:
                                 id: 3b13a8cb-d4f3-4678-8bed-7fa3931c0c40
                                 name: Patient
@@ -3365,6 +3388,9 @@ components:
             example:
                 appointments:
                     - appointmentDetails:
+                        appointmentType:
+                            id: k9512p-bas2-42k1-55pl-ie259x10k5b71
+                            name: New Patient
                         cancelReason:
                             id: 3b13a8cb-d4f3-4678-8bed-7fa3931c0c40
                             name: Patient
@@ -3414,7 +3440,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Doloremque necessitatibus repellat atque et non.
+                        example: Cupiditate molestias laudantium.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
                         - 87b0e9dd-6849-457f-9d1b-40b25584dd73
@@ -3550,7 +3576,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Quae inventore nihil quibusdam.
+                        example: Hic debitis ea.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3603,8 +3629,8 @@ components:
                     example: "5555555555"
             example:
                 period:
-                    end: "1991-03-28T00:27:24Z"
-                    start: "1996-12-09T15:08:03Z"
+                    end: "2011-05-24T19:48:21Z"
+                    start: "2006-05-05T05:27:47Z"
                 type: phone
                 use: home
                 value: "5555555555"
@@ -3619,7 +3645,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: name
+                        example: address
                         enum:
                             - address
                             - birthdate
@@ -3872,7 +3898,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Et amet hic inventore.
+                        example: Sunt doloremque necessitatibus repellat atque et.
                     description: Given names (not always 'first'). Includes middle names
                     example:
                         - Jane
@@ -3882,14 +3908,14 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Voluptatem sit deleniti sequi.
+                        example: Ad et amet hic.
                     example:
                         - Ms
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Provident maiores quam.
+                        example: Sequi voluptatem sit deleniti.
                     example:
                         - PhD
                 text:
@@ -4050,17 +4076,17 @@ components:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "1981-01-04T21:03:07Z"
+                    example: "2011-11-16T08:55:43Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "2008-08-08T15:15:32Z"
+                    example: "2000-02-04T06:47:34Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "1986-04-21T03:43:34Z"
-                start: "1978-09-04T16:57:41Z"
+                end: "2011-12-28T03:01:33Z"
+                start: "2006-05-16T06:48:44Z"
         ProviderOrganization:
             type: object
             properties:
@@ -4071,7 +4097,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Culpa at.
+                        example: Ut enim quia doloremque.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4187,7 +4213,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Nemo similique praesentium repellat.
+                        example: Et quae inventore nihil quibusdam cupiditate est.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -4512,11 +4538,6 @@ components:
                     example: Dental
                 carePlan:
                     $ref: '#/components/schemas/CarePlan'
-                date:
-                    type: string
-                    description: the target date for an appointment
-                    example: "2030-01-01"
-                    format: date
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -4544,6 +4565,11 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                requestedDate:
+                    type: string
+                    description: the requested date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4577,13 +4603,13 @@ components:
                     specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                date: "2030-01-01"
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
                 referralNumber: "12345"
+                requestedDate: "2030-01-01"
                 state: authorized
                 status: approved
             required:
@@ -4608,11 +4634,6 @@ components:
                     example: Dental
                 carePlan:
                     $ref: '#/components/schemas/CarePlan'
-                date:
-                    type: string
-                    description: the target date for an appointment
-                    example: "2030-01-01"
-                    format: date
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -4636,6 +4657,11 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                requestedDate:
+                    type: string
+                    description: the requested date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4669,12 +4695,12 @@ components:
                     specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                date: "2030-01-01"
                 externalId: va-7655-78876545
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
                 referralNumber: "12345"
+                requestedDate: "2030-01-01"
                 state: authorized
                 status: approved
             required:
@@ -4713,7 +4739,6 @@ components:
                             specialtyIds:
                                 - 69cd9203-5e92-47a3-aa03-94b03752872a
                                 - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                          Date: "2025-12-18"
                           assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           careCategory: Dental
@@ -4723,6 +4748,7 @@ components:
                           priority: Routine
                           priorityCode: 1
                           referralNumber: "23456"
+                          requestedDate: "2025-12-18"
                           state: pending
                           status: approved
                         - CarePlan:
@@ -4740,7 +4766,6 @@ components:
                             specialtyIds:
                                 - 69cd9203-5e92-47a3-aa03-94b03752872a
                                 - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                          Date: "2025-12-18"
                           assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           careCategory: Dental
@@ -4750,6 +4775,7 @@ components:
                           priority: Routine
                           priorityCode: 1
                           referralNumber: "34567"
+                          requestedDate: "2025-12-18"
                           state: pending
                           status: approved
                 total:
@@ -4776,7 +4802,6 @@ components:
                         specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                      Date: "2025-12-18"
                       assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       careCategory: Dental
@@ -4786,6 +4811,7 @@ components:
                       priority: Routine
                       priorityCode: 1
                       referralNumber: "23456"
+                      requestedDate: "2025-12-18"
                       state: pending
                       status: approved
                     - CarePlan:
@@ -4803,7 +4829,6 @@ components:
                         specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                      Date: "2025-12-18"
                       assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       careCategory: Dental
@@ -4813,6 +4838,7 @@ components:
                       priority: Routine
                       priorityCode: 1
                       referralNumber: "34567"
+                      requestedDate: "2025-12-18"
                       state: pending
                       status: approved
                 total: 5
@@ -4835,11 +4861,6 @@ components:
                     example: Dental
                 carePlan:
                     $ref: '#/components/schemas/CarePlan'
-                date:
-                    type: string
-                    description: the target date for an appointment
-                    example: "2030-01-01"
-                    format: date
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -4863,6 +4884,11 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                requestedDate:
+                    type: string
+                    description: the requested date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4896,12 +4922,12 @@ components:
                     specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                date: "2030-01-01"
                 externalId: va-7655-78876545
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
                 referralNumber: "12345"
+                requestedDate: "2030-01-01"
                 state: authorized
                 status: approved
             required:
@@ -4924,11 +4950,6 @@ components:
                     example: Dental
                 carePlan:
                     $ref: '#/components/schemas/CarePlan'
-                date:
-                    type: string
-                    description: the target date for an appointment
-                    example: "2030-01-01"
-                    format: date
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -4952,6 +4973,11 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                requestedDate:
+                    type: string
+                    description: the requested date for an appointment
+                    example: "2030-01-01"
+                    format: date
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -4985,12 +5011,12 @@ components:
                     specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                date: "2030-01-01"
                 externalId: va-7655-78876545
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
                 referralNumber: "12345"
+                requestedDate: "2030-01-01"
                 state: authorized
                 status: approved
             required:
@@ -5020,7 +5046,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Est dolorem inventore qui reprehenderit ut.
+                        example: Sint culpa.
                     description: the specialty ids of the ServiceOption; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5135,7 +5161,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Voluptatem dignissimos voluptate sunt doloribus.
+                        example: Qui reprehenderit ut in nemo similique praesentium.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5258,14 +5284,14 @@ components:
             description: Requires a valid JWT retrieved from the Authorization Server.
             scheme: bearer
 tags:
-    - name: Appointment
-      description: an appointment to receive care from a ProviderService
     - name: DriveTime
       description: the time it takes to drive the shortest route from origin to destination
     - name: Network
       description: a group of ProviderOrganizations and ProviderServices authorized to receive Appointments
     - name: ProviderOrganization
       description: a group of ProviderServices, member of one or more Networks
+    - name: Appointment
+      description: an appointment to receive care from a ProviderService
     - name: Referral
       description: an order to send a Patient to a ProviderService, ProviderOrganization, or Network; can be backed by a customer system integration
     - name: ProviderService
