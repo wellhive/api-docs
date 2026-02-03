@@ -2166,6 +2166,24 @@ paths:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             externalId: va-7655-78876545
+                            patientAttributes:
+                                address:
+                                    city: Anytown
+                                    country: USA
+                                    line:
+                                        - 123 Main Street
+                                        - Suite 101
+                                    postalCode: "12345"
+                                    state: FL
+                                    type: both
+                                    use: home
+                                contactDetails:
+                                    - type: phone
+                                      use: home
+                                      value: 555-555-0001
+                                    - type: email
+                                      use: home
+                                      value: joe@example.com
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
@@ -2201,6 +2219,24 @@ paths:
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                patientAttributes:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    contactDetails:
+                                        - type: phone
+                                          use: home
+                                          value: 555-555-0001
+                                        - type: email
+                                          use: home
+                                          value: joe@example.com
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -2313,6 +2349,24 @@ paths:
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                patientAttributes:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    contactDetails:
+                                        - type: phone
+                                          use: home
+                                          value: 555-555-0001
+                                        - type: email
+                                          use: home
+                                          value: joe@example.com
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -2427,6 +2481,24 @@ paths:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             externalId: va-7655-78876545
+                            patientAttributes:
+                                address:
+                                    city: Anytown
+                                    country: USA
+                                    line:
+                                        - 123 Main Street
+                                        - Suite 101
+                                    postalCode: "12345"
+                                    state: FL
+                                    type: both
+                                    use: home
+                                contactDetails:
+                                    - type: phone
+                                      use: home
+                                      value: 555-555-0001
+                                    - type: email
+                                      use: home
+                                      value: joe@example.com
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
@@ -2462,6 +2534,24 @@ paths:
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                patientAttributes:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    contactDetails:
+                                        - type: phone
+                                          use: home
+                                          value: 555-555-0001
+                                        - type: email
+                                          use: home
+                                          value: joe@example.com
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -2566,6 +2656,24 @@ paths:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             externalId: va-7655-78876545
+                            patientAttributes:
+                                address:
+                                    city: Anytown
+                                    country: USA
+                                    line:
+                                        - 123 Main Street
+                                        - Suite 101
+                                    postalCode: "12345"
+                                    state: FL
+                                    type: both
+                                    use: home
+                                contactDetails:
+                                    - type: phone
+                                      use: home
+                                      value: 555-555-0001
+                                    - type: email
+                                      use: home
+                                      value: joe@example.com
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
@@ -2601,6 +2709,24 @@ paths:
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                patientAttributes:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    contactDetails:
+                                        - type: phone
+                                          use: home
+                                          value: 555-555-0001
+                                        - type: email
+                                          use: home
+                                          value: joe@example.com
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -3067,7 +3193,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Asperiores non est at autem sit.
+                        example: Assumenda aut consequuntur asperiores non.
                     description: Street name, number, direction
                     example:
                         - 120 Main Street
@@ -3146,7 +3272,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Sit a beatae hic explicabo ducimus.
+                        example: Eligendi sit a beatae hic explicabo.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -3440,7 +3566,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Cupiditate molestias laudantium.
+                        example: Dolorum cupiditate.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
                         - 87b0e9dd-6849-457f-9d1b-40b25584dd73
@@ -3576,7 +3702,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Hic debitis ea.
+                        example: Autem sit quis et hic debitis ea.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -3629,8 +3755,8 @@ components:
                     example: "5555555555"
             example:
                 period:
-                    end: "2011-05-24T19:48:21Z"
-                    start: "2006-05-05T05:27:47Z"
+                    end: "2011-06-22T14:05:06Z"
+                    start: "1985-07-10T09:55:04Z"
                 type: phone
                 use: home
                 value: "5555555555"
@@ -3898,7 +4024,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Sunt doloremque necessitatibus repellat atque et.
+                        example: Laudantium fugit.
                     description: Given names (not always 'first'). Includes middle names
                     example:
                         - Jane
@@ -3908,14 +4034,14 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ad et amet hic.
+                        example: Doloremque necessitatibus repellat atque et non.
                     example:
                         - Ms
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Sequi voluptatem sit deleniti.
+                        example: Et amet hic inventore.
                     example:
                         - PhD
                 text:
@@ -4070,23 +4196,57 @@ components:
                 name: Acme Cardiology
                 npi: "1245319599"
                 npiName: The Smith Group
+        PatientAttributes:
+            type: object
+            properties:
+                address:
+                    $ref: '#/components/schemas/Address'
+                contactDetails:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/ContactPoint'
+                    example:
+                        - type: phone
+                          use: home
+                          value: 555-555-0001
+                        - type: email
+                          use: home
+                          value: joe@example.com
+            example:
+                address:
+                    city: Anytown
+                    country: USA
+                    line:
+                        - 123 Main Street
+                        - Suite 101
+                    postalCode: "12345"
+                    state: FL
+                    type: both
+                    use: home
+                contactDetails:
+                    - type: phone
+                      use: home
+                      value: 555-555-0001
+                    - type: email
+                      use: home
+                      value: joe@example.com
         Period:
             type: object
             properties:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "2011-11-16T08:55:43Z"
+                    example: "1993-04-26T22:03:53Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "2000-02-04T06:47:34Z"
+                    example: "1997-12-24T16:56:44Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "2011-12-28T03:01:33Z"
-                start: "2006-05-16T06:48:44Z"
+                end: "1978-10-28T21:58:03Z"
+                start: "1971-09-05T13:57:56Z"
         ProviderOrganization:
             type: object
             properties:
@@ -4097,7 +4257,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ut enim quia doloremque.
+                        example: Necessitatibus qui animi ut enim quia.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4546,6 +4706,8 @@ components:
                     type: string
                     description: the WellHive referral identifier
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                patientAttributes:
+                    $ref: '#/components/schemas/PatientAttributes'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
@@ -4605,6 +4767,24 @@ components:
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                patientAttributes:
+                    address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                    contactDetails:
+                        - type: phone
+                          use: home
+                          value: 555-555-0001
+                        - type: email
+                          use: home
+                          value: joe@example.com
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
@@ -4638,6 +4818,8 @@ components:
                     type: string
                     description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
+                patientAttributes:
+                    $ref: '#/components/schemas/PatientAttributes'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
@@ -4696,6 +4878,24 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 externalId: va-7655-78876545
+                patientAttributes:
+                    address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                    contactDetails:
+                        - type: phone
+                          use: home
+                          value: 555-555-0001
+                        - type: email
+                          use: home
+                          value: joe@example.com
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
@@ -4865,6 +5065,8 @@ components:
                     type: string
                     description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
+                patientAttributes:
+                    $ref: '#/components/schemas/PatientAttributes'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
@@ -4923,6 +5125,24 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 externalId: va-7655-78876545
+                patientAttributes:
+                    address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                    contactDetails:
+                        - type: phone
+                          use: home
+                          value: 555-555-0001
+                        - type: email
+                          use: home
+                          value: joe@example.com
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
@@ -4954,6 +5174,8 @@ components:
                     type: string
                     description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
+                patientAttributes:
+                    $ref: '#/components/schemas/PatientAttributes'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
@@ -5012,6 +5234,24 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 externalId: va-7655-78876545
+                patientAttributes:
+                    address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                    contactDetails:
+                        - type: phone
+                          use: home
+                          value: 555-555-0001
+                        - type: email
+                          use: home
+                          value: joe@example.com
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
