@@ -792,11 +792,11 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/CarePlanResult'
                             example:
+                                careCategory: Dentist
                                 description: Care plan description for Dentist
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 name: Dental Specialty Endodontics
-                                serviceCategory: Dentist
                                 serviceOptions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -888,10 +888,10 @@ paths:
                             $ref: '#/components/schemas/BatchUpdateOrCreateRequestBody'
                         example:
                             payloads:
-                                - description: Care plan description for Dentist
+                                - careCategory: Dentist
+                                  description: Care plan description for Dentist
                                   externalId: va-7655-78876545
                                   name: Dental Specialty Endodontics
-                                  serviceCategory: Dentist
                                   serviceOptions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -903,10 +903,10 @@ paths:
                                   specialtyIds:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                - description: Care plan description for Dentist
+                                - careCategory: Dentist
+                                  description: Care plan description for Dentist
                                   externalId: va-7655-78876545
                                   name: Dental Specialty Endodontics
-                                  serviceCategory: Dentist
                                   serviceOptions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -928,11 +928,11 @@ paths:
                                 items:
                                     $ref: '#/components/schemas/CarePlanResult'
                                 example:
-                                    - description: Care plan description for Dentist
+                                    - careCategory: Dentist
+                                      description: Care plan description for Dentist
                                       externalId: va-7655-78876545
                                       id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                       name: Dental Specialty Endodontics
-                                      serviceCategory: Dentist
                                       serviceOptions:
                                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -944,11 +944,11 @@ paths:
                                       specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    - description: Care plan description for Dentist
+                                    - careCategory: Dentist
+                                      description: Care plan description for Dentist
                                       externalId: va-7655-78876545
                                       id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                       name: Dental Specialty Endodontics
-                                      serviceCategory: Dentist
                                       serviceOptions:
                                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -960,11 +960,11 @@ paths:
                                       specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                    - description: Care plan description for Dentist
+                                    - careCategory: Dentist
+                                      description: Care plan description for Dentist
                                       externalId: va-7655-78876545
                                       id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                       name: Dental Specialty Endodontics
-                                      serviceCategory: Dentist
                                       serviceOptions:
                                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -979,11 +979,11 @@ paths:
                                 minItems: 1
                                 maxItems: 100
                             example:
-                                - description: Care plan description for Dentist
+                                - careCategory: Dentist
+                                  description: Care plan description for Dentist
                                   externalId: va-7655-78876545
                                   id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                   name: Dental Specialty Endodontics
-                                  serviceCategory: Dentist
                                   serviceOptions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -2396,7 +2396,7 @@ paths:
             tags:
                 - Referral
             summary: Referral.create
-            description: create a Referral;
+            description: create a Referral
             operationId: Referral#create
             requestBody:
                 required: true
@@ -2659,7 +2659,7 @@ paths:
             tags:
                 - Referral
             summary: Referral.update
-            description: update a Referral;
+            description: update a Referral; if updatedAt is provided it will be used to reject stale updates
             operationId: Referral#update
             parameters:
                 - name: referralId
@@ -2708,6 +2708,7 @@ paths:
                             requestedDate: "2030-01-01"
                             state: authorized
                             status: approved
+                            updatedAt: "2026-01-28T00:59:36Z"
             responses:
                 "200":
                     description: OK response.
@@ -2816,7 +2817,7 @@ paths:
             tags:
                 - Referral
             summary: Referral.updateOrCreate
-            description: create a Referral or update an existing Referral; externalId is required;
+            description: create a Referral or update an existing Referral; externalId is required; if updatedAt is provided it will be used to reject stale updates
             operationId: Referral#updateOrCreate
             requestBody:
                 required: true
@@ -2829,9 +2830,9 @@ paths:
                             assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             careCategory: Dental
                             carePlan:
+                                careCategory: Dentist
                                 description: Care plan description for Dentist
                                 name: Dental Specialty Endodontics
-                                serviceCategory: Dentist
                                 serviceOptions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -2870,6 +2871,7 @@ paths:
                             requestedDate: "2030-01-01"
                             state: authorized
                             status: approved
+                            updatedAt: "2026-01-28T00:59:36Z"
             responses:
                 "200":
                     description: OK response.
@@ -3808,10 +3810,10 @@ components:
                     items:
                         $ref: '#/components/schemas/CarePlanUpsertPayload'
                     example:
-                        - description: Care plan description for Dentist
+                        - careCategory: Dentist
+                          description: Care plan description for Dentist
                           externalId: va-7655-78876545
                           name: Dental Specialty Endodontics
-                          serviceCategory: Dentist
                           serviceOptions:
                             - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                               assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -3823,10 +3825,10 @@ components:
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        - description: Care plan description for Dentist
+                        - careCategory: Dentist
+                          description: Care plan description for Dentist
                           externalId: va-7655-78876545
                           name: Dental Specialty Endodontics
-                          serviceCategory: Dentist
                           serviceOptions:
                             - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                               assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -3838,10 +3840,10 @@ components:
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        - description: Care plan description for Dentist
+                        - careCategory: Dentist
+                          description: Care plan description for Dentist
                           externalId: va-7655-78876545
                           name: Dental Specialty Endodontics
-                          serviceCategory: Dentist
                           serviceOptions:
                             - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                               assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -3857,10 +3859,10 @@ components:
                     maxItems: 100
             example:
                 payloads:
-                    - description: Care plan description for Dentist
+                    - careCategory: Dentist
+                      description: Care plan description for Dentist
                       externalId: va-7655-78876545
                       name: Dental Specialty Endodontics
-                      serviceCategory: Dentist
                       serviceOptions:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -3872,10 +3874,10 @@ components:
                       specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    - description: Care plan description for Dentist
+                    - careCategory: Dentist
+                      description: Care plan description for Dentist
                       externalId: va-7655-78876545
                       name: Dental Specialty Endodontics
-                      serviceCategory: Dentist
                       serviceOptions:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -3933,6 +3935,10 @@ components:
         CarePlan:
             type: object
             properties:
+                careCategory:
+                    type: string
+                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dentist
                 description:
                     type: string
                     description: the description of the requested CarePlan
@@ -3945,10 +3951,6 @@ components:
                     type: string
                     description: the name of the requested CarePlan
                     example: Dental Specialty Endodontics
-                serviceCategory:
-                    type: string
-                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: Dentist
                 serviceOptions:
                     type: array
                     items:
@@ -3972,10 +3974,10 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
             example:
+                careCategory: Dentist
                 description: Care plan description for Dentist
                 externalId: va-7655-78876545
                 name: Dental Specialty Endodontics
-                serviceCategory: Dentist
                 serviceOptions:
                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -3990,6 +3992,10 @@ components:
         CarePlanResult:
             type: object
             properties:
+                careCategory:
+                    type: string
+                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dentist
                 description:
                     type: string
                     description: the description of the requested CarePlan
@@ -4006,10 +4012,6 @@ components:
                     type: string
                     description: the name of the requested CarePlan
                     example: Dental Specialty Endodontics
-                serviceCategory:
-                    type: string
-                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: Dentist
                 serviceOptions:
                     type: array
                     items:
@@ -4033,11 +4035,11 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
             example:
+                careCategory: Dentist
                 description: Care plan description for Dentist
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                 name: Dental Specialty Endodontics
-                serviceCategory: Dentist
                 serviceOptions:
                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -4052,6 +4054,10 @@ components:
         CarePlanUpsertPayload:
             type: object
             properties:
+                careCategory:
+                    type: string
+                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Dentist
                 description:
                     type: string
                     description: the description of the requested CarePlan
@@ -4064,10 +4070,6 @@ components:
                     type: string
                     description: the name of the requested CarePlan
                     example: Dental Specialty Endodontics
-                serviceCategory:
-                    type: string
-                    description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: Dentist
                 serviceOptions:
                     type: array
                     items:
@@ -4091,10 +4093,10 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
             example:
+                careCategory: Dentist
                 description: Care plan description for Dentist
                 externalId: va-7655-78876545
                 name: Dental Specialty Endodontics
-                serviceCategory: Dentist
                 serviceOptions:
                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -5409,6 +5411,11 @@ components:
                     type: string
                     description: a free text label for status; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: approved
+                updatedAt:
+                    type: string
+                    description: the timestamp of when the referral was last updated
+                    example: "2026-01-28T00:59:36Z"
+                    format: date-time
             example:
                 assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -5440,6 +5447,7 @@ components:
                 requestedDate: "2030-01-01"
                 state: authorized
                 status: approved
+                updatedAt: "2026-01-28T00:59:36Z"
             required:
                 - referralNumber
                 - patientId
@@ -5508,14 +5516,19 @@ components:
                     type: string
                     description: a free text label for status; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example: approved
+                updatedAt:
+                    type: string
+                    description: the timestamp of when the referral was last updated
+                    example: "2026-01-28T00:59:36Z"
+                    format: date-time
             example:
                 assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 careCategory: Dental
                 carePlan:
+                    careCategory: Dentist
                     description: Care plan description for Dentist
                     name: Dental Specialty Endodontics
-                    serviceCategory: Dentist
                     serviceOptions:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -5554,6 +5567,7 @@ components:
                 requestedDate: "2030-01-01"
                 state: authorized
                 status: approved
+                updatedAt: "2026-01-28T00:59:36Z"
             required:
                 - externalId
                 - referralNumber
