@@ -2417,17 +2417,176 @@ paths:
                                     line:
                                         - 123 Main Street
                                         - Suite 101
+                                    period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
                                     postalCode: "12345"
                                     state: FL
                                     type: both
                                     use: home
+                                authorizedThirdParties:
+                                    - address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                      contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0003
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: jim@example.com
+                                      firstName: Jim
+                                      lastName: Smith
                                 contactDetails:
-                                    - type: phone
+                                    - period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
+                                      type: phone
                                       use: home
                                       value: 555-555-0001
-                                    - type: email
+                                    - period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
+                                      type: email
                                       use: home
                                       value: joe@example.com
+                                dependentInfo:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
+                                    code: child-001
+                                    contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0004
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: sally.doe@bogus.com
+                                    dateOfBirth: "2015-06-01"
+                                    firstName: Sally
+                                    lastName: Doe
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Medical
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
+                                    sex: female
+                                isDependent: true
+                                isPregnant: "no"
+                                powerOfAttorney:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    code: Full
+                                    contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0002
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: joe@example.com
+                                    name: Jane Doe
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
@@ -2456,17 +2615,176 @@ paths:
                                         line:
                                             - 123 Main Street
                                             - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
                                         postalCode: "12345"
                                         state: FL
                                         type: both
                                         use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
                                     contactDetails:
-                                        - type: phone
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
                                           use: home
                                           value: 555-555-0001
-                                        - type: email
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
                                           use: home
                                           value: joe@example.com
+                                    dependentInfo:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        authorizedThirdParties:
+                                            - address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                              contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0003
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: jim@example.com
+                                              firstName: Jim
+                                              lastName: Smith
+                                        code: child-001
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0004
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: sally.doe@bogus.com
+                                        dateOfBirth: "2015-06-01"
+                                        firstName: Sally
+                                        lastName: Doe
+                                        powerOfAttorney:
+                                            address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                            code: Medical
+                                            contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0002
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: joe@example.com
+                                            name: Jane Doe
+                                        sex: female
+                                    isDependent: true
+                                    isPregnant: "no"
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Full
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -2572,17 +2890,176 @@ paths:
                                         line:
                                             - 123 Main Street
                                             - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
                                         postalCode: "12345"
                                         state: FL
                                         type: both
                                         use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
                                     contactDetails:
-                                        - type: phone
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
                                           use: home
                                           value: 555-555-0001
-                                        - type: email
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
                                           use: home
                                           value: joe@example.com
+                                    dependentInfo:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        authorizedThirdParties:
+                                            - address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                              contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0003
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: jim@example.com
+                                              firstName: Jim
+                                              lastName: Smith
+                                        code: child-001
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0004
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: sally.doe@bogus.com
+                                        dateOfBirth: "2015-06-01"
+                                        firstName: Sally
+                                        lastName: Doe
+                                        powerOfAttorney:
+                                            address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                            code: Medical
+                                            contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0002
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: joe@example.com
+                                            name: Jane Doe
+                                        sex: female
+                                    isDependent: true
+                                    isPregnant: "no"
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Full
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -2690,17 +3167,176 @@ paths:
                                     line:
                                         - 123 Main Street
                                         - Suite 101
+                                    period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
                                     postalCode: "12345"
                                     state: FL
                                     type: both
                                     use: home
+                                authorizedThirdParties:
+                                    - address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                      contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0003
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: jim@example.com
+                                      firstName: Jim
+                                      lastName: Smith
                                 contactDetails:
-                                    - type: phone
+                                    - period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
+                                      type: phone
                                       use: home
                                       value: 555-555-0001
-                                    - type: email
+                                    - period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
+                                      type: email
                                       use: home
                                       value: joe@example.com
+                                dependentInfo:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
+                                    code: child-001
+                                    contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0004
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: sally.doe@bogus.com
+                                    dateOfBirth: "2015-06-01"
+                                    firstName: Sally
+                                    lastName: Doe
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Medical
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
+                                    sex: female
+                                isDependent: true
+                                isPregnant: "no"
+                                powerOfAttorney:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    code: Full
+                                    contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0002
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: joe@example.com
+                                    name: Jane Doe
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
@@ -2730,17 +3366,176 @@ paths:
                                         line:
                                             - 123 Main Street
                                             - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
                                         postalCode: "12345"
                                         state: FL
                                         type: both
                                         use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
                                     contactDetails:
-                                        - type: phone
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
                                           use: home
                                           value: 555-555-0001
-                                        - type: email
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
                                           use: home
                                           value: joe@example.com
+                                    dependentInfo:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        authorizedThirdParties:
+                                            - address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                              contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0003
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: jim@example.com
+                                              firstName: Jim
+                                              lastName: Smith
+                                        code: child-001
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0004
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: sally.doe@bogus.com
+                                        dateOfBirth: "2015-06-01"
+                                        firstName: Sally
+                                        lastName: Doe
+                                        powerOfAttorney:
+                                            address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                            code: Medical
+                                            contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0002
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: joe@example.com
+                                            name: Jane Doe
+                                        sex: female
+                                    isDependent: true
+                                    isPregnant: "no"
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Full
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -2853,17 +3648,176 @@ paths:
                                     line:
                                         - 123 Main Street
                                         - Suite 101
+                                    period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
                                     postalCode: "12345"
                                     state: FL
                                     type: both
                                     use: home
+                                authorizedThirdParties:
+                                    - address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                      contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0003
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: jim@example.com
+                                      firstName: Jim
+                                      lastName: Smith
                                 contactDetails:
-                                    - type: phone
+                                    - period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
+                                      type: phone
                                       use: home
                                       value: 555-555-0001
-                                    - type: email
+                                    - period:
+                                        end: "2025-12-31T23:59:59Z"
+                                        start: "2025-01-01T00:00:00Z"
+                                      type: email
                                       use: home
                                       value: joe@example.com
+                                dependentInfo:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
+                                    code: child-001
+                                    contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0004
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: sally.doe@bogus.com
+                                    dateOfBirth: "2015-06-01"
+                                    firstName: Sally
+                                    lastName: Doe
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Medical
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
+                                    sex: female
+                                isDependent: true
+                                isPregnant: "no"
+                                powerOfAttorney:
+                                    address:
+                                        city: Anytown
+                                        country: USA
+                                        line:
+                                            - 123 Main Street
+                                            - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                        postalCode: "12345"
+                                        state: FL
+                                        type: both
+                                        use: home
+                                    code: Full
+                                    contactDetails:
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
+                                          use: home
+                                          value: 555-555-0002
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
+                                          use: home
+                                          value: joe@example.com
+                                    name: Jane Doe
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             priority: High
                             priorityCode: 1
@@ -2893,17 +3847,176 @@ paths:
                                         line:
                                             - 123 Main Street
                                             - Suite 101
+                                        period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
                                         postalCode: "12345"
                                         state: FL
                                         type: both
                                         use: home
+                                    authorizedThirdParties:
+                                        - address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                          contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0003
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: jim@example.com
+                                          firstName: Jim
+                                          lastName: Smith
                                     contactDetails:
-                                        - type: phone
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: phone
                                           use: home
                                           value: 555-555-0001
-                                        - type: email
+                                        - period:
+                                            end: "2025-12-31T23:59:59Z"
+                                            start: "2025-01-01T00:00:00Z"
+                                          type: email
                                           use: home
                                           value: joe@example.com
+                                    dependentInfo:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        authorizedThirdParties:
+                                            - address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                              contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0003
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: jim@example.com
+                                              firstName: Jim
+                                              lastName: Smith
+                                        code: child-001
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0004
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: sally.doe@bogus.com
+                                        dateOfBirth: "2015-06-01"
+                                        firstName: Sally
+                                        lastName: Doe
+                                        powerOfAttorney:
+                                            address:
+                                                city: Anytown
+                                                country: USA
+                                                line:
+                                                    - 123 Main Street
+                                                    - Suite 101
+                                                period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                postalCode: "12345"
+                                                state: FL
+                                                type: both
+                                                use: home
+                                            code: Medical
+                                            contactDetails:
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: phone
+                                                  use: home
+                                                  value: 555-555-0002
+                                                - period:
+                                                    end: "2025-12-31T23:59:59Z"
+                                                    start: "2025-01-01T00:00:00Z"
+                                                  type: email
+                                                  use: home
+                                                  value: joe@example.com
+                                            name: Jane Doe
+                                        sex: female
+                                    isDependent: true
+                                    isPregnant: "no"
+                                    powerOfAttorney:
+                                        address:
+                                            city: Anytown
+                                            country: USA
+                                            line:
+                                                - 123 Main Street
+                                                - Suite 101
+                                            period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                            postalCode: "12345"
+                                            state: FL
+                                            type: both
+                                            use: home
+                                        code: Full
+                                        contactDetails:
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: phone
+                                              use: home
+                                              value: 555-555-0002
+                                            - period:
+                                                end: "2025-12-31T23:59:59Z"
+                                                start: "2025-01-01T00:00:00Z"
+                                              type: email
+                                              use: home
+                                              value: joe@example.com
+                                        name: Jane Doe
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 priority: High
                                 priorityCode: 1
@@ -3802,6 +4915,66 @@ components:
             required:
                 - id
                 - name
+        AuthorizedThirdParty:
+            type: object
+            properties:
+                address:
+                    $ref: '#/components/schemas/Address'
+                contactDetails:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/ContactPoint'
+                    description: contact details for the Authorized Third Party
+                    example:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0003
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: jim@example.com
+                firstName:
+                    type: string
+                    description: the first name of the Authorized Third Party
+                    example: Jim
+                lastName:
+                    type: string
+                    description: the last name of the Authorized Third Party
+                    example: Smith
+            example:
+                address:
+                    city: Anytown
+                    country: USA
+                    line:
+                        - 123 Main Street
+                        - Suite 101
+                    period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                    postalCode: "12345"
+                    state: FL
+                    type: both
+                    use: home
+                contactDetails:
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: phone
+                      use: home
+                      value: 555-555-0003
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: email
+                      use: home
+                      value: jim@example.com
+                firstName: Jim
+                lastName: Smith
         BatchUpdateOrCreateRequestBody:
             type: object
             properties:
@@ -4148,6 +5321,140 @@ components:
                 type: phone
                 use: home
                 value: "5555555555"
+        DependentInfo:
+            type: object
+            properties:
+                address:
+                    $ref: '#/components/schemas/Address'
+                authorizedThirdParties:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/AuthorizedThirdParty'
+                    description: the Authorized Third Parties for the Dependent
+                    example:
+                        - contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
+                code:
+                    type: string
+                    description: a free text label for the type of Dependent; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: child
+                contactDetails:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/ContactPoint'
+                    description: contact details for the Dependent
+                    example:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0004
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: sally@example.com
+                dateOfBirth:
+                    type: string
+                    description: the date of birth of the Dependent
+                    example: "1977-01-01"
+                    format: date
+                firstName:
+                    type: string
+                    description: the first name of the Dependent
+                    example: Sally
+                lastName:
+                    type: string
+                    description: the last name of the Dependent
+                    example: Doe
+                powerOfAttorney:
+                    $ref: '#/components/schemas/PowerOfAttorney'
+                sex:
+                    type: string
+                    description: the sex of the Dependent
+                    example: female
+                    enum:
+                        - female
+                        - male
+                        - unknown
+            example:
+                address:
+                    city: Anytown
+                    country: USA
+                    line:
+                        - 123 Main Street
+                        - Suite 101
+                    period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                    postalCode: "12345"
+                    state: FL
+                    type: both
+                    use: home
+                authorizedThirdParties:
+                    - contactDetails:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0003
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: jim@example.com
+                      firstName: Jim
+                      lastName: Smith
+                code: child
+                contactDetails:
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: phone
+                      use: home
+                      value: 555-555-0004
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: email
+                      use: home
+                      value: sally@example.com
+                dateOfBirth: "1977-01-01"
+                firstName: Sally
+                lastName: Doe
+                powerOfAttorney:
+                    contactDetails:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0002
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: jane@example.com
+                    name: Jane Doe
+                sex: female
         DirectBooking:
             type: object
             properties:
@@ -4589,17 +5896,74 @@ components:
             properties:
                 address:
                     $ref: '#/components/schemas/Address'
+                authorizedThirdParties:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/AuthorizedThirdParty'
+                    description: the Authorized Third Parties for the Patient
+                    example:
+                        - address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                          contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
                 contactDetails:
                     type: array
                     items:
                         $ref: '#/components/schemas/ContactPoint'
+                    description: contact details for the Patient
                     example:
-                        - type: phone
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
                           use: home
                           value: 555-555-0001
-                        - type: email
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
                           use: home
                           value: joe@example.com
+                dependentInfo:
+                    $ref: '#/components/schemas/DependentInfo'
+                isDependent:
+                    type: boolean
+                    description: indicates if the Patient is a dependent
+                    example: true
+                isPregnant:
+                    type: string
+                    description: indicates if the Patient is pregnant; expected values are 'yes', 'no', or 'unknown'
+                    example: "no"
+                    enum:
+                        - "yes"
+                        - "no"
+                        - unknown
+                powerOfAttorney:
+                    $ref: '#/components/schemas/PowerOfAttorney'
             example:
                 address:
                     city: Anytown
@@ -4607,17 +5971,176 @@ components:
                     line:
                         - 123 Main Street
                         - Suite 101
+                    period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
                     postalCode: "12345"
                     state: FL
                     type: both
                     use: home
+                authorizedThirdParties:
+                    - address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                      contactDetails:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0003
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: jim@example.com
+                      firstName: Jim
+                      lastName: Smith
                 contactDetails:
-                    - type: phone
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: phone
                       use: home
                       value: 555-555-0001
-                    - type: email
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: email
                       use: home
                       value: joe@example.com
+                dependentInfo:
+                    address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                    authorizedThirdParties:
+                        - address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                          contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
+                    code: child-001
+                    contactDetails:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0004
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: sally.doe@bogus.com
+                    dateOfBirth: "2015-06-01"
+                    firstName: Sally
+                    lastName: Doe
+                    powerOfAttorney:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        code: Medical
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0002
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: joe@example.com
+                        name: Jane Doe
+                    sex: female
+                isDependent: true
+                isPregnant: "no"
+                powerOfAttorney:
+                    address:
+                        city: Anytown
+                        country: USA
+                        line:
+                            - 123 Main Street
+                            - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                        postalCode: "12345"
+                        state: FL
+                        type: both
+                        use: home
+                    code: Full
+                    contactDetails:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0002
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: joe@example.com
+                    name: Jane Doe
         Period:
             type: object
             properties:
@@ -4635,6 +6158,66 @@ components:
             example:
                 end: "1982-03-07T14:28:20Z"
                 start: "1972-11-03T14:03:35Z"
+        PowerOfAttorney:
+            type: object
+            properties:
+                address:
+                    $ref: '#/components/schemas/Address'
+                code:
+                    type: string
+                    description: a free text label for the type of Power of Attorney; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example: Medical
+                contactDetails:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/ContactPoint'
+                    description: contact details for the Power of Attorney
+                    example:
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
+                          use: home
+                          value: 555-555-0002
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
+                          use: home
+                          value: joe@example.com
+                name:
+                    type: string
+                    description: the name of the Power of Attorney
+                    example: Jane Doe
+            example:
+                address:
+                    city: Anytown
+                    country: USA
+                    line:
+                        - 123 Main Street
+                        - Suite 101
+                    period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                    postalCode: "12345"
+                    state: FL
+                    type: both
+                    use: home
+                code: Medical
+                contactDetails:
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: phone
+                      use: home
+                      value: 555-555-0002
+                    - period:
+                        end: "2025-12-31T23:59:59Z"
+                        start: "2025-01-01T00:00:00Z"
+                      type: email
+                      use: home
+                      value: joe@example.com
+                name: Jane Doe
         ProviderOrganization:
             type: object
             properties:
@@ -5150,17 +6733,176 @@ components:
                         line:
                             - 123 Main Street
                             - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
                         postalCode: "12345"
                         state: FL
                         type: both
                         use: home
+                    authorizedThirdParties:
+                        - address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                          contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
                     contactDetails:
-                        - type: phone
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
                           use: home
                           value: 555-555-0001
-                        - type: email
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
                           use: home
                           value: joe@example.com
+                    dependentInfo:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        authorizedThirdParties:
+                            - address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                              contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0003
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: jim@example.com
+                              firstName: Jim
+                              lastName: Smith
+                        code: child-001
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0004
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: sally.doe@bogus.com
+                        dateOfBirth: "2015-06-01"
+                        firstName: Sally
+                        lastName: Doe
+                        powerOfAttorney:
+                            address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                            code: Medical
+                            contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0002
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: joe@example.com
+                            name: Jane Doe
+                        sex: female
+                    isDependent: true
+                    isPregnant: "no"
+                    powerOfAttorney:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        code: Full
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0002
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: joe@example.com
+                        name: Jane Doe
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
@@ -5249,17 +6991,176 @@ components:
                         line:
                             - 123 Main Street
                             - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
                         postalCode: "12345"
                         state: FL
                         type: both
                         use: home
+                    authorizedThirdParties:
+                        - address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                          contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
                     contactDetails:
-                        - type: phone
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
                           use: home
                           value: 555-555-0001
-                        - type: email
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
                           use: home
                           value: joe@example.com
+                    dependentInfo:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        authorizedThirdParties:
+                            - address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                              contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0003
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: jim@example.com
+                              firstName: Jim
+                              lastName: Smith
+                        code: child-001
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0004
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: sally.doe@bogus.com
+                        dateOfBirth: "2015-06-01"
+                        firstName: Sally
+                        lastName: Doe
+                        powerOfAttorney:
+                            address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                            code: Medical
+                            contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0002
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: joe@example.com
+                            name: Jane Doe
+                        sex: female
+                    isDependent: true
+                    isPregnant: "no"
+                    powerOfAttorney:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        code: Full
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0002
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: joe@example.com
+                        name: Jane Doe
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
@@ -5429,17 +7330,176 @@ components:
                         line:
                             - 123 Main Street
                             - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
                         postalCode: "12345"
                         state: FL
                         type: both
                         use: home
+                    authorizedThirdParties:
+                        - address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                          contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
                     contactDetails:
-                        - type: phone
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
                           use: home
                           value: 555-555-0001
-                        - type: email
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
                           use: home
                           value: joe@example.com
+                    dependentInfo:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        authorizedThirdParties:
+                            - address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                              contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0003
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: jim@example.com
+                              firstName: Jim
+                              lastName: Smith
+                        code: child-001
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0004
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: sally.doe@bogus.com
+                        dateOfBirth: "2015-06-01"
+                        firstName: Sally
+                        lastName: Doe
+                        powerOfAttorney:
+                            address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                            code: Medical
+                            contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0002
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: joe@example.com
+                            name: Jane Doe
+                        sex: female
+                    isDependent: true
+                    isPregnant: "no"
+                    powerOfAttorney:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        code: Full
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0002
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: joe@example.com
+                        name: Jane Doe
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
@@ -5549,17 +7609,176 @@ components:
                         line:
                             - 123 Main Street
                             - Suite 101
+                        period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
                         postalCode: "12345"
                         state: FL
                         type: both
                         use: home
+                    authorizedThirdParties:
+                        - address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                          contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0003
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: jim@example.com
+                          firstName: Jim
+                          lastName: Smith
                     contactDetails:
-                        - type: phone
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: phone
                           use: home
                           value: 555-555-0001
-                        - type: email
+                        - period:
+                            end: "2025-12-31T23:59:59Z"
+                            start: "2025-01-01T00:00:00Z"
+                          type: email
                           use: home
                           value: joe@example.com
+                    dependentInfo:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        authorizedThirdParties:
+                            - address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                              contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0003
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: jim@example.com
+                              firstName: Jim
+                              lastName: Smith
+                        code: child-001
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0004
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: sally.doe@bogus.com
+                        dateOfBirth: "2015-06-01"
+                        firstName: Sally
+                        lastName: Doe
+                        powerOfAttorney:
+                            address:
+                                city: Anytown
+                                country: USA
+                                line:
+                                    - 123 Main Street
+                                    - Suite 101
+                                period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                postalCode: "12345"
+                                state: FL
+                                type: both
+                                use: home
+                            code: Medical
+                            contactDetails:
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: phone
+                                  use: home
+                                  value: 555-555-0002
+                                - period:
+                                    end: "2025-12-31T23:59:59Z"
+                                    start: "2025-01-01T00:00:00Z"
+                                  type: email
+                                  use: home
+                                  value: joe@example.com
+                            name: Jane Doe
+                        sex: female
+                    isDependent: true
+                    isPregnant: "no"
+                    powerOfAttorney:
+                        address:
+                            city: Anytown
+                            country: USA
+                            line:
+                                - 123 Main Street
+                                - Suite 101
+                            period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                            postalCode: "12345"
+                            state: FL
+                            type: both
+                            use: home
+                        code: Full
+                        contactDetails:
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: phone
+                              use: home
+                              value: 555-555-0002
+                            - period:
+                                end: "2025-12-31T23:59:59Z"
+                                start: "2025-01-01T00:00:00Z"
+                              type: email
+                              use: home
+                              value: joe@example.com
+                        name: Jane Doe
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 priority: High
                 priorityCode: 1
