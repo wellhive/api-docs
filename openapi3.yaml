@@ -30,7 +30,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Quia dolorem eum.
+                        example: Quos occaecati commodi et debitis.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -795,11 +795,31 @@ paths:
                                 actions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      description: Initial evaluation for this episode of care
+                                      attentionItems:
+                                        - category: high
+                                          description: This is a full description of the first attention item
+                                          summary: This is a summary of the first attention item
+                                        - category: medium
+                                          description: This is a full description of the second attention item
+                                          summary: This is a summary of the second attention item
+                                      descriptionLines:
+                                        - line 1
+                                        - line 2
                                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      isRecordReviewAcceptable: true
+                                      patientMustBePresent: true
+                                      patientPreferences:
+                                        providerSex: female
+                                      priorities:
+                                        - High
+                                      priorityCode: 1
+                                      secondarySpecialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                       specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                      summary: Initial evaluation for this episode of care
                                 category: Dentist
                                 description: Care plan description for Dentist
                                 externalId: va-7655-78876545
@@ -891,41 +911,31 @@ paths:
                                 - actions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      description: Initial evaluation for this episode of care
+                                      attentionItems:
+                                        - category: high
+                                          description: This is a full description of the first attention item
+                                          summary: This is a summary of the first attention item
+                                        - category: medium
+                                          description: This is a full description of the second attention item
+                                          summary: This is a summary of the second attention item
+                                      descriptionLines:
+                                        - line 1
+                                        - line 2
                                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      isRecordReviewAcceptable: true
+                                      patientMustBePresent: true
+                                      patientPreferences:
+                                        providerSex: female
+                                      priorities:
+                                        - High
+                                      priorityCode: 1
+                                      secondarySpecialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                       specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                  category: Dentist
-                                  description: Care plan description for Dentist
-                                  externalId: va-7655-78876545
-                                  name: Dental Specialty Endodontics
-                                  specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                - actions:
-                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      description: Initial evaluation for this episode of care
-                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                      specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                  category: Dentist
-                                  description: Care plan description for Dentist
-                                  externalId: va-7655-78876545
-                                  name: Dental Specialty Endodontics
-                                  specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                - actions:
-                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      description: Initial evaluation for this episode of care
-                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                      specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                      summary: Initial evaluation for this episode of care
                                   category: Dentist
                                   description: Care plan description for Dentist
                                   externalId: va-7655-78876545
@@ -946,11 +956,67 @@ paths:
                                     - actions:
                                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                          description: Initial evaluation for this episode of care
+                                          attentionItems:
+                                            - category: high
+                                              description: This is a full description of the first attention item
+                                              summary: This is a summary of the first attention item
+                                            - category: medium
+                                              description: This is a full description of the second attention item
+                                              summary: This is a summary of the second attention item
+                                          descriptionLines:
+                                            - line 1
+                                            - line 2
                                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                          isRecordReviewAcceptable: true
+                                          patientMustBePresent: true
+                                          patientPreferences:
+                                            providerSex: female
+                                          priorities:
+                                            - High
+                                          priorityCode: 1
+                                          secondarySpecialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                           specialtyIds:
                                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                          summary: Initial evaluation for this episode of care
+                                      category: Dentist
+                                      description: Care plan description for Dentist
+                                      externalId: va-7655-78876545
+                                      id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                      name: Dental Specialty Endodontics
+                                      specialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                    - actions:
+                                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                          attentionItems:
+                                            - category: high
+                                              description: This is a full description of the first attention item
+                                              summary: This is a summary of the first attention item
+                                            - category: medium
+                                              description: This is a full description of the second attention item
+                                              summary: This is a summary of the second attention item
+                                          descriptionLines:
+                                            - line 1
+                                            - line 2
+                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                          isRecordReviewAcceptable: true
+                                          patientMustBePresent: true
+                                          patientPreferences:
+                                            providerSex: female
+                                          priorities:
+                                            - High
+                                          priorityCode: 1
+                                          secondarySpecialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                          specialtyIds:
+                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                          summary: Initial evaluation for this episode of care
                                       category: Dentist
                                       description: Care plan description for Dentist
                                       externalId: va-7655-78876545
@@ -965,27 +1031,31 @@ paths:
                                 - actions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      description: Initial evaluation for this episode of care
+                                      attentionItems:
+                                        - category: high
+                                          description: This is a full description of the first attention item
+                                          summary: This is a summary of the first attention item
+                                        - category: medium
+                                          description: This is a full description of the second attention item
+                                          summary: This is a summary of the second attention item
+                                      descriptionLines:
+                                        - line 1
+                                        - line 2
                                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                                      isRecordReviewAcceptable: true
+                                      patientMustBePresent: true
+                                      patientPreferences:
+                                        providerSex: female
+                                      priorities:
+                                        - High
+                                      priorityCode: 1
+                                      secondarySpecialtyIds:
+                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                       specialtyIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                  category: Dentist
-                                  description: Care plan description for Dentist
-                                  externalId: va-7655-78876545
-                                  id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                  name: Dental Specialty Endodontics
-                                  specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                - actions:
-                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      description: Initial evaluation for this episode of care
-                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                      specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                      summary: Initial evaluation for this episode of care
                                   category: Dentist
                                   description: Care plan description for Dentist
                                   externalId: va-7655-78876545
@@ -1185,7 +1255,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Beatae dignissimos dignissimos ad voluptas animi aut.
+                        example: Distinctio error voluptas est praesentium.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1387,7 +1457,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Soluta quia.
+                        example: Repudiandae tempora sunt debitis impedit animi sequi.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1516,7 +1586,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Fugiat quia ad consectetur.
+                        example: Aspernatur aut omnis quia aspernatur quo sit.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1569,7 +1639,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Odio ut enim consequatur.
+                        example: Minima neque.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1583,7 +1653,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Officiis commodi a et fugiat.
+                        example: Quia vitae ut maiores et suscipit vel.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -1597,7 +1667,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Magnam consequatur quo eligendi.
+                        example: Numquam earum omnis et qui eveniet.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
@@ -2008,7 +2078,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Sit sapiente id est aut voluptatibus.
+                        example: Ipsam sed commodi nemo accusantium.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -2238,7 +2308,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ut qui consequatur est itaque vel possimus.
+                        example: Voluptatem repellendus.
                     description: find Referrals by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2254,7 +2324,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Sequi velit.
+                        example: Non occaecati qui eveniet.
                     description: find a Referral by externalId
                     example:
                         - va-7655-78876545
@@ -2409,7 +2479,7 @@ paths:
                             careCategory: Dental
                             carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             externalId: va-7655-78876545
-                            patientAttributes:
+                            patient:
                                 address:
                                     city: Anytown
                                     country: USA
@@ -2452,6 +2522,7 @@ paths:
                                           value: jim@example.com
                                       firstName: Jim
                                       lastName: Smith
+                                birthDate: "1980-01-01"
                                 contactDetails:
                                     - period:
                                         end: "2025-12-31T23:59:59Z"
@@ -2465,98 +2536,16 @@ paths:
                                       type: email
                                       use: home
                                       value: joe@example.com
-                                dependentInfo:
-                                    address:
-                                        city: Anytown
-                                        country: USA
-                                        line:
-                                            - 123 Main Street
-                                            - Suite 101
-                                        period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                        postalCode: "12345"
-                                        state: FL
-                                        type: both
-                                        use: home
-                                    authorizedThirdParties:
-                                        - address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                          contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0003
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: jim@example.com
-                                          firstName: Jim
-                                          lastName: Smith
-                                    code: child-001
-                                    contactDetails:
-                                        - period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                          type: phone
-                                          use: home
-                                          value: 555-555-0004
-                                        - period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                          type: email
-                                          use: home
-                                          value: sally.doe@bogus.com
-                                    dateOfBirth: "2015-06-01"
-                                    firstName: Sally
-                                    lastName: Doe
-                                    powerOfAttorney:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        code: Medical
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0002
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: joe@example.com
-                                        name: Jane Doe
-                                    sex: female
                                 isDependent: true
                                 isPregnant: "no"
+                                name:
+                                    family: Smith
+                                    given:
+                                        - Joe
+                                    period:
+                                        end: "2026-12-31T23:59:59Z"
+                                        start: "2026-01-01T00:00:00Z"
+                                    text: Joe Smith
                                 powerOfAttorney:
                                     address:
                                         city: Anytown
@@ -2586,8 +2575,10 @@ paths:
                                           use: home
                                           value: joe@example.com
                                     name: Jane Doe
+                                sex: female
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                            priority: High
+                            priorities:
+                                - High
                             priorityCode: 1
                             referralNumber: "12345"
                             requestedDate: "2030-01-01"
@@ -2607,7 +2598,7 @@ paths:
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                patientAttributes:
+                                patient:
                                     address:
                                         city: Anytown
                                         country: USA
@@ -2650,6 +2641,7 @@ paths:
                                               value: jim@example.com
                                           firstName: Jim
                                           lastName: Smith
+                                    birthDate: "1980-01-01"
                                     contactDetails:
                                         - period:
                                             end: "2025-12-31T23:59:59Z"
@@ -2663,98 +2655,16 @@ paths:
                                           type: email
                                           use: home
                                           value: joe@example.com
-                                    dependentInfo:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        authorizedThirdParties:
-                                            - address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                              contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0003
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: jim@example.com
-                                              firstName: Jim
-                                              lastName: Smith
-                                        code: child-001
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0004
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: sally.doe@bogus.com
-                                        dateOfBirth: "2015-06-01"
-                                        firstName: Sally
-                                        lastName: Doe
-                                        powerOfAttorney:
-                                            address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                            code: Medical
-                                            contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0002
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: joe@example.com
-                                            name: Jane Doe
-                                        sex: female
                                     isDependent: true
                                     isPregnant: "no"
+                                    name:
+                                        family: Smith
+                                        given:
+                                            - Joe
+                                        period:
+                                            end: "2026-12-31T23:59:59Z"
+                                            start: "2026-01-01T00:00:00Z"
+                                        text: Joe Smith
                                     powerOfAttorney:
                                         address:
                                             city: Anytown
@@ -2784,8 +2694,10 @@ paths:
                                               use: home
                                               value: joe@example.com
                                         name: Jane Doe
+                                    sex: female
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                priority: High
+                                priorities:
+                                    - High
                                 priorityCode: 1
                                 referralNumber: "12345"
                                 requestedDate: "2030-01-01"
@@ -2882,7 +2794,7 @@ paths:
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                patientAttributes:
+                                patient:
                                     address:
                                         city: Anytown
                                         country: USA
@@ -2925,6 +2837,7 @@ paths:
                                               value: jim@example.com
                                           firstName: Jim
                                           lastName: Smith
+                                    birthDate: "1980-01-01"
                                     contactDetails:
                                         - period:
                                             end: "2025-12-31T23:59:59Z"
@@ -2938,98 +2851,16 @@ paths:
                                           type: email
                                           use: home
                                           value: joe@example.com
-                                    dependentInfo:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        authorizedThirdParties:
-                                            - address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                              contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0003
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: jim@example.com
-                                              firstName: Jim
-                                              lastName: Smith
-                                        code: child-001
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0004
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: sally.doe@bogus.com
-                                        dateOfBirth: "2015-06-01"
-                                        firstName: Sally
-                                        lastName: Doe
-                                        powerOfAttorney:
-                                            address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                            code: Medical
-                                            contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0002
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: joe@example.com
-                                            name: Jane Doe
-                                        sex: female
                                     isDependent: true
                                     isPregnant: "no"
+                                    name:
+                                        family: Smith
+                                        given:
+                                            - Joe
+                                        period:
+                                            end: "2026-12-31T23:59:59Z"
+                                            start: "2026-01-01T00:00:00Z"
+                                        text: Joe Smith
                                     powerOfAttorney:
                                         address:
                                             city: Anytown
@@ -3059,8 +2890,10 @@ paths:
                                               use: home
                                               value: joe@example.com
                                         name: Jane Doe
+                                    sex: female
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                priority: High
+                                priorities:
+                                    - High
                                 priorityCode: 1
                                 referralNumber: "12345"
                                 requestedDate: "2030-01-01"
@@ -3159,7 +2992,7 @@ paths:
                             careCategory: Dental
                             carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             externalId: va-7655-78876545
-                            patientAttributes:
+                            patient:
                                 address:
                                     city: Anytown
                                     country: USA
@@ -3202,6 +3035,7 @@ paths:
                                           value: jim@example.com
                                       firstName: Jim
                                       lastName: Smith
+                                birthDate: "1980-01-01"
                                 contactDetails:
                                     - period:
                                         end: "2025-12-31T23:59:59Z"
@@ -3215,98 +3049,16 @@ paths:
                                       type: email
                                       use: home
                                       value: joe@example.com
-                                dependentInfo:
-                                    address:
-                                        city: Anytown
-                                        country: USA
-                                        line:
-                                            - 123 Main Street
-                                            - Suite 101
-                                        period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                        postalCode: "12345"
-                                        state: FL
-                                        type: both
-                                        use: home
-                                    authorizedThirdParties:
-                                        - address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                          contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0003
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: jim@example.com
-                                          firstName: Jim
-                                          lastName: Smith
-                                    code: child-001
-                                    contactDetails:
-                                        - period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                          type: phone
-                                          use: home
-                                          value: 555-555-0004
-                                        - period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                          type: email
-                                          use: home
-                                          value: sally.doe@bogus.com
-                                    dateOfBirth: "2015-06-01"
-                                    firstName: Sally
-                                    lastName: Doe
-                                    powerOfAttorney:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        code: Medical
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0002
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: joe@example.com
-                                        name: Jane Doe
-                                    sex: female
                                 isDependent: true
                                 isPregnant: "no"
+                                name:
+                                    family: Smith
+                                    given:
+                                        - Joe
+                                    period:
+                                        end: "2026-12-31T23:59:59Z"
+                                        start: "2026-01-01T00:00:00Z"
+                                    text: Joe Smith
                                 powerOfAttorney:
                                     address:
                                         city: Anytown
@@ -3336,8 +3088,10 @@ paths:
                                           use: home
                                           value: joe@example.com
                                     name: Jane Doe
+                                sex: female
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                            priority: High
+                            priorities:
+                                - High
                             priorityCode: 1
                             referralNumber: "12345"
                             requestedDate: "2030-01-01"
@@ -3358,7 +3112,7 @@ paths:
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                patientAttributes:
+                                patient:
                                     address:
                                         city: Anytown
                                         country: USA
@@ -3401,6 +3155,7 @@ paths:
                                               value: jim@example.com
                                           firstName: Jim
                                           lastName: Smith
+                                    birthDate: "1980-01-01"
                                     contactDetails:
                                         - period:
                                             end: "2025-12-31T23:59:59Z"
@@ -3414,98 +3169,16 @@ paths:
                                           type: email
                                           use: home
                                           value: joe@example.com
-                                    dependentInfo:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        authorizedThirdParties:
-                                            - address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                              contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0003
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: jim@example.com
-                                              firstName: Jim
-                                              lastName: Smith
-                                        code: child-001
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0004
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: sally.doe@bogus.com
-                                        dateOfBirth: "2015-06-01"
-                                        firstName: Sally
-                                        lastName: Doe
-                                        powerOfAttorney:
-                                            address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                            code: Medical
-                                            contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0002
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: joe@example.com
-                                            name: Jane Doe
-                                        sex: female
                                     isDependent: true
                                     isPregnant: "no"
+                                    name:
+                                        family: Smith
+                                        given:
+                                            - Joe
+                                        period:
+                                            end: "2026-12-31T23:59:59Z"
+                                            start: "2026-01-01T00:00:00Z"
+                                        text: Joe Smith
                                     powerOfAttorney:
                                         address:
                                             city: Anytown
@@ -3535,8 +3208,10 @@ paths:
                                               use: home
                                               value: joe@example.com
                                         name: Jane Doe
+                                    sex: female
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                priority: High
+                                priorities:
+                                    - High
                                 priorityCode: 1
                                 referralNumber: "12345"
                                 requestedDate: "2030-01-01"
@@ -3640,7 +3315,7 @@ paths:
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             externalId: va-7655-78876545
-                            patientAttributes:
+                            patient:
                                 address:
                                     city: Anytown
                                     country: USA
@@ -3683,6 +3358,7 @@ paths:
                                           value: jim@example.com
                                       firstName: Jim
                                       lastName: Smith
+                                birthDate: "1980-01-01"
                                 contactDetails:
                                     - period:
                                         end: "2025-12-31T23:59:59Z"
@@ -3696,98 +3372,16 @@ paths:
                                       type: email
                                       use: home
                                       value: joe@example.com
-                                dependentInfo:
-                                    address:
-                                        city: Anytown
-                                        country: USA
-                                        line:
-                                            - 123 Main Street
-                                            - Suite 101
-                                        period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                        postalCode: "12345"
-                                        state: FL
-                                        type: both
-                                        use: home
-                                    authorizedThirdParties:
-                                        - address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                          contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0003
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: jim@example.com
-                                          firstName: Jim
-                                          lastName: Smith
-                                    code: child-001
-                                    contactDetails:
-                                        - period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                          type: phone
-                                          use: home
-                                          value: 555-555-0004
-                                        - period:
-                                            end: "2025-12-31T23:59:59Z"
-                                            start: "2025-01-01T00:00:00Z"
-                                          type: email
-                                          use: home
-                                          value: sally.doe@bogus.com
-                                    dateOfBirth: "2015-06-01"
-                                    firstName: Sally
-                                    lastName: Doe
-                                    powerOfAttorney:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        code: Medical
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0002
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: joe@example.com
-                                        name: Jane Doe
-                                    sex: female
                                 isDependent: true
                                 isPregnant: "no"
+                                name:
+                                    family: Smith
+                                    given:
+                                        - Joe
+                                    period:
+                                        end: "2026-12-31T23:59:59Z"
+                                        start: "2026-01-01T00:00:00Z"
+                                    text: Joe Smith
                                 powerOfAttorney:
                                     address:
                                         city: Anytown
@@ -3817,8 +3411,10 @@ paths:
                                           use: home
                                           value: joe@example.com
                                     name: Jane Doe
+                                sex: female
                             patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                            priority: High
+                            priorities:
+                                - High
                             priorityCode: 1
                             referralNumber: "12345"
                             requestedDate: "2030-01-01"
@@ -3839,7 +3435,7 @@ paths:
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                patientAttributes:
+                                patient:
                                     address:
                                         city: Anytown
                                         country: USA
@@ -3882,6 +3478,7 @@ paths:
                                               value: jim@example.com
                                           firstName: Jim
                                           lastName: Smith
+                                    birthDate: "1980-01-01"
                                     contactDetails:
                                         - period:
                                             end: "2025-12-31T23:59:59Z"
@@ -3895,98 +3492,16 @@ paths:
                                           type: email
                                           use: home
                                           value: joe@example.com
-                                    dependentInfo:
-                                        address:
-                                            city: Anytown
-                                            country: USA
-                                            line:
-                                                - 123 Main Street
-                                                - Suite 101
-                                            period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                            postalCode: "12345"
-                                            state: FL
-                                            type: both
-                                            use: home
-                                        authorizedThirdParties:
-                                            - address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                              contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0003
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: jim@example.com
-                                              firstName: Jim
-                                              lastName: Smith
-                                        code: child-001
-                                        contactDetails:
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: phone
-                                              use: home
-                                              value: 555-555-0004
-                                            - period:
-                                                end: "2025-12-31T23:59:59Z"
-                                                start: "2025-01-01T00:00:00Z"
-                                              type: email
-                                              use: home
-                                              value: sally.doe@bogus.com
-                                        dateOfBirth: "2015-06-01"
-                                        firstName: Sally
-                                        lastName: Doe
-                                        powerOfAttorney:
-                                            address:
-                                                city: Anytown
-                                                country: USA
-                                                line:
-                                                    - 123 Main Street
-                                                    - Suite 101
-                                                period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                postalCode: "12345"
-                                                state: FL
-                                                type: both
-                                                use: home
-                                            code: Medical
-                                            contactDetails:
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: phone
-                                                  use: home
-                                                  value: 555-555-0002
-                                                - period:
-                                                    end: "2025-12-31T23:59:59Z"
-                                                    start: "2025-01-01T00:00:00Z"
-                                                  type: email
-                                                  use: home
-                                                  value: joe@example.com
-                                            name: Jane Doe
-                                        sex: female
                                     isDependent: true
                                     isPregnant: "no"
+                                    name:
+                                        family: Smith
+                                        given:
+                                            - Joe
+                                        period:
+                                            end: "2026-12-31T23:59:59Z"
+                                            start: "2026-01-01T00:00:00Z"
+                                        text: Joe Smith
                                     powerOfAttorney:
                                         address:
                                             city: Anytown
@@ -4016,8 +3531,10 @@ paths:
                                               use: home
                                               value: joe@example.com
                                         name: Jane Doe
+                                    sex: female
                                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                priority: High
+                                priorities:
+                                    - High
                                 priorityCode: 1
                                 referralNumber: "12345"
                                 requestedDate: "2030-01-01"
@@ -4102,7 +3619,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Ratione sed ab vitae laborum.
+                        example: Beatae natus doloremque quis.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4291,7 +3808,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Maxime nisi qui accusamus optio.
+                        example: Alias nisi iste praesentium sit sed omnis.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4480,31 +3997,115 @@ components:
                     type: string
                     description: the ID of the Provider Service being referred
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                description:
-                    type: string
-                    description: the description of the Action
-                    example: Initial evaluation for this episode of care
+                attentionItems:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/AttentionItem'
+                    description: any attention items relevant to the Action
+                    example:
+                        - category: medium
+                          description: This is a full description of the attention item
+                          summary: This is the summary of the attention item
+                        - category: medium
+                          description: This is a full description of the attention item
+                          summary: This is the summary of the attention item
+                        - category: medium
+                          description: This is a full description of the attention item
+                          summary: This is the summary of the attention item
+                descriptionLines:
+                    type: array
+                    items:
+                        type: string
+                        example: Qui accusamus et velit adipisci quas.
+                    description: the description lines of the Action
+                    example:
+                        - line 1
+                        - line 2
                 externalId:
                     type: string
                     description: the id of the Action, passed through from the source system
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                isRecordReviewAcceptable:
+                    type: boolean
+                    description: whether the Action can be fulfilled by a record review instead of an in-person visit
+                    example: true
+                patientMustBePresent:
+                    type: boolean
+                    description: whether the patient must be present for the Action to be fulfilled
+                    example: true
+                patientPreferences:
+                    $ref: '#/components/schemas/PatientPreferences'
+                priorities:
+                    type: array
+                    items:
+                        type: string
+                        example: Ducimus accusantium rerum veniam.
+                    description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example:
+                        - High
+                priorityCode:
+                    type: integer
+                    description: the priority code of the Action, from 1 to 5 where 1 is the highest
+                    example: 1
+                    format: int64
+                    minimum: 1
+                    maximum: 5
+                secondarySpecialtyIds:
+                    type: array
+                    items:
+                        type: string
+                        example: Quas nam in.
+                    description: the secondary specialty ids of the Action; each ID should be one returned by the /specialties endpoint
+                    example:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 specialtyIds:
                     type: array
                     items:
                         type: string
-                        example: Qui provident minus porro omnis voluptatem vero.
+                        example: Eius ut est suscipit.
                     description: the specialty ids of the Action; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                summary:
+                    type: string
+                    description: the summary of the Action
+                    example: Initial evaluation for this episode of care
             example:
                 assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                description: Initial evaluation for this episode of care
+                attentionItems:
+                    - category: medium
+                      description: This is a full description of the attention item
+                      summary: This is the summary of the attention item
+                    - category: medium
+                      description: This is a full description of the attention item
+                      summary: This is the summary of the attention item
+                    - category: medium
+                      description: This is a full description of the attention item
+                      summary: This is the summary of the attention item
+                    - category: medium
+                      description: This is a full description of the attention item
+                      summary: This is the summary of the attention item
+                descriptionLines:
+                    - line 1
+                    - line 2
                 externalId: 69cd9203-5e92-47a3-aa03-94b03752872a
+                isRecordReviewAcceptable: true
+                patientMustBePresent: true
+                patientPreferences:
+                    providerSex: female
+                priorities:
+                    - High
+                priorityCode: 1
+                secondarySpecialtyIds:
+                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 specialtyIds:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                summary: Initial evaluation for this episode of care
         Address:
             type: object
             properties:
@@ -4518,7 +4119,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Laboriosam unde ut.
+                        example: Non iste.
                     description: Street name, number, direction
                     example:
                         - 120 Main Street
@@ -4597,7 +4198,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Enim officia eos ab delectus.
+                        example: Tempore vel ipsa.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -4891,7 +4492,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Voluptatem non tempore.
+                        example: Nihil quia.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
                         - 87b0e9dd-6849-457f-9d1b-40b25584dd73
@@ -4950,6 +4551,29 @@ components:
             required:
                 - id
                 - name
+        AttentionItem:
+            type: object
+            properties:
+                category:
+                    type: string
+                    description: the impact of the attention item, where values can be 'low', 'medium', or 'high'
+                    example: medium
+                    enum:
+                        - low
+                        - medium
+                        - high
+                description:
+                    type: string
+                    description: a full description of the attention item
+                    example: This is a full description of the attention item
+                summary:
+                    type: string
+                    description: a summary of the attention item
+                    example: This is the summary of the attention item
+            example:
+                category: medium
+                description: This is a full description of the attention item
+                summary: This is the summary of the attention item
         AuthorizedThirdParty:
             type: object
             properties:
@@ -5021,11 +4645,31 @@ components:
                         - actions:
                             - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                               assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              description: Initial evaluation for this episode of care
+                              attentionItems:
+                                - category: high
+                                  description: This is a full description of the first attention item
+                                  summary: This is a summary of the first attention item
+                                - category: medium
+                                  description: This is a full description of the second attention item
+                                  summary: This is a summary of the second attention item
+                              descriptionLines:
+                                - line 1
+                                - line 2
                               externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                              isRecordReviewAcceptable: true
+                              patientMustBePresent: true
+                              patientPreferences:
+                                providerSex: female
+                              priorities:
+                                - High
+                              priorityCode: 1
+                              secondarySpecialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                               specialtyIds:
                                 - 69cd9203-5e92-47a3-aa03-94b03752872a
                                 - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                              summary: Initial evaluation for this episode of care
                           category: Dentist
                           description: Care plan description for Dentist
                           externalId: va-7655-78876545
@@ -5036,11 +4680,66 @@ components:
                         - actions:
                             - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                               assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              description: Initial evaluation for this episode of care
+                              attentionItems:
+                                - category: high
+                                  description: This is a full description of the first attention item
+                                  summary: This is a summary of the first attention item
+                                - category: medium
+                                  description: This is a full description of the second attention item
+                                  summary: This is a summary of the second attention item
+                              descriptionLines:
+                                - line 1
+                                - line 2
                               externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                              isRecordReviewAcceptable: true
+                              patientMustBePresent: true
+                              patientPreferences:
+                                providerSex: female
+                              priorities:
+                                - High
+                              priorityCode: 1
+                              secondarySpecialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                               specialtyIds:
                                 - 69cd9203-5e92-47a3-aa03-94b03752872a
                                 - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                              summary: Initial evaluation for this episode of care
+                          category: Dentist
+                          description: Care plan description for Dentist
+                          externalId: va-7655-78876545
+                          name: Dental Specialty Endodontics
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                        - actions:
+                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              attentionItems:
+                                - category: high
+                                  description: This is a full description of the first attention item
+                                  summary: This is a summary of the first attention item
+                                - category: medium
+                                  description: This is a full description of the second attention item
+                                  summary: This is a summary of the second attention item
+                              descriptionLines:
+                                - line 1
+                                - line 2
+                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                              isRecordReviewAcceptable: true
+                              patientMustBePresent: true
+                              patientPreferences:
+                                providerSex: female
+                              priorities:
+                                - High
+                              priorityCode: 1
+                              secondarySpecialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                              specialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                              summary: Initial evaluation for this episode of care
                           category: Dentist
                           description: Care plan description for Dentist
                           externalId: va-7655-78876545
@@ -5055,41 +4754,31 @@ components:
                     - actions:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          description: Initial evaluation for this episode of care
+                          attentionItems:
+                            - category: high
+                              description: This is a full description of the first attention item
+                              summary: This is a summary of the first attention item
+                            - category: medium
+                              description: This is a full description of the second attention item
+                              summary: This is a summary of the second attention item
+                          descriptionLines:
+                            - line 1
+                            - line 2
                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isRecordReviewAcceptable: true
+                          patientMustBePresent: true
+                          patientPreferences:
+                            providerSex: female
+                          priorities:
+                            - High
+                          priorityCode: 1
+                          secondarySpecialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                      category: Dentist
-                      description: Care plan description for Dentist
-                      externalId: va-7655-78876545
-                      name: Dental Specialty Endodontics
-                      specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    - actions:
-                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          description: Initial evaluation for this episode of care
-                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                          specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                      category: Dentist
-                      description: Care plan description for Dentist
-                      externalId: va-7655-78876545
-                      name: Dental Specialty Endodontics
-                      specialtyIds:
-                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                    - actions:
-                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          description: Initial evaluation for this episode of care
-                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                          specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          summary: Initial evaluation for this episode of care
                       category: Dentist
                       description: Care plan description for Dentist
                       externalId: va-7655-78876545
@@ -5122,6 +4811,10 @@ components:
                           name: Patient
                         - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                           name: Patient
+                        - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                          name: Patient
+                        - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
+                          name: Patient
                 count:
                     type: integer
                     description: the number of CancelReasons returned in the Result
@@ -5149,11 +4842,31 @@ components:
                     example:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          description: Initial evaluation for this episode of care
+                          attentionItems:
+                            - category: high
+                              description: This is a full description of the first attention item
+                              summary: This is a summary of the first attention item
+                            - category: medium
+                              description: This is a full description of the second attention item
+                              summary: This is a summary of the second attention item
+                          descriptionLines:
+                            - line 1
+                            - line 2
                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isRecordReviewAcceptable: true
+                          patientMustBePresent: true
+                          patientPreferences:
+                            providerSex: female
+                          priorities:
+                            - High
+                          priorityCode: 1
+                          secondarySpecialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          summary: Initial evaluation for this episode of care
                 category:
                     type: string
                     description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
@@ -5174,7 +4887,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Perspiciatis ut qui.
+                        example: Accusamus error voluptas repudiandae labore.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5183,11 +4896,31 @@ components:
                 actions:
                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                      description: Initial evaluation for this episode of care
+                      attentionItems:
+                        - category: high
+                          description: This is a full description of the first attention item
+                          summary: This is a summary of the first attention item
+                        - category: medium
+                          description: This is a full description of the second attention item
+                          summary: This is a summary of the second attention item
+                      descriptionLines:
+                        - line 1
+                        - line 2
                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                      isRecordReviewAcceptable: true
+                      patientMustBePresent: true
+                      patientPreferences:
+                        providerSex: female
+                      priorities:
+                        - High
+                      priorityCode: 1
+                      secondarySpecialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                       specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                      summary: Initial evaluation for this episode of care
                 category: Dentist
                 description: Care plan description for Dentist
                 externalId: va-7655-78876545
@@ -5206,11 +4939,31 @@ components:
                     example:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          description: Initial evaluation for this episode of care
+                          attentionItems:
+                            - category: high
+                              description: This is a full description of the first attention item
+                              summary: This is a summary of the first attention item
+                            - category: medium
+                              description: This is a full description of the second attention item
+                              summary: This is a summary of the second attention item
+                          descriptionLines:
+                            - line 1
+                            - line 2
                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isRecordReviewAcceptable: true
+                          patientMustBePresent: true
+                          patientPreferences:
+                            providerSex: female
+                          priorities:
+                            - High
+                          priorityCode: 1
+                          secondarySpecialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          summary: Initial evaluation for this episode of care
                 category:
                     type: string
                     description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
@@ -5235,7 +4988,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Perspiciatis ipsam molestiae commodi.
+                        example: Sed ducimus.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5244,11 +4997,31 @@ components:
                 actions:
                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                      description: Initial evaluation for this episode of care
+                      attentionItems:
+                        - category: high
+                          description: This is a full description of the first attention item
+                          summary: This is a summary of the first attention item
+                        - category: medium
+                          description: This is a full description of the second attention item
+                          summary: This is a summary of the second attention item
+                      descriptionLines:
+                        - line 1
+                        - line 2
                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                      isRecordReviewAcceptable: true
+                      patientMustBePresent: true
+                      patientPreferences:
+                        providerSex: female
+                      priorities:
+                        - High
+                      priorityCode: 1
+                      secondarySpecialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                       specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                      summary: Initial evaluation for this episode of care
                 category: Dentist
                 description: Care plan description for Dentist
                 externalId: va-7655-78876545
@@ -5268,11 +5041,31 @@ components:
                     example:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                          description: Initial evaluation for this episode of care
+                          attentionItems:
+                            - category: high
+                              description: This is a full description of the first attention item
+                              summary: This is a summary of the first attention item
+                            - category: medium
+                              description: This is a full description of the second attention item
+                              summary: This is a summary of the second attention item
+                          descriptionLines:
+                            - line 1
+                            - line 2
                           externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isRecordReviewAcceptable: true
+                          patientMustBePresent: true
+                          patientPreferences:
+                            providerSex: female
+                          priorities:
+                            - High
+                          priorityCode: 1
+                          secondarySpecialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          summary: Initial evaluation for this episode of care
                 category:
                     type: string
                     description: a free text label for service category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
@@ -5293,7 +5086,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Sint sapiente optio similique et est.
+                        example: Labore ex quisquam voluptas exercitationem in.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5302,11 +5095,31 @@ components:
                 actions:
                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                      description: Initial evaluation for this episode of care
+                      attentionItems:
+                        - category: high
+                          description: This is a full description of the first attention item
+                          summary: This is a summary of the first attention item
+                        - category: medium
+                          description: This is a full description of the second attention item
+                          summary: This is a summary of the second attention item
+                      descriptionLines:
+                        - line 1
+                        - line 2
                       externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                      isRecordReviewAcceptable: true
+                      patientMustBePresent: true
+                      patientPreferences:
+                        providerSex: female
+                      priorities:
+                        - High
+                      priorityCode: 1
+                      secondarySpecialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                       specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                      summary: Initial evaluation for this episode of care
                 category: Dentist
                 description: Care plan description for Dentist
                 externalId: va-7655-78876545
@@ -5349,145 +5162,11 @@ components:
                     example: "5555555555"
             example:
                 period:
-                    end: "1975-12-05T10:41:19Z"
-                    start: "1983-12-06T05:18:42Z"
+                    end: "2011-05-24T19:48:21Z"
+                    start: "2006-05-05T05:27:47Z"
                 type: phone
                 use: home
                 value: "5555555555"
-        DependentInfo:
-            type: object
-            properties:
-                address:
-                    $ref: '#/components/schemas/Address'
-                authorizedThirdParties:
-                    type: array
-                    items:
-                        $ref: '#/components/schemas/AuthorizedThirdParty'
-                    description: the Authorized Third Parties for the Dependent
-                    example:
-                        - contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0003
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: jim@example.com
-                          firstName: Jim
-                          lastName: Smith
-                code:
-                    type: string
-                    description: a free text label for the type of Dependent; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: child
-                contactDetails:
-                    type: array
-                    items:
-                        $ref: '#/components/schemas/ContactPoint'
-                    description: contact details for the Dependent
-                    example:
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: phone
-                          use: home
-                          value: 555-555-0004
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: email
-                          use: home
-                          value: sally@example.com
-                dateOfBirth:
-                    type: string
-                    description: the date of birth of the Dependent
-                    example: "1977-01-01"
-                    format: date
-                firstName:
-                    type: string
-                    description: the first name of the Dependent
-                    example: Sally
-                lastName:
-                    type: string
-                    description: the last name of the Dependent
-                    example: Doe
-                powerOfAttorney:
-                    $ref: '#/components/schemas/PowerOfAttorney'
-                sex:
-                    type: string
-                    description: the sex of the Dependent
-                    example: female
-                    enum:
-                        - female
-                        - male
-                        - unknown
-            example:
-                address:
-                    city: Anytown
-                    country: USA
-                    line:
-                        - 123 Main Street
-                        - Suite 101
-                    period:
-                        end: "2025-12-31T23:59:59Z"
-                        start: "2025-01-01T00:00:00Z"
-                    postalCode: "12345"
-                    state: FL
-                    type: both
-                    use: home
-                authorizedThirdParties:
-                    - contactDetails:
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: phone
-                          use: home
-                          value: 555-555-0003
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: email
-                          use: home
-                          value: jim@example.com
-                      firstName: Jim
-                      lastName: Smith
-                code: child
-                contactDetails:
-                    - period:
-                        end: "2025-12-31T23:59:59Z"
-                        start: "2025-01-01T00:00:00Z"
-                      type: phone
-                      use: home
-                      value: 555-555-0004
-                    - period:
-                        end: "2025-12-31T23:59:59Z"
-                        start: "2025-01-01T00:00:00Z"
-                      type: email
-                      use: home
-                      value: sally@example.com
-                dateOfBirth: "1977-01-01"
-                firstName: Sally
-                lastName: Doe
-                powerOfAttorney:
-                    contactDetails:
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: phone
-                          use: home
-                          value: 555-555-0002
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: email
-                          use: home
-                          value: jane@example.com
-                    name: Jane Doe
-                sex: female
         DirectBooking:
             type: object
             properties:
@@ -5499,7 +5178,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: email
+                        example: birthdate
                         enum:
                             - address
                             - birthdate
@@ -5752,7 +5431,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Facilis nostrum vitae delectus quisquam reiciendis vel.
+                        example: Quod architecto ipsam facere et beatae quia.
                     description: Given names (not always 'first'). Includes middle names
                     example:
                         - Jane
@@ -5762,14 +5441,14 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Illo aut aut sed.
+                        example: Et ut possimus quam.
                     example:
                         - Ms
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Eius perferendis quia et.
+                        example: Et possimus labore amet quis sunt fugiat.
                     example:
                         - PhD
                 text:
@@ -5924,7 +5603,7 @@ components:
                 name: Acme Cardiology
                 npi: "1245319599"
                 npiName: The Smith Group
-        PatientAttributes:
+        Patient:
             type: object
             properties:
                 address:
@@ -5963,6 +5642,11 @@ components:
                               value: jim@example.com
                           firstName: Jim
                           lastName: Smith
+                birthDate:
+                    type: string
+                    description: the birth date of the Patient
+                    example: "1980-01-01"
+                    format: date
                 contactDetails:
                     type: array
                     items:
@@ -5981,8 +5665,6 @@ components:
                           type: email
                           use: home
                           value: joe@example.com
-                dependentInfo:
-                    $ref: '#/components/schemas/DependentInfo'
                 isDependent:
                     type: boolean
                     description: indicates if the Patient is a dependent
@@ -5995,8 +5677,17 @@ components:
                         - "yes"
                         - "no"
                         - unknown
+                name:
+                    $ref: '#/components/schemas/HumanName'
                 powerOfAttorney:
                     $ref: '#/components/schemas/PowerOfAttorney'
+                sex:
+                    type: string
+                    description: the sex of the Patient
+                    example: female
+                    enum:
+                        - female
+                        - male
             example:
                 address:
                     city: Anytown
@@ -6040,6 +5731,7 @@ components:
                           value: jim@example.com
                       firstName: Jim
                       lastName: Smith
+                birthDate: "1980-01-01"
                 contactDetails:
                     - period:
                         end: "2025-12-31T23:59:59Z"
@@ -6053,98 +5745,16 @@ components:
                       type: email
                       use: home
                       value: joe@example.com
-                dependentInfo:
-                    address:
-                        city: Anytown
-                        country: USA
-                        line:
-                            - 123 Main Street
-                            - Suite 101
-                        period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                        postalCode: "12345"
-                        state: FL
-                        type: both
-                        use: home
-                    authorizedThirdParties:
-                        - address:
-                            city: Anytown
-                            country: USA
-                            line:
-                                - 123 Main Street
-                                - Suite 101
-                            period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                            postalCode: "12345"
-                            state: FL
-                            type: both
-                            use: home
-                          contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0003
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: jim@example.com
-                          firstName: Jim
-                          lastName: Smith
-                    code: child-001
-                    contactDetails:
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: phone
-                          use: home
-                          value: 555-555-0004
-                        - period:
-                            end: "2025-12-31T23:59:59Z"
-                            start: "2025-01-01T00:00:00Z"
-                          type: email
-                          use: home
-                          value: sally.doe@bogus.com
-                    dateOfBirth: "2015-06-01"
-                    firstName: Sally
-                    lastName: Doe
-                    powerOfAttorney:
-                        address:
-                            city: Anytown
-                            country: USA
-                            line:
-                                - 123 Main Street
-                                - Suite 101
-                            period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                            postalCode: "12345"
-                            state: FL
-                            type: both
-                            use: home
-                        code: Medical
-                        contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0002
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: joe@example.com
-                        name: Jane Doe
-                    sex: female
                 isDependent: true
                 isPregnant: "no"
+                name:
+                    family: Smith
+                    given:
+                        - Joe
+                    period:
+                        end: "2026-12-31T23:59:59Z"
+                        start: "2026-01-01T00:00:00Z"
+                    text: Joe Smith
                 powerOfAttorney:
                     address:
                         city: Anytown
@@ -6174,23 +5784,36 @@ components:
                           use: home
                           value: joe@example.com
                     name: Jane Doe
+                sex: female
+        PatientPreferences:
+            type: object
+            properties:
+                providerSex:
+                    type: string
+                    description: the patient's preference for provider sex, where values can be 'male', 'female'
+                    example: female
+                    enum:
+                        - female
+                        - male
+            example:
+                providerSex: female
         Period:
             type: object
             properties:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "1997-11-18T19:48:49Z"
+                    example: "1987-04-18T22:54:04Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "2006-06-29T09:12:59Z"
+                    example: "1978-05-04T06:39:18Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "1976-07-27T22:26:13Z"
-                start: "1997-05-23T07:47:42Z"
+                end: "2006-12-26T03:05:39Z"
+                start: "1972-05-25T06:40:51Z"
         PowerOfAttorney:
             type: object
             properties:
@@ -6261,7 +5884,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Id unde perferendis.
+                        example: Ut non molestiae a est id.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -6377,7 +6000,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Officia consequatur quis.
+                        example: Maxime pariatur sapiente.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -6712,16 +6335,20 @@ components:
                     type: string
                     description: the WellHive referral identifier
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
-                patientAttributes:
-                    $ref: '#/components/schemas/PatientAttributes'
+                patient:
+                    $ref: '#/components/schemas/Patient'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority:
-                    type: string
-                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: High
+                priorities:
+                    type: array
+                    items:
+                        type: string
+                        example: Beatae a sed quasi excepturi ducimus explicabo.
+                    description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example:
+                        - High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
@@ -6759,7 +6386,7 @@ components:
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                patientAttributes:
+                patient:
                     address:
                         city: Anytown
                         country: USA
@@ -6802,6 +6429,7 @@ components:
                               value: jim@example.com
                           firstName: Jim
                           lastName: Smith
+                    birthDate: "1980-01-01"
                     contactDetails:
                         - period:
                             end: "2025-12-31T23:59:59Z"
@@ -6815,98 +6443,16 @@ components:
                           type: email
                           use: home
                           value: joe@example.com
-                    dependentInfo:
-                        address:
-                            city: Anytown
-                            country: USA
-                            line:
-                                - 123 Main Street
-                                - Suite 101
-                            period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                            postalCode: "12345"
-                            state: FL
-                            type: both
-                            use: home
-                        authorizedThirdParties:
-                            - address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                              contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0003
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: jim@example.com
-                              firstName: Jim
-                              lastName: Smith
-                        code: child-001
-                        contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0004
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: sally.doe@bogus.com
-                        dateOfBirth: "2015-06-01"
-                        firstName: Sally
-                        lastName: Doe
-                        powerOfAttorney:
-                            address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                            code: Medical
-                            contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0002
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: joe@example.com
-                            name: Jane Doe
-                        sex: female
                     isDependent: true
                     isPregnant: "no"
+                    name:
+                        family: Smith
+                        given:
+                            - Joe
+                        period:
+                            end: "2026-12-31T23:59:59Z"
+                            start: "2026-01-01T00:00:00Z"
+                        text: Joe Smith
                     powerOfAttorney:
                         address:
                             city: Anytown
@@ -6936,8 +6482,10 @@ components:
                               use: home
                               value: joe@example.com
                         name: Jane Doe
+                    sex: female
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority: High
+                priorities:
+                    - High
                 priorityCode: 1
                 referralNumber: "12345"
                 requestedDate: "2030-01-01"
@@ -6971,16 +6519,20 @@ components:
                     type: string
                     description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
-                patientAttributes:
-                    $ref: '#/components/schemas/PatientAttributes'
+                patient:
+                    $ref: '#/components/schemas/Patient'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority:
-                    type: string
-                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: High
+                priorities:
+                    type: array
+                    items:
+                        type: string
+                        example: Voluptas quia quaerat exercitationem similique.
+                    description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example:
+                        - High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
@@ -7017,7 +6569,7 @@ components:
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 externalId: va-7655-78876545
-                patientAttributes:
+                patient:
                     address:
                         city: Anytown
                         country: USA
@@ -7060,6 +6612,7 @@ components:
                               value: jim@example.com
                           firstName: Jim
                           lastName: Smith
+                    birthDate: "1980-01-01"
                     contactDetails:
                         - period:
                             end: "2025-12-31T23:59:59Z"
@@ -7073,98 +6626,16 @@ components:
                           type: email
                           use: home
                           value: joe@example.com
-                    dependentInfo:
-                        address:
-                            city: Anytown
-                            country: USA
-                            line:
-                                - 123 Main Street
-                                - Suite 101
-                            period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                            postalCode: "12345"
-                            state: FL
-                            type: both
-                            use: home
-                        authorizedThirdParties:
-                            - address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                              contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0003
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: jim@example.com
-                              firstName: Jim
-                              lastName: Smith
-                        code: child-001
-                        contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0004
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: sally.doe@bogus.com
-                        dateOfBirth: "2015-06-01"
-                        firstName: Sally
-                        lastName: Doe
-                        powerOfAttorney:
-                            address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                            code: Medical
-                            contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0002
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: joe@example.com
-                            name: Jane Doe
-                        sex: female
                     isDependent: true
                     isPregnant: "no"
+                    name:
+                        family: Smith
+                        given:
+                            - Joe
+                        period:
+                            end: "2026-12-31T23:59:59Z"
+                            start: "2026-01-01T00:00:00Z"
+                        text: Joe Smith
                     powerOfAttorney:
                         address:
                             city: Anytown
@@ -7194,8 +6665,10 @@ components:
                               use: home
                               value: joe@example.com
                         name: Jane Doe
+                    sex: female
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority: High
+                priorities:
+                    - High
                 priorityCode: 1
                 referralNumber: "12345"
                 requestedDate: "2030-01-01"
@@ -7305,16 +6778,20 @@ components:
                     type: string
                     description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
-                patientAttributes:
-                    $ref: '#/components/schemas/PatientAttributes'
+                patient:
+                    $ref: '#/components/schemas/Patient'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority:
-                    type: string
-                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: High
+                priorities:
+                    type: array
+                    items:
+                        type: string
+                        example: Quos velit sed beatae eum.
+                    description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example:
+                        - High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
@@ -7356,7 +6833,7 @@ components:
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 externalId: va-7655-78876545
-                patientAttributes:
+                patient:
                     address:
                         city: Anytown
                         country: USA
@@ -7399,6 +6876,7 @@ components:
                               value: jim@example.com
                           firstName: Jim
                           lastName: Smith
+                    birthDate: "1980-01-01"
                     contactDetails:
                         - period:
                             end: "2025-12-31T23:59:59Z"
@@ -7412,98 +6890,16 @@ components:
                           type: email
                           use: home
                           value: joe@example.com
-                    dependentInfo:
-                        address:
-                            city: Anytown
-                            country: USA
-                            line:
-                                - 123 Main Street
-                                - Suite 101
-                            period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                            postalCode: "12345"
-                            state: FL
-                            type: both
-                            use: home
-                        authorizedThirdParties:
-                            - address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                              contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0003
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: jim@example.com
-                              firstName: Jim
-                              lastName: Smith
-                        code: child-001
-                        contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0004
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: sally.doe@bogus.com
-                        dateOfBirth: "2015-06-01"
-                        firstName: Sally
-                        lastName: Doe
-                        powerOfAttorney:
-                            address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                            code: Medical
-                            contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0002
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: joe@example.com
-                            name: Jane Doe
-                        sex: female
                     isDependent: true
                     isPregnant: "no"
+                    name:
+                        family: Smith
+                        given:
+                            - Joe
+                        period:
+                            end: "2026-12-31T23:59:59Z"
+                            start: "2026-01-01T00:00:00Z"
+                        text: Joe Smith
                     powerOfAttorney:
                         address:
                             city: Anytown
@@ -7533,8 +6929,10 @@ components:
                               use: home
                               value: joe@example.com
                         name: Jane Doe
+                    sex: female
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority: High
+                priorities:
+                    - High
                 priorityCode: 1
                 referralNumber: "12345"
                 requestedDate: "2030-01-01"
@@ -7569,16 +6967,20 @@ components:
                     type: string
                     description: your own unique referral identifier, external to WellHive
                     example: va-7655-78876545
-                patientAttributes:
-                    $ref: '#/components/schemas/PatientAttributes'
+                patient:
+                    $ref: '#/components/schemas/Patient'
                 patientId:
                     type: string
                     description: the ID of the Patient being referred
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority:
-                    type: string
-                    description: a free text label for priority; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
-                    example: High
+                priorities:
+                    type: array
+                    items:
+                        type: string
+                        example: Qui eos sed.
+                    description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
+                    example:
+                        - High
                 priorityCode:
                     type: integer
                     description: the priority code of the Referral, from 1 to 5 where 1 is the highest
@@ -7635,7 +7037,7 @@ components:
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 externalId: va-7655-78876545
-                patientAttributes:
+                patient:
                     address:
                         city: Anytown
                         country: USA
@@ -7678,6 +7080,7 @@ components:
                               value: jim@example.com
                           firstName: Jim
                           lastName: Smith
+                    birthDate: "1980-01-01"
                     contactDetails:
                         - period:
                             end: "2025-12-31T23:59:59Z"
@@ -7691,98 +7094,16 @@ components:
                           type: email
                           use: home
                           value: joe@example.com
-                    dependentInfo:
-                        address:
-                            city: Anytown
-                            country: USA
-                            line:
-                                - 123 Main Street
-                                - Suite 101
-                            period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                            postalCode: "12345"
-                            state: FL
-                            type: both
-                            use: home
-                        authorizedThirdParties:
-                            - address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                              contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0003
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: jim@example.com
-                              firstName: Jim
-                              lastName: Smith
-                        code: child-001
-                        contactDetails:
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: phone
-                              use: home
-                              value: 555-555-0004
-                            - period:
-                                end: "2025-12-31T23:59:59Z"
-                                start: "2025-01-01T00:00:00Z"
-                              type: email
-                              use: home
-                              value: sally.doe@bogus.com
-                        dateOfBirth: "2015-06-01"
-                        firstName: Sally
-                        lastName: Doe
-                        powerOfAttorney:
-                            address:
-                                city: Anytown
-                                country: USA
-                                line:
-                                    - 123 Main Street
-                                    - Suite 101
-                                period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                postalCode: "12345"
-                                state: FL
-                                type: both
-                                use: home
-                            code: Medical
-                            contactDetails:
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: phone
-                                  use: home
-                                  value: 555-555-0002
-                                - period:
-                                    end: "2025-12-31T23:59:59Z"
-                                    start: "2025-01-01T00:00:00Z"
-                                  type: email
-                                  use: home
-                                  value: joe@example.com
-                            name: Jane Doe
-                        sex: female
                     isDependent: true
                     isPregnant: "no"
+                    name:
+                        family: Smith
+                        given:
+                            - Joe
+                        period:
+                            end: "2026-12-31T23:59:59Z"
+                            start: "2026-01-01T00:00:00Z"
+                        text: Joe Smith
                     powerOfAttorney:
                         address:
                             city: Anytown
@@ -7812,8 +7133,10 @@ components:
                               use: home
                               value: joe@example.com
                         name: Jane Doe
+                    sex: female
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                priority: High
+                priorities:
+                    - High
                 priorityCode: 1
                 referralNumber: "12345"
                 requestedDate: "2030-01-01"
@@ -7926,7 +7249,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Distinctio dignissimos ut quia eum.
+                        example: Fugiat ut veniam quibusdam officiis.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
