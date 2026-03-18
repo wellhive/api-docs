@@ -4017,7 +4017,7 @@ components:
                     items:
                         type: string
                         example: Qui accusamus et velit adipisci quas.
-                    description: the description lines of the Action
+                    description: a full description of the action; each line is visually separated when displayed in the WellHive application
                     example:
                         - line 1
                         - line 2
