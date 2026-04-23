@@ -39,20 +39,19 @@ Generate a public/private JSON Web Key Set (JWKS) key pair.  Work with WellHive 
 ## Create and Sign a Private Key JWT
 Create and sign the JWT with your private key for use as a JWT assertion in the request for a scoped access token. This JWT is only good for up to an hour and so will need to be replaced at least that often.
 
-At a minimum, include the following claims in the payload of the JWT:
-* `aud`: `https://login.wellhive.com/oauth2/default/v1/token`
-* `iss`: `<your client ID>`
-* `sub`: `<your client ID>`
-* `exp`: `1614664267`
+JWT header:
+* `alg` (required): one of the supported algorithm values (RS256, RS384, RS512, ES256, ES384, or ES512). The auth server uses this to verify the token with your public key.
+* `kid` (recommended; required when you've provided multiple public keys to WellHive): identifies which public key to verify against. If provided, must match the `kid` of a key you've provided to WellHive.
 
-The full set of possible claims are:
-* `alg`: One of the supported algorithm values (RS256, RS384, RS512, ES256, ES384, or ES512). This is required to successfully verify the token by using the signing keys provided in the previous step. The `alg` parameter goes in the JWT header rather than a claim in the payload of the body.
-* `aud`: The full URL of the resource that you're using the JWT to authenticate to: `http://login.wellhive.com/oauth2/default/v1/token`
-* `exp`: The expiration time of the token in seconds since January 1, 1970 UTC (current UNIX timestamp). This value must be a maximum of an hour in the future.
-* `jti`: (Optional) The token's unique identifier. This value is used to prevent the JWT from being replayed. The claim is a case-sensitive string.
-* `iat`: (Optional) The issuing time of the token in seconds since January 1, 1970 UTC (current UNIX timestamp)
-* `iss`: The issuer of the token. This value must be the same as your client ID.
-* `sub`: The subject of the token. This value must be the same as your client ID.
+JWT payload:
+* `aud` (required): the full URL of the resource that you're using the JWT to authenticate to: `https://login.wellhive.com/oauth2/default/v1/token`
+* `iss` (required): the issuer of the token. This value must be the same as your client ID.
+* `sub` (required): the subject of the token. This value must be the same as your client ID.
+* `exp` (required): the expiration time of the token in seconds since January 1, 1970 UTC (current UNIX timestamp). This value must be a maximum of an hour in the future.
+* `jti` (optional): the token's unique identifier. This value is used to prevent the JWT from being replayed. The claim is a case-sensitive string.
+* `iat` (optional): the issuing time of the token in seconds since January 1, 1970 UTC (current UNIX timestamp).
+
+For general background on JWT structure and standard claims, see [jwt.io's Introduction to JWT](https://jwt.io/introduction).
 
 ## Get an Access Token
 To request an access token using the Client Credentials grant flow, POST the Private Key JWT, requested scope, and grant type as URL-encoded form parameters to WellHive's token service at `https://login.wellhive.com/oauth2/default/v1/token`.
