@@ -58,6 +58,8 @@ The full set of possible claims are:
 To request an access token using the Client Credentials grant flow, POST the Private Key JWT, requested scope, and grant type as URL-encoded form parameters to WellHive's token service at `https://login.wellhive.com/oauth2/default/v1/token`.
 
 Include the following parameters:
+   * `grant_type`: Specifies the OAuth 2.0 grant type.
+      * `grant_type=client_credentials`
    * `scope`: Include the scopes that allow you to perform the actions on the endpoint that you want to access. There is only one valid scope.
       * `scope=care-nav`
    * `client_assertion_type`: Specifies the type of assertion, in this case a JWT token:
