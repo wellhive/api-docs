@@ -4615,7 +4615,7 @@ components:
                 error:
                     type: string
                     description: |4
-                        indicates an error has occurred when processing a request to submit or cancel an Appointment:
+                        indicates an error has occurred when processing a request to submit or cancel an Appointment. Possible values include, but are not limited to:
                         * already-canceled - the Appointment is already canceled
                         * appointment-request-id-required - an appointment request is required to book this appointment
                         * appointment-request-not-open - the appointment request is no longer open for booking
@@ -4633,23 +4633,6 @@ components:
                         * too-late-to-cancel - the Appointment time is too near to current time to allow cancelling
                         * unique-match-bad-request - an issue matching this specific patient to the selected ProviderService; WellHive is aware and working to resolve
                     example: slot-conflict
-                    enum:
-                        - already-canceled
-                        - appointment-request-id-required
-                        - appointment-request-not-open
-                        - bad-request
-                        - booking-failed-status
-                        - cannot-book-for-established-patient
-                        - create-timeout-in-flight
-                        - cross-state-lines
-                        - forbidden
-                        - internal-error
-                        - invalid-email
-                        - patient-appointment-conflict
-                        - slot-conflict
-                        - too-far-in-the-future
-                        - too-late-to-cancel
-                        - unique-match-bad-request
                 id:
                     type: string
                     example: b79e46ba-1b09-4195-ae0a-ea42baedea6e
@@ -4922,7 +4905,7 @@ components:
                 error:
                     type: string
                     description: |4
-                        indicates an error has occurred when processing a request to submit or cancel an Appointment:
+                        indicates an error has occurred when processing a request to submit or cancel an Appointment. Possible values include, but are not limited to:
                         * already-canceled - the Appointment is already canceled
                         * appointment-request-id-required - an appointment request is required to book this appointment
                         * appointment-request-not-open - the appointment request is no longer open for booking
@@ -4940,23 +4923,6 @@ components:
                         * too-late-to-cancel - the Appointment time is too near to current time to allow cancelling
                         * unique-match-bad-request - an issue matching this specific patient to the selected ProviderService; WellHive is aware and working to resolve
                     example: slot-conflict
-                    enum:
-                        - already-canceled
-                        - appointment-request-id-required
-                        - appointment-request-not-open
-                        - bad-request
-                        - booking-failed-status
-                        - cannot-book-for-established-patient
-                        - create-timeout-in-flight
-                        - cross-state-lines
-                        - forbidden
-                        - internal-error
-                        - invalid-email
-                        - patient-appointment-conflict
-                        - slot-conflict
-                        - too-far-in-the-future
-                        - too-late-to-cancel
-                        - unique-match-bad-request
                 id:
                     type: string
                     example: b79e46ba-1b09-4195-ae0a-ea42baedea6e
@@ -9076,6 +9042,7 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                    minLength: 1
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -9278,6 +9245,7 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                    minLength: 1
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -9886,6 +9854,7 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                    minLength: 1
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -10096,6 +10065,7 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                    minLength: 1
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -10307,6 +10277,7 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                    minLength: 1
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -10533,6 +10504,7 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                    minLength: 1
                 state:
                     type: string
                     description: the lifecycle state of the Referral
