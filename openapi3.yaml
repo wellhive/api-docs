@@ -30,7 +30,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Rerum ullam nihil dolorum illo qui.
+                        example: Itaque veritatis temporibus.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -171,7 +171,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse9'
+                                $ref: '#/components/schemas/ErrorResponse11'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -277,7 +277,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse10'
+                                $ref: '#/components/schemas/ErrorResponse12'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -394,7 +394,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse11'
+                                $ref: '#/components/schemas/ErrorResponse13'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -514,7 +514,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse13'
+                                $ref: '#/components/schemas/ErrorResponse15'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -600,7 +600,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse14'
+                                $ref: '#/components/schemas/ErrorResponse16'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -765,7 +765,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse12'
+                                $ref: '#/components/schemas/ErrorResponse14'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -816,42 +816,6 @@ paths:
                                 $ref: '#/components/schemas/CarePlanSearchResult'
                             example:
                                 carePlans:
-                                    - actions:
-                                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                          attentionItems:
-                                            - category: high
-                                              description: This is a full description of the first attention item
-                                              summary: This is a summary of the first attention item
-                                            - category: medium
-                                              description: This is a full description of the second attention item
-                                              summary: This is a summary of the second attention item
-                                          descriptionLines:
-                                            - line 1
-                                            - line 2
-                                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                          isRecordReviewAcceptable: true
-                                          patientMustBePresent: true
-                                          patientPreferences:
-                                            providerSex: female
-                                          priorities:
-                                            - High
-                                          priorityCode: 1
-                                          secondarySpecialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                          specialtyIds:
-                                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                          summary: Initial evaluation for this episode of care
-                                      category: Dentist
-                                      description: Care plan description for Dentist
-                                      externalId: va-7655-78876545
-                                      id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                      name: Dental Specialty Endodontics
-                                      specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                     - actions:
                                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -1236,41 +1200,6 @@ paths:
                                   specialtyIds:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                - actions:
-                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      attentionItems:
-                                        - category: high
-                                          description: This is a full description of the first attention item
-                                          summary: This is a summary of the first attention item
-                                        - category: medium
-                                          description: This is a full description of the second attention item
-                                          summary: This is a summary of the second attention item
-                                      descriptionLines:
-                                        - line 1
-                                        - line 2
-                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                      isRecordReviewAcceptable: true
-                                      patientMustBePresent: true
-                                      patientPreferences:
-                                        providerSex: female
-                                      priorities:
-                                        - High
-                                      priorityCode: 1
-                                      secondarySpecialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                      specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                      summary: Initial evaluation for this episode of care
-                                  category: Dentist
-                                  description: Care plan description for Dentist
-                                  externalId: va-7655-78876545
-                                  name: Dental Specialty Endodontics
-                                  specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
             responses:
                 "200":
                     description: OK response.
@@ -1320,42 +1249,6 @@ paths:
                                 minItems: 1
                                 maxItems: 100
                             example:
-                                - actions:
-                                    - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                                      attentionItems:
-                                        - category: high
-                                          description: This is a full description of the first attention item
-                                          summary: This is a summary of the first attention item
-                                        - category: medium
-                                          description: This is a full description of the second attention item
-                                          summary: This is a summary of the second attention item
-                                      descriptionLines:
-                                        - line 1
-                                        - line 2
-                                      externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                                      isRecordReviewAcceptable: true
-                                      patientMustBePresent: true
-                                      patientPreferences:
-                                        providerSex: female
-                                      priorities:
-                                        - High
-                                      priorityCode: 1
-                                      secondarySpecialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                      specialtyIds:
-                                        - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                                      summary: Initial evaluation for this episode of care
-                                  category: Dentist
-                                  description: Care plan description for Dentist
-                                  externalId: va-7655-78876545
-                                  id: 69cd9203-5e92-47a3-aa03-94b03752872a
-                                  name: Dental Specialty Endodontics
-                                  specialtyIds:
-                                    - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                                 - actions:
                                     - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -1568,6 +1461,225 @@ paths:
                                 name: Internal Server Error
             security:
                 - jwt_header_Authorization: []
+    /care-navigation/v1/managed-organizations:
+        get:
+            tags:
+                - ManagedOrganization
+            summary: ManagedOrganization.search
+            description: search the ManagedOrganizations of your own organization; results are always scoped to the organizations you manage
+            operationId: ManagedOrganization#search
+            parameters:
+                - name: id
+                  in: query
+                  description: find ManagedOrganizations matching any of the provided IDs
+                  allowEmptyValue: true
+                  schema:
+                    type: array
+                    items:
+                        type: string
+                        example: Ipsam quo aliquam et quas rem.
+                    description: find ManagedOrganizations matching any of the provided IDs
+                    example:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                  example:
+                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                - name: externalId
+                  in: query
+                  description: find the ManagedOrganization with a matching externalId; returns zero or one result
+                  allowEmptyValue: true
+                  schema:
+                    type: string
+                    description: find the ManagedOrganization with a matching externalId; returns zero or one result
+                    example: vha-eps-98765
+                  example: vha-eps-98765
+                - name: name
+                  in: query
+                  description: find ManagedOrganizations with matching names
+                  allowEmptyValue: true
+                  schema:
+                    type: string
+                    description: find ManagedOrganizations with matching names
+                    example: VHA Direct
+                  example: VHA Direct
+                - name: pageSize
+                  in: query
+                  description: the number of results to return per page, defaults to 100
+                  allowEmptyValue: true
+                  schema:
+                    type: integer
+                    description: the number of results to return per page, defaults to 100
+                    example: 100
+                    format: int64
+                    minimum: 1
+                    maximum: 1000
+                  example: 100
+                - name: nextToken
+                  in: query
+                  description: the nextToken from a previous ManagedOrganizationSearchResult to use for retrieving the next page, other params are ignored when this one is provided
+                  allowEmptyValue: true
+                  schema:
+                    type: string
+                    description: the nextToken from a previous ManagedOrganizationSearchResult to use for retrieving the next page, other params are ignored when this one is provided
+                    example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                  example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+            responses:
+                "200":
+                    description: OK response.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ManagedOrganizationSearchResult'
+                            example:
+                                count: 2
+                                managedOrganizations:
+                                    - externalOrganizationIds:
+                                        - vha-eps-98765
+                                      id: ff826316-b95c-4888-b8bb-930598785fed
+                                      name: VHA Direct Provider Organization
+                                    - externalOrganizationIds:
+                                        - vha-eps-12345
+                                      id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
+                                      name: Meridian Health
+                                nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                                total: 5
+                "400":
+                    description: 'Bad Request: something is wrong with the request'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                message: invalid value for field xyz
+                                name: Bad Request
+                "401":
+                    description: 'Unauthorized: not authorized to make the request'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                name: Unauthorized
+                "403":
+                    description: 'Forbidden: the request is forbidden (example, the IP address is not within the Trusted Internet Connection [TIC] address range)'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                message: requests must originate from your organization's Trusted Internet Connection (TIC)
+                                name: Forbidden
+                "429":
+                    description: 'Too Many Requests: the number or rate of requests has exceeded a limit'
+                    headers:
+                        Retry-After:
+                            description: indicates how long the user agent should wait before making a follow-up request
+                            schema:
+                                type: integer
+                                description: indicates how long the user agent should wait before making a follow-up request
+                                example: "60"
+                                format: int64
+                            example: "60"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse6'
+                            example:
+                                isTemporary: true
+                                name: Too Many Requests
+                "500":
+                    description: 'Internal Server Error: the server encountered an unexpected problem'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                isFault: true
+                                isTemporary: true
+                                name: Internal Server Error
+            security:
+                - jwt_header_Authorization: []
+    /care-navigation/v1/managed-organizations/{managedOrganizationId}:
+        get:
+            tags:
+                - ManagedOrganization
+            summary: ManagedOrganization.show
+            description: retrieve one of your ManagedOrganizations by ID
+            operationId: ManagedOrganization#show
+            parameters:
+                - name: managedOrganizationId
+                  in: path
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    description: OK response.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ManagedOrganizationResult'
+                            example:
+                                externalOrganizationIds:
+                                    - vha-eps-98765
+                                id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                                name: VHA Direct Provider Organization
+                "401":
+                    description: 'Unauthorized: not authorized to make the request'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                name: Unauthorized
+                "403":
+                    description: 'Forbidden: the request is forbidden (example, the IP address is not within the Trusted Internet Connection [TIC] address range)'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                message: requests must originate from your organization's Trusted Internet Connection (TIC)
+                                name: Forbidden
+                "404":
+                    description: 'Not Found: no resource with the specified ID is found'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                name: Not Found
+                "429":
+                    description: 'Too Many Requests: the number or rate of requests has exceeded a limit'
+                    headers:
+                        Retry-After:
+                            description: indicates how long the user agent should wait before making a follow-up request
+                            schema:
+                                type: integer
+                                description: indicates how long the user agent should wait before making a follow-up request
+                                example: "60"
+                                format: int64
+                            example: "60"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse7'
+                            example:
+                                isTemporary: true
+                                name: Too Many Requests
+                "500":
+                    description: 'Internal Server Error: the server encountered an unexpected problem'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                isFault: true
+                                isTemporary: true
+                                name: Internal Server Error
+            security:
+                - jwt_header_Authorization: []
     /care-navigation/v1/networks:
         get:
             tags:
@@ -1583,7 +1695,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Rerum cumque beatae.
+                        example: In ad voluptas voluptatem.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1667,7 +1779,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse6'
+                                $ref: '#/components/schemas/ErrorResponse8'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -1745,7 +1857,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse7'
+                                $ref: '#/components/schemas/ErrorResponse9'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -1785,7 +1897,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Rerum mollitia occaecati voluptatem.
+                        example: Quia dolorem odio culpa maiores sunt.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1874,7 +1986,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse8'
+                                $ref: '#/components/schemas/ErrorResponse10'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -1914,7 +2026,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Est et.
+                        example: Tempore ut similique quod.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1967,7 +2079,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Aut vel veniam sint quia beatae alias.
+                        example: Eveniet fuga fuga unde.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -1981,7 +2093,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Enim ipsum.
+                        example: Dolore qui sunt.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -1995,7 +2107,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Et temporibus excepturi et et.
+                        example: Quidem architecto.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
@@ -2219,7 +2331,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse20'
+                                $ref: '#/components/schemas/ErrorResponse22'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -2353,7 +2465,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse21'
+                                $ref: '#/components/schemas/ErrorResponse23'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -2407,7 +2519,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Similique ut officiis omnis numquam ea illum.
+                        example: Quo tempore.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -2511,7 +2623,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse22'
+                                $ref: '#/components/schemas/ErrorResponse24'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -2605,7 +2717,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse23'
+                                $ref: '#/components/schemas/ErrorResponse25'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -2637,7 +2749,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Est nam in quam vero.
+                        example: Quia molestias ducimus quidem distinctio adipisci nihil.
                     description: find Referrals by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -2653,7 +2765,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Similique aperiam rerum quos.
+                        example: Ut repudiandae laboriosam.
                     description: find a Referral by externalId
                     example:
                         - va-7655-78876545
@@ -2708,6 +2820,7 @@ paths:
                                       priority: Routine
                                       priorityCode: 1
                                       referralNumber: "23456"
+                                      referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       state: pending
                                       status: approved
                                       targetDate: "2025-12-18"
@@ -2720,6 +2833,7 @@ paths:
                                       priority: Routine
                                       priorityCode: 1
                                       referralNumber: "34567"
+                                      referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       state: pending
                                       status: approved
                                       targetDate: "2025-12-18"
@@ -2764,7 +2878,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse15'
+                                $ref: '#/components/schemas/ErrorResponse17'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -2927,6 +3041,7 @@ paths:
                                 - High
                             priorityCode: 1
                             referralNumber: "12345"
+                            referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             state: authorized
                             status: approved
                             targetDate: "2030-01-01"
@@ -3063,6 +3178,7 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -3114,7 +3230,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse17'
+                                $ref: '#/components/schemas/ErrorResponse19'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3276,6 +3392,7 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -3318,7 +3435,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse16'
+                                $ref: '#/components/schemas/ErrorResponse18'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3491,6 +3608,7 @@ paths:
                                 - High
                             priorityCode: 1
                             referralNumber: "12345"
+                            referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             state: authorized
                             status: approved
                             targetDate: "2030-01-01"
@@ -3628,6 +3746,7 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -3679,7 +3798,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse18'
+                                $ref: '#/components/schemas/ErrorResponse20'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3848,6 +3967,7 @@ paths:
                                 - High
                             priorityCode: 1
                             referralNumber: "12345"
+                            referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             state: authorized
                             status: approved
                             targetDate: "2030-01-01"
@@ -3985,6 +4105,7 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -4036,7 +4157,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse19'
+                                $ref: '#/components/schemas/ErrorResponse21'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4067,7 +4188,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Nisi maiores debitis harum nisi quam optio.
+                        example: Ut molestiae impedit id.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4148,7 +4269,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse24'
+                                $ref: '#/components/schemas/ErrorResponse26'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4225,7 +4346,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse25'
+                                $ref: '#/components/schemas/ErrorResponse27'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4256,7 +4377,7 @@ paths:
                     type: array
                     items:
                         type: string
-                        example: Facilis dolorum in totam dolorem.
+                        example: Dolore culpa ut repellat labore praesentium autem.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4336,7 +4457,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse26'
+                                $ref: '#/components/schemas/ErrorResponse28'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4416,7 +4537,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse27'
+                                $ref: '#/components/schemas/ErrorResponse29'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4460,11 +4581,14 @@ components:
                         - category: medium
                           description: This is a full description of the attention item
                           summary: This is the summary of the attention item
+                        - category: medium
+                          description: This is a full description of the attention item
+                          summary: This is the summary of the attention item
                 descriptionLines:
                     type: array
                     items:
                         type: string
-                        example: Quae accusamus vero.
+                        example: Et itaque praesentium velit.
                     description: a full description of the action; each line is visually separated when displayed in the WellHive application
                     example:
                         - line 1
@@ -4487,7 +4611,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Quisquam occaecati doloremque id.
+                        example: Ea eos voluptatem enim vel sint.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -4502,7 +4626,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Accusamus pariatur vero ipsam aliquam quaerat sed.
+                        example: Perferendis dolores occaecati.
                     description: the secondary specialty ids of the Action; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4511,7 +4635,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Nobis autem cum quo facere molestias.
+                        example: Ut voluptas eos impedit.
                     description: the specialty ids of the Action; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -4567,7 +4691,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ex quisquam voluptas exercitationem in quia qui.
+                        example: Ut eius sunt.
                     description: Street name, number, direction
                     example:
                         - 120 Main Street
@@ -4656,7 +4780,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Blanditiis consequatur.
+                        example: Est praesentium sint repudiandae tempora sunt.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -4710,7 +4834,7 @@ components:
                     minLength: 1
                 authToken:
                     type: string
-                    example: Et et pariatur et aut qui.
+                    example: Consequatur error quod animi voluptatem.
                 cancelReasonId:
                     type: string
                     description: the CancelReason
@@ -4718,7 +4842,7 @@ components:
                     minLength: 1
             example:
                 appointmentId: 69cd9203-5e92-47a3-aa03-94b03752872a
-                authToken: Laboriosam beatae enim iusto.
+                authToken: Maxime minus incidunt.
                 cancelReasonId: 930c8a9f-ce78-449c-8dda-d5428d183ec8
             required:
                 - authToken
@@ -4741,7 +4865,7 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Ab perferendis sunt excepturi corrupti.
+                    example: Nobis autem cum quo facere molestias.
                 patientId:
                     type: string
                     description: a reference to a Patient
@@ -4757,7 +4881,7 @@ components:
                     example:
                         referralNumber: "12345"
             example:
-                authToken: Commodi possimus facilis non tempora enim qui.
+                authToken: Dolor accusamus.
                 patientId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 referral:
                     referralNumber: "12345"
@@ -4946,7 +5070,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Modi rerum.
+                        example: Impedit animi sequi corporis.
                     description: a reference to the Slot or sequenced Slots the Appointment is or will be booked to; set by the API client when submitting the Appointment
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -4995,12 +5119,12 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Delectus sapiente praesentium et culpa quaerat dolorum.
+                    example: Vero ipsam aliquam quaerat sed sint.
                 id:
                     type: array
                     items:
                         type: string
-                        example: Dolorem laborum fugiat ullam nulla.
+                        example: Assumenda consequatur aut non deserunt.
                     description: find Appointments by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5027,7 +5151,7 @@ components:
                     description: find Appointments by lifecycle state
                     example: submitted
             example:
-                authToken: Voluptas ut.
+                authToken: Qui quia voluptatem eos voluptas error vel.
                 id:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -5136,7 +5260,7 @@ components:
                     minLength: 1
                 authToken:
                     type: string
-                    example: Quia quasi quod architecto ipsam facere.
+                    example: Debitis ea iste sint culpa at et.
                 networkId:
                     type: string
                     description: the Network to associate with the Appointment, e.g. the authorizing Network
@@ -5153,7 +5277,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Beatae quia qui et ut.
+                        example: Inventore nihil quibusdam cupiditate.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
                         - 87b0e9dd-6849-457f-9d1b-40b25584dd73
@@ -5190,7 +5314,7 @@ components:
                     type: both
                     use: home
                 appointmentId: 69cd9203-5e92-47a3-aa03-94b03752872a
-                authToken: Quam et et possimus labore amet quis.
+                authToken: Dolorem inventore qui reprehenderit ut in nemo.
                 networkId: 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 providerServiceId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referral:
@@ -5226,7 +5350,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Blanditiis voluptatem ullam soluta consequuntur nihil non.
+                        example: Omnis numquam ea illum itaque nisi.
                     description: the Slot or sequence of Slots to book the Appointment into
                     example:
                         - 87b0e9dd-6849-457f-9d1b-40b25584dd73
@@ -5405,8 +5529,6 @@ components:
                           name: Patient
                         - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
                           name: Patient
-                        - id: 930c8a9f-ce78-449c-8dda-d5428d183ec8
-                          name: Patient
                 count:
                     type: integer
                     description: the number of CancelReasons returned in the Result
@@ -5481,7 +5603,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Assumenda consequatur aut non deserunt.
+                        example: Quae architecto nulla esse est.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -5527,7 +5649,7 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Incidunt eum vel aut praesentium quam ipsum.
+                    example: Molestias laudantium fugit.
                 payloads:
                     type: array
                     items:
@@ -5568,80 +5690,10 @@ components:
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        - actions:
-                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              attentionItems:
-                                - category: high
-                                  description: This is a full description of the first attention item
-                                  summary: This is a summary of the first attention item
-                                - category: medium
-                                  description: This is a full description of the second attention item
-                                  summary: This is a summary of the second attention item
-                              descriptionLines:
-                                - line 1
-                                - line 2
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              isRecordReviewAcceptable: true
-                              patientMustBePresent: true
-                              patientPreferences:
-                                providerSex: female
-                              priorities:
-                                - High
-                              priorityCode: 1
-                              secondarySpecialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                              summary: Initial evaluation for this episode of care
-                          category: Dentist
-                          description: Care plan description for Dentist
-                          externalId: va-7655-78876545
-                          name: Dental Specialty Endodontics
-                          specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        - actions:
-                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              attentionItems:
-                                - category: high
-                                  description: This is a full description of the first attention item
-                                  summary: This is a summary of the first attention item
-                                - category: medium
-                                  description: This is a full description of the second attention item
-                                  summary: This is a summary of the second attention item
-                              descriptionLines:
-                                - line 1
-                                - line 2
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              isRecordReviewAcceptable: true
-                              patientMustBePresent: true
-                              patientPreferences:
-                                providerSex: female
-                              priorities:
-                                - High
-                              priorityCode: 1
-                              secondarySpecialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                              summary: Initial evaluation for this episode of care
-                          category: Dentist
-                          description: Care plan description for Dentist
-                          externalId: va-7655-78876545
-                          name: Dental Specialty Endodontics
-                          specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                     minItems: 1
                     maxItems: 100
             example:
-                authToken: Qui repellat cupiditate sint.
+                authToken: Necessitatibus repellat atque.
                 payloads:
                     - actions:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -5793,45 +5845,45 @@ components:
                           specialtyIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                        - actions:
-                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                              attentionItems:
-                                - category: high
-                                  description: This is a full description of the first attention item
-                                  summary: This is a summary of the first attention item
-                                - category: medium
-                                  description: This is a full description of the second attention item
-                                  summary: This is a summary of the second attention item
-                              descriptionLines:
-                                - line 1
-                                - line 2
-                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
-                              isRecordReviewAcceptable: true
-                              patientMustBePresent: true
-                              patientPreferences:
-                                providerSex: female
-                              priorities:
-                                - High
-                              priorityCode: 1
-                              secondarySpecialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                              specialtyIds:
-                                - 69cd9203-5e92-47a3-aa03-94b03752872a
-                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
-                              summary: Initial evaluation for this episode of care
-                          category: Dentist
-                          description: Care plan description for Dentist
-                          externalId: va-7655-78876545
-                          name: Dental Specialty Endodontics
-                          specialtyIds:
-                            - 69cd9203-5e92-47a3-aa03-94b03752872a
-                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                     minItems: 1
                     maxItems: 100
             example:
                 payloads:
+                    - actions:
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          attentionItems:
+                            - category: high
+                              description: This is a full description of the first attention item
+                              summary: This is a summary of the first attention item
+                            - category: medium
+                              description: This is a full description of the second attention item
+                              summary: This is a summary of the second attention item
+                          descriptionLines:
+                            - line 1
+                            - line 2
+                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isRecordReviewAcceptable: true
+                          patientMustBePresent: true
+                          patientPreferences:
+                            providerSex: female
+                          priorities:
+                            - High
+                          priorityCode: 1
+                          secondarySpecialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          summary: Initial evaluation for this episode of care
+                      category: Dentist
+                      description: Care plan description for Dentist
+                      externalId: va-7655-78876545
+                      name: Dental Specialty Endodontics
+                      specialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                     - actions:
                         - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -5962,7 +6014,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Qui quia voluptatem eos voluptas error vel.
+                        example: Necessitatibus qui animi ut enim quia.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -6009,7 +6061,7 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Nulla qui amet.
+                    example: Praesentium quam ipsum possimus quae qui.
                 externalId:
                     type: string
                     description: your own unique care plan identifier, external to WellHive; exact match; when this parameter is specified, zero or one CarePlan will be returned
@@ -6019,7 +6071,7 @@ components:
                     description: the nextToken from a previous CarePlanSearchResult to use for retrieving the next page; other params are ignored when this one is provided
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
             example:
-                authToken: Odio recusandae sed.
+                authToken: Cupiditate sint laboriosam omnis ipsa non tenetur.
                 externalId: va-7655-78876545
                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
             required:
@@ -6033,6 +6085,42 @@ components:
                         $ref: '#/components/schemas/CarePlanResult'
                     description: CarePlans that match the search
                     example:
+                        - actions:
+                            - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                              attentionItems:
+                                - category: high
+                                  description: This is a full description of the first attention item
+                                  summary: This is a summary of the first attention item
+                                - category: medium
+                                  description: This is a full description of the second attention item
+                                  summary: This is a summary of the second attention item
+                              descriptionLines:
+                                - line 1
+                                - line 2
+                              externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                              isRecordReviewAcceptable: true
+                              patientMustBePresent: true
+                              patientPreferences:
+                                providerSex: female
+                              priorities:
+                                - High
+                              priorityCode: 1
+                              secondarySpecialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                              specialtyIds:
+                                - 69cd9203-5e92-47a3-aa03-94b03752872a
+                                - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                              summary: Initial evaluation for this episode of care
+                          category: Dentist
+                          description: Care plan description for Dentist
+                          externalId: va-7655-78876545
+                          id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                          name: Dental Specialty Endodontics
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                         - actions:
                             - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                               assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
@@ -6265,6 +6353,42 @@ components:
                       specialtyIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                    - actions:
+                        - assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                          attentionItems:
+                            - category: high
+                              description: This is a full description of the first attention item
+                              summary: This is a summary of the first attention item
+                            - category: medium
+                              description: This is a full description of the second attention item
+                              summary: This is a summary of the second attention item
+                          descriptionLines:
+                            - line 1
+                            - line 2
+                          externalId: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
+                          isRecordReviewAcceptable: true
+                          patientMustBePresent: true
+                          patientPreferences:
+                            providerSex: female
+                          priorities:
+                            - High
+                          priorityCode: 1
+                          secondarySpecialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          specialtyIds:
+                            - 69cd9203-5e92-47a3-aa03-94b03752872a
+                            - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          summary: Initial evaluation for this episode of care
+                      category: Dentist
+                      description: Care plan description for Dentist
+                      externalId: va-7655-78876545
+                      id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                      name: Dental Specialty Endodontics
+                      specialtyIds:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 count: 2
                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
                 total: 5
@@ -6326,7 +6450,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Consequatur error quod animi voluptatem.
+                        example: Eligendi sit a beatae hic explicabo.
                     description: the specialty ids of the requested CarePlan; each ID should be one returned by the /specialties endpoint
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -6402,8 +6526,8 @@ components:
                     example: "5555555555"
             example:
                 period:
-                    end: "1978-04-12T18:19:59Z"
-                    start: "1998-09-22T00:27:56Z"
+                    end: "1972-05-25T06:40:51Z"
+                    start: "2004-04-07T23:06:18Z"
                 type: phone
                 use: home
                 value: "5555555555"
@@ -6418,7 +6542,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: address
+                        example: gender
                         enum:
                             - address
                             - birthdate
@@ -6458,7 +6582,7 @@ components:
                     format: date-time
                 authToken:
                     type: string
-                    example: Consequuntur perspiciatis ut qui.
+                    example: Quo eligendi sed sit sapiente id.
                 departAt:
                     type: string
                     description: the date and time of departure from the origin; optional; it is an error to specify both departAt and arriveAt; if neither are specified then `now` will be used
@@ -7381,6 +7505,64 @@ components:
                 name: Too Many Requests
             required:
                 - name
+        ErrorResponse28:
+            type: object
+            properties:
+                isFault:
+                    type: boolean
+                    description: if true, indicates the error is a server-side fault
+                    example: true
+                isTemporary:
+                    type: boolean
+                    description: if true, indicates the error is temporary
+                    example: true
+                isTimeout:
+                    type: boolean
+                    description: if true, indicates the error is a timeout
+                    example: true
+                message:
+                    type: string
+                    description: provides explanation for the error
+                    example: internal server error
+                name:
+                    type: string
+                    description: name of error used by goa to encode response
+                    example: Internal
+            description: the number or rate of requests has exceeded a limit
+            example:
+                isTemporary: true
+                name: Too Many Requests
+            required:
+                - name
+        ErrorResponse29:
+            type: object
+            properties:
+                isFault:
+                    type: boolean
+                    description: if true, indicates the error is a server-side fault
+                    example: true
+                isTemporary:
+                    type: boolean
+                    description: if true, indicates the error is temporary
+                    example: true
+                isTimeout:
+                    type: boolean
+                    description: if true, indicates the error is a timeout
+                    example: true
+                message:
+                    type: string
+                    description: provides explanation for the error
+                    example: internal server error
+                name:
+                    type: string
+                    description: name of error used by goa to encode response
+                    example: Internal
+            description: the number or rate of requests has exceeded a limit
+            example:
+                isTemporary: true
+                name: Too Many Requests
+            required:
+                - name
         GeoLocation:
             type: object
             properties:
@@ -7452,7 +7634,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Et ut.
+                        example: Omnis sint non.
                     description: Given names (not always 'first'). Includes middle names
                     example:
                         - Jane
@@ -7462,14 +7644,14 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Molestiae a est.
+                        example: Assumenda aut consequuntur asperiores non.
                     example:
                         - Ms
                 suffix:
                     type: array
                     items:
                         type: string
-                        example: Omnis tempore vel ipsa atque.
+                        example: At autem sit quis et.
                     example:
                         - PhD
                 text:
@@ -7604,6 +7786,149 @@ components:
                 longitude: 180
                 name: Acme Cardiology - Anywhere, USA
                 timezone: America/New_York
+        ManagedOrganization:
+            type: object
+            properties:
+                externalOrganizationIds:
+                    type: array
+                    items:
+                        type: string
+                        example: Blanditiis consequatur.
+                    description: your own identifiers for the ManagedOrganization, external to WellHive
+                    example:
+                        - vha-eps-98765
+                id:
+                    type: string
+                    description: the WellHive identifier of the ManagedOrganization
+                    example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                name:
+                    type: string
+                    example: VHA Direct Provider Organization
+            example:
+                externalOrganizationIds:
+                    - vha-eps-98765
+                id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                name: VHA Direct Provider Organization
+            required:
+                - id
+                - name
+        ManagedOrganizationResult:
+            type: object
+            properties:
+                externalOrganizationIds:
+                    type: array
+                    items:
+                        type: string
+                        example: Modi rerum.
+                    description: your own identifiers for the ManagedOrganization, external to WellHive
+                    example:
+                        - vha-eps-98765
+                id:
+                    type: string
+                    description: the WellHive identifier of the ManagedOrganization
+                    example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                name:
+                    type: string
+                    example: VHA Direct Provider Organization
+            example:
+                externalOrganizationIds:
+                    - vha-eps-98765
+                id: 69cd9203-5e92-47a3-aa03-94b03752872a
+                name: VHA Direct Provider Organization
+            required:
+                - id
+                - name
+        ManagedOrganizationSearchPayload:
+            type: object
+            properties:
+                authToken:
+                    type: string
+                    example: Aut voluptatibus autem ratione sed ab vitae.
+                externalId:
+                    type: string
+                    description: find the ManagedOrganization with a matching externalId; returns zero or one result
+                    example: vha-eps-98765
+                id:
+                    type: array
+                    items:
+                        type: string
+                        example: Ut maxime nisi qui accusamus optio optio.
+                    description: find ManagedOrganizations matching any of the provided IDs
+                    example:
+                        - 69cd9203-5e92-47a3-aa03-94b03752872a
+                        - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                name:
+                    type: string
+                    description: find ManagedOrganizations with matching names
+                    example: VHA Direct
+                nextToken:
+                    type: string
+                    description: the nextToken from a previous ManagedOrganizationSearchResult to use for retrieving the next page, other params are ignored when this one is provided
+                    example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                pageSize:
+                    type: integer
+                    description: the number of results to return per page, defaults to 100
+                    example: 100
+                    format: int64
+                    minimum: 1
+                    maximum: 1000
+            example:
+                authToken: Qui autem error.
+                externalId: vha-eps-98765
+                id:
+                    - 69cd9203-5e92-47a3-aa03-94b03752872a
+                    - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                name: VHA Direct
+                nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                pageSize: 100
+            required:
+                - authToken
+        ManagedOrganizationSearchResult:
+            type: object
+            properties:
+                count:
+                    type: integer
+                    description: the number of ManagedOrganizations in this page of results
+                    example: 2
+                    format: int64
+                managedOrganizations:
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/ManagedOrganization'
+                    description: ManagedOrganizations that match the search
+                    example:
+                        - externalOrganizationIds:
+                            - vha-eps-98765
+                          id: ff826316-b95c-4888-b8bb-930598785fed
+                          name: VHA Direct Provider Organization
+                        - externalOrganizationIds:
+                            - vha-eps-12345
+                          id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
+                          name: Meridian Health
+                nextToken:
+                    type: string
+                    description: the nextToken param to use with ManagedOrganization.search to retrieve the next page of results
+                    example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                total:
+                    type: integer
+                    description: the total number of ManagedOrganizations matching the search params, not guaranteed to be populated
+                    example: 5
+                    format: int64
+            example:
+                count: 2
+                managedOrganizations:
+                    - externalOrganizationIds:
+                        - vha-eps-98765
+                      id: ff826316-b95c-4888-b8bb-930598785fed
+                      name: VHA Direct Provider Organization
+                    - externalOrganizationIds:
+                        - vha-eps-12345
+                      id: 8d85bbad-2d8a-411f-8806-cb94a9a600d1
+                      name: Meridian Health
+                nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                total: 5
+            required:
+                - count
         Network:
             type: object
             properties:
@@ -7649,12 +7974,12 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Officia consequatur quis.
+                    example: Culpa quia esse quia perspiciatis non deserunt.
                 id:
                     type: array
                     items:
                         type: string
-                        example: Est distinctio dignissimos ut quia.
+                        example: Quis aut sequi minus excepturi molestiae vel.
                     description: find Networks by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -7668,7 +7993,7 @@ components:
                     description: the nextToken from a previous NetworkSearchResult to use for retrieving the next page, other params are ignored when this one is provided
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
             example:
-                authToken: Consequatur tempora beatae dignissimos dignissimos ad voluptas.
+                authToken: Et impedit sunt libero et facilis.
                 id:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -7971,7 +8296,6 @@ components:
                     - mon
                     - mon
                     - mon
-                    - mon
                 times:
                     - before-9am
                     - before-9am
@@ -7981,17 +8305,17 @@ components:
                 end:
                     type: string
                     description: End time with inclusive boundary, if not ongoing
-                    example: "2011-04-02T06:27:56Z"
+                    example: "1978-01-04T08:08:43Z"
                     format: date-time
                 start:
                     type: string
                     description: Starting time with inclusive boundary
-                    example: "2000-11-22T12:03:39Z"
+                    example: "1984-05-18T15:52:19Z"
                     format: date-time
             description: A time period defined by a start and end date/time
             example:
-                end: "1971-08-22T16:29:21Z"
-                start: "1974-04-16T18:25:26Z"
+                end: "1996-04-11T04:29:58Z"
+                start: "1971-08-22T16:29:21Z"
         PowerOfAttorney:
             type: object
             properties:
@@ -8062,7 +8386,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Sapiente odio ut enim consequatur aliquam officiis.
+                        example: Quia quaerat exercitationem similique.
                     description: the IDs of the Networks that the ProviderOrganization is in
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -8078,7 +8402,7 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Aut iusto soluta quia sed quia dolorem.
+                    example: Asperiores sit non.
                 name:
                     type: string
                     description: find ProviderOrganizations with matching names
@@ -8087,7 +8411,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Nobis ut qui consequatur est itaque vel.
+                        example: Expedita quas beatae a sed.
                     description: find ProviderOrganizations in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -8097,7 +8421,7 @@ components:
                     description: the nextToken from a previous ProviderOrganizationSearchResult to use for retrieving the next page, other params are ignored when this one is provided
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
             example:
-                authToken: Dicta sequi velit ut fugiat quia ad.
+                authToken: Excepturi ducimus explicabo et.
                 name: Acme
                 networkId:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -8210,7 +8534,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Minima neque.
+                        example: Voluptatem sint quaerat rerum cumque.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -8367,7 +8691,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Quia vitae ut maiores et suscipit vel.
+                        example: Quia rerum mollitia.
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -8462,7 +8786,7 @@ components:
                     example: e2487f73-62e7-476b-a8b7-503333572d2a
                 authToken:
                     type: string
-                    example: A et.
+                    example: Quos velit sed beatae eum.
                 digitalOrNot:
                     type: string
                     description: find digital or non-digital ProviderServices, or find both; defaults to both
@@ -8475,7 +8799,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Vitae magnam consequatur quo eligendi.
+                        example: Accusamus error voluptas repudiandae labore.
                     description: find ProviderServices by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -8501,7 +8825,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Sit sapiente id est aut voluptatibus.
+                        example: Qui eos sed.
                     description: find ProviderServices in the identified Networks
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -8517,7 +8841,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Ratione sed ab vitae laborum.
+                        example: Maxime pariatur sapiente.
                     description: find ProviderServices with matching organization names
                     example:
                         - Alpha Cardiology
@@ -8536,7 +8860,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Maxime nisi qui accusamus optio.
+                        example: Incidunt fugiat ut veniam quibusdam officiis.
                     description: find ProviderServices offering the identified Specialties
                     example:
                         - 207XX0004X
@@ -8555,7 +8879,7 @@ components:
                         - in-person
             example:
                 appointmentId: e2487f73-62e7-476b-a8b7-503333572d2a
-                authToken: Ipsa qui autem error.
+                authToken: Quo distinctio error.
                 digitalOrNot: digital
                 id:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -8821,7 +9145,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Eum corporis accusamus.
+                        example: Officia alias nisi iste praesentium sit sed.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -8836,6 +9160,10 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -8981,6 +9309,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -9002,7 +9331,7 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 authToken:
                     type: string
-                    example: Voluptas repudiandae labore qui qui eos sed.
+                    example: Accusamus magnam.
                 careCategory:
                     type: string
                     description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
@@ -9027,7 +9356,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Maxime pariatur sapiente.
+                        example: Sit pariatur.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -9043,6 +9372,10 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -9065,7 +9398,7 @@ components:
             example:
                 assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                authToken: Incidunt fugiat ut veniam quibusdam officiis.
+                authToken: Fuga quo asperiores aut provident.
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 externalId: va-7655-78876545
@@ -9188,6 +9521,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -9230,7 +9564,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Sit sit omnis quia id.
+                        example: Debitis harum nisi quam optio ipsam facilis.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -9246,6 +9580,10 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -9390,6 +9728,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -9502,7 +9841,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Aspernatur aut omnis quia aspernatur quo sit.
+                        example: Eos nihil deleniti sint sed non dolor.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -9517,6 +9856,10 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -9662,6 +10005,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -9675,12 +10019,12 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Sunt libero et facilis rerum asperiores sit.
+                    example: Minima neque.
                 externalId:
                     type: array
                     items:
                         type: string
-                        example: Beatae a sed quasi excepturi ducimus explicabo.
+                        example: Numquam earum omnis et qui eveniet.
                     description: find a Referral by externalId
                     example:
                         - va-7655-78876545
@@ -9689,7 +10033,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Iste expedita.
+                        example: Quia vitae ut maiores et suscipit vel.
                     description: find Referrals by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -9707,7 +10051,7 @@ components:
                     description: find a Referral by referralNumber
                     example: "12345"
             example:
-                authToken: Voluptas quia quaerat exercitationem similique.
+                authToken: Ipsam sed commodi nemo accusantium.
                 externalId:
                     - va-7655-78876545
                     - va-8765-87651234
@@ -9746,6 +10090,7 @@ components:
                           priority: Routine
                           priorityCode: 1
                           referralNumber: "23456"
+                          referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           state: pending
                           status: approved
                           targetDate: "2025-12-18"
@@ -9758,6 +10103,7 @@ components:
                           priority: Routine
                           priorityCode: 1
                           referralNumber: "34567"
+                          referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           state: pending
                           status: approved
                           targetDate: "2025-12-18"
@@ -9779,6 +10125,7 @@ components:
                       priority: Routine
                       priorityCode: 1
                       referralNumber: "23456"
+                      referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       state: pending
                       status: approved
                       targetDate: "2025-12-18"
@@ -9791,6 +10138,7 @@ components:
                       priority: Routine
                       priorityCode: 1
                       referralNumber: "34567"
+                      referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       state: pending
                       status: approved
                       targetDate: "2025-12-18"
@@ -9810,7 +10158,7 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 authToken:
                     type: string
-                    example: Quo distinctio error.
+                    example: Perspiciatis explicabo.
                 careCategory:
                     type: string
                     description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
@@ -9835,7 +10183,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Est praesentium sint repudiandae tempora sunt.
+                        example: Autem in perferendis nemo aspernatur.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -9855,6 +10203,10 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -9882,7 +10234,7 @@ components:
             example:
                 assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                authToken: Impedit animi sequi corporis.
+                authToken: Id vitae sapiente ut culpa aperiam qui.
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 externalId: va-7655-78876545
@@ -10006,6 +10358,7 @@ components:
                 priorityCode: 1
                 referralId: 69cd9203-5e92-47a3-aa03-94b03752872a
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -10050,7 +10403,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Distinctio eos nihil deleniti sint sed.
+                        example: In totam dolorem tempora quia sit.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -10066,6 +10419,10 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -10215,6 +10572,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -10235,7 +10593,7 @@ components:
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 authToken:
                     type: string
-                    example: Occaecati commodi et debitis.
+                    example: Reprehenderit temporibus possimus blanditiis voluptatem ullam soluta.
                 careCategory:
                     type: string
                     description: a free text label for care category; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
@@ -10262,7 +10620,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Voluptatem repellendus.
+                        example: Nihil non accusantium.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -10278,6 +10636,10 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -10305,7 +10667,7 @@ components:
             example:
                 assignedNetworkId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
-                authToken: Non occaecati qui eveniet.
+                authToken: Sit omnis quia id est.
                 careCategory: Dental
                 carePlan:
                     actions:
@@ -10443,6 +10805,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -10489,7 +10852,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Dolor et voluptatem.
+                        example: Atque laboriosam ut rem quibusdam.
                     description: a list of priorities; WellHive does not operate on this attribute, but instead simply displays it to users and passes it through integrations
                     example:
                         - High
@@ -10505,6 +10868,10 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringOrganizationId:
+                    type: string
+                    description: the ID of the Organization that referred the Patient
+                    example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -10669,6 +11036,7 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -10755,12 +11123,12 @@ components:
                     example: 665b5f97-dc9c-4935-991f-a997996c1943
                 authToken:
                     type: string
-                    example: Quia esse quia perspiciatis non.
+                    example: Commodi et debitis cumque voluptatem.
                 id:
                     type: array
                     items:
                         type: string
-                        example: Illum quis.
+                        example: Illum non occaecati qui eveniet.
                     description: find Slots by ID
                     example:
                         - dba0855e-5681-411d-801c-036f4f046988
@@ -10784,7 +11152,7 @@ components:
             example:
                 appointmentId: e2487f73-62e7-476b-a8b7-503333572d2a
                 appointmentTypeId: 665b5f97-dc9c-4935-991f-a997996c1943
-                authToken: Sequi minus excepturi molestiae vel fugit et.
+                authToken: Aspernatur aut omnis quia aspernatur quo sit.
                 id:
                     - dba0855e-5681-411d-801c-036f4f046988
                 nextToken: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
@@ -10863,7 +11231,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Alias nisi iste praesentium sit sed omnis.
+                        example: Similique aperiam rerum quos.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -10891,7 +11259,7 @@ components:
                     type: array
                     items:
                         type: string
-                        example: Magnam cum sit pariatur nam.
+                        example: Est et.
                     description: IDs of the Specialties in the SpecialtyGroup
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -10911,12 +11279,12 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Quo asperiores aut provident ratione perspiciatis explicabo.
+                    example: Aut vel veniam sint quia beatae alias.
                 id:
                     type: array
                     items:
                         type: string
-                        example: Autem in perferendis nemo aspernatur.
+                        example: Enim ipsum.
                     description: find SpecialtyGroups by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -10926,7 +11294,7 @@ components:
                     description: the nextToken from a previous SpecialtyGroupSearchResult to use for retrieving the next page, other params are ignored when this one is provided
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
             example:
-                authToken: Id vitae sapiente ut culpa aperiam qui.
+                authToken: Et temporibus excepturi et et.
                 id:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -11002,12 +11370,12 @@ components:
             properties:
                 authToken:
                     type: string
-                    example: Numquam earum omnis et qui eveniet.
+                    example: Voluptatem neque rerum ullam nihil.
                 id:
                     type: array
                     items:
                         type: string
-                        example: Ipsam sed commodi nemo accusantium.
+                        example: Illo qui et.
                     description: find Specialties by ID
                     example:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
@@ -11017,7 +11385,7 @@ components:
                     description: the nextToken from a previous SpecialtySearchResult to use for retrieving the next page, other params are ignored when this one is provided
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
             example:
-                authToken: Beatae natus doloremque quis.
+                authToken: Nam in quam vero.
                 id:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
@@ -11072,6 +11440,8 @@ tags:
       description: one or more actions referenced by a Referral, to be performed by a ProviderService assigned the Referral
     - name: DriveTime
       description: the time it takes to drive the shortest route from origin to destination
+    - name: ManagedOrganization
+      description: an organization managed by your own organization, such as a provider organization you administer on behalf of your network
     - name: Network
       description: a group of ProviderOrganizations and ProviderServices authorized to receive Appointments
     - name: ProviderOrganization
