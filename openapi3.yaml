@@ -2921,6 +2921,7 @@ paths:
                             assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             careCategory: Dental
                             carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            createdAt: "2001-08-19T20:36:51Z"
                             externalId: va-7655-78876545
                             patient:
                                 address:
@@ -3057,6 +3058,7 @@ paths:
                                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 careCategory: Dental
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                createdAt: "2001-08-19T20:36:51Z"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patient:
@@ -3271,6 +3273,7 @@ paths:
                                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 careCategory: Dental
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                createdAt: "2001-08-19T20:36:51Z"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patient:
@@ -3488,6 +3491,7 @@ paths:
                             assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                             careCategory: Dental
                             carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            createdAt: "2001-08-19T20:36:51Z"
                             externalId: va-7655-78876545
                             patient:
                                 address:
@@ -3625,6 +3629,7 @@ paths:
                                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 careCategory: Dental
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                createdAt: "2001-08-19T20:36:51Z"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patient:
@@ -3847,6 +3852,7 @@ paths:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                             carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            createdAt: "2001-08-19T20:36:51Z"
                             externalId: va-7655-78876545
                             patient:
                                 address:
@@ -3984,6 +3990,7 @@ paths:
                                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                 careCategory: Dental
                                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                createdAt: "2001-08-19T20:36:51Z"
                                 externalId: va-7655-78876545
                                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                                 patient:
@@ -9125,6 +9132,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -9188,6 +9200,7 @@ components:
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                 patient:
@@ -9340,6 +9353,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -9401,6 +9419,7 @@ components:
                 authToken: Fuga quo asperiores aut provident.
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 patient:
                     address:
@@ -9548,6 +9567,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -9608,6 +9632,7 @@ components:
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 patient:
                     address:
@@ -9821,6 +9846,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -9884,6 +9914,7 @@ components:
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 id: 69cd9203-5e92-47a3-aa03-94b03752872a
                 patient:
@@ -10167,6 +10198,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -10237,6 +10273,7 @@ components:
                 authToken: Id vitae sapiente ut culpa aperiam qui.
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 patient:
                     address:
@@ -10387,6 +10424,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -10452,6 +10494,7 @@ components:
                 assignedProviderServiceId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                 careCategory: Dental
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 patient:
                     address:
@@ -10604,6 +10647,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -10685,6 +10733,7 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 patient:
                     address:
@@ -10836,6 +10885,11 @@ components:
                     type: string
                     description: the ID of the CarePlan associated with the Referral
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt:
+                    type: string
+                    description: the date and time when this referral was created
+                    example: "2001-08-19T20:36:51Z"
+                    format: date-time
                 externalId:
                     type: string
                     description: your own unique referral identifier, external to WellHive
@@ -10916,6 +10970,7 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                 carePlanId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                createdAt: "2001-08-19T20:36:51Z"
                 externalId: va-7655-78876545
                 patient:
                     address:
