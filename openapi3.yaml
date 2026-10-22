@@ -3650,6 +3650,12 @@ paths:
                     description: the nextToken from a previous SlotSearchResult to use for retrieving the next page, other params are ignored when this one is provided
                     example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
                   example: YTI0NTM5NzUtNzA2My00NTU5LWJiYWYtZTg3MGY4ZWZlYzg5
+                - name: x-wellhive-customer-authorization
+                  in: header
+                  description: the end customer's JWT, passed through to WellHive as-is
+                  schema:
+                    type: string
+                    description: the end customer's JWT, passed through to WellHive as-is
             responses:
                 "200":
                     description: OK response.
@@ -8644,6 +8650,7 @@ components:
                             - name
                             - phone
                             - applicable-patient-address
+                            - timezone
                     description: Patient attributes that are required to book an Appointment with this ProviderService; any attributes missing from a Patient record can be provided when submitting an Appointment
                     example:
                         - name
@@ -10513,12 +10520,12 @@ components:
                     type: array
                     items:
                         $ref: '#/components/schemas/AppointmentType'
+                    description: a list of appointment types supported by the service
                     example:
                         - id: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
                           isSelfSchedulable: true
                           isStrict: true
                           name: Initial Consult
-                    minItems: 1
                 contactDetails:
                     type: array
                     items:
@@ -10665,12 +10672,12 @@ components:
                     type: array
                     items:
                         $ref: '#/components/schemas/AppointmentType'
+                    description: a list of appointment types supported by the service
                     example:
                         - id: 40cca3e9-cbf2-48d0-b088-7f4a2713fcae
                           isSelfSchedulable: true
                           isStrict: true
                           name: Initial Consult
-                    minItems: 1
                 contactDetails:
                     type: array
                     items:
