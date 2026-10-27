@@ -3334,6 +3334,7 @@ paths:
                                       networkIds:
                                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                      patientFriendlyName: Dr. Smith - Cardiology
                                       providerOrganization:
                                         name: Acme Cardiology
                                         npi: "1245319599"
@@ -3504,6 +3505,7 @@ paths:
                                 networkIds:
                                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                                patientFriendlyName: Dr. Smith - Cardiology
                                 providerOrganization:
                                     name: Acme Cardiology
                                     npi: "1245319599"
@@ -10566,6 +10568,10 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                     minItems: 1
+                patientFriendlyName:
+                    type: string
+                    description: the name of the ProviderService to show to patients
+                    example: Dr. Smith - Cardiology
                 providerOrganization:
                     $ref: '#/components/schemas/OrganizationProvider'
                 schedulingNotes:
@@ -10627,6 +10633,7 @@ components:
                 networkIds:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                patientFriendlyName: Dr. Smith - Cardiology
                 providerOrganization:
                     name: Acme Cardiology
                     npi: "1245319599"
@@ -10718,6 +10725,10 @@ components:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
                     minItems: 1
+                patientFriendlyName:
+                    type: string
+                    description: the name of the ProviderService to show to patients
+                    example: Dr. Smith - Cardiology
                 providerOrganization:
                     $ref: '#/components/schemas/OrganizationProvider'
                 schedulingNotes:
@@ -10779,6 +10790,7 @@ components:
                 networkIds:
                     - 69cd9203-5e92-47a3-aa03-94b03752872a
                     - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                patientFriendlyName: Dr. Smith - Cardiology
                 providerOrganization:
                     name: Acme Cardiology
                     npi: "1245319599"
@@ -10850,6 +10862,7 @@ components:
                           networkIds:
                             - 69cd9203-5e92-47a3-aa03-94b03752872a
                             - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                          patientFriendlyName: Dr. Smith - Cardiology
                           providerOrganization:
                             name: Acme Cardiology
                             npi: "1245319599"
@@ -10940,6 +10953,7 @@ components:
                       networkIds:
                         - 69cd9203-5e92-47a3-aa03-94b03752872a
                         - 00eff3f3-ecfb-41ff-9ebc-78ed811e17f9
+                      patientFriendlyName: Dr. Smith - Cardiology
                       providerOrganization:
                         name: Acme Cardiology
                         npi: "1245319599"
