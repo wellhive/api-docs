@@ -1347,6 +1347,12 @@ paths:
                   required: true
                   schema:
                     type: string
+                - name: x-wellhive-customer-authorization
+                  in: header
+                  description: the end customer's JWT, passed through to WellHive as-is
+                  schema:
+                    type: string
+                    description: the end customer's JWT, passed through to WellHive as-is
             responses:
                 "200":
                     description: OK response.
@@ -1459,6 +1465,12 @@ paths:
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
                     minLength: 1
                   example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                - name: x-wellhive-customer-authorization
+                  in: header
+                  description: the end customer's JWT, passed through to WellHive as-is
+                  schema:
+                    type: string
+                    description: the end customer's JWT, passed through to WellHive as-is
             requestBody:
                 description: Request body for cancel.
                 required: true
@@ -1574,6 +1586,12 @@ paths:
                   required: true
                   schema:
                     type: string
+                - name: x-wellhive-customer-authorization
+                  in: header
+                  description: the end customer's JWT, passed through to WellHive as-is
+                  schema:
+                    type: string
+                    description: the end customer's JWT, passed through to WellHive as-is
             responses:
                 "200":
                     description: OK response.
@@ -1676,6 +1694,12 @@ paths:
                     example: 69cd9203-5e92-47a3-aa03-94b03752872a
                     minLength: 1
                   example: 69cd9203-5e92-47a3-aa03-94b03752872a
+                - name: x-wellhive-customer-authorization
+                  in: header
+                  description: the end customer's JWT, passed through to WellHive as-is
+                  schema:
+                    type: string
+                    description: the end customer's JWT, passed through to WellHive as-is
             requestBody:
                 description: Request body for submit.
                 required: true
@@ -2567,6 +2591,98 @@ paths:
                                 name: Internal Server Error
             security:
                 - jwt_header_Authorization: []
+    /care-navigation/v1/managed-locations/{managedLocationId}:
+        get:
+            tags:
+                - ManagedLocation
+            summary: ManagedLocation.show
+            description: retrieve one of your ManagedLocations by ID
+            operationId: ManagedLocation#show
+            parameters:
+                - name: managedLocationId
+                  in: path
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    description: OK response.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ManagedLocationResult'
+                            example:
+                                address: 123 Main Street, Suite 1, Anywhere USA 12345
+                                id: downtown-clinic
+                                latitude: 90
+                                longitude: 180
+                                name: Acme Cardiology - Anywhere, USA
+                                stateCode: FL
+                                timezone: America/New_York
+                "400":
+                    description: 'Bad Request: something is wrong with the request'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                message: invalid value for field xyz
+                                name: Bad Request
+                "401":
+                    description: 'Unauthorized: not authorized to make the request'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                name: Unauthorized
+                "403":
+                    description: 'Forbidden: the request is forbidden (example, the IP address is not within the Trusted Internet Connection [TIC] address range)'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                message: requests must originate from your organization's Trusted Internet Connection (TIC)
+                                name: Forbidden
+                "404":
+                    description: 'Not Found: no resource with the specified ID is found'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                name: Not Found
+                "429":
+                    description: 'Too Many Requests: the number or rate of requests has exceeded a limit'
+                    headers:
+                        Retry-After:
+                            description: indicates how long the user agent should wait before making a follow-up request
+                            schema:
+                                type: integer
+                                description: indicates how long the user agent should wait before making a follow-up request
+                                example: "60"
+                                format: int64
+                            example: "60"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse20'
+                            example:
+                                isTemporary: true
+                                name: Too Many Requests
+                "500":
+                    description: 'Internal Server Error: the server encountered an unexpected problem'
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResponse'
+                            example:
+                                isFault: true
+                                isTemporary: true
+                                name: Internal Server Error
+            security:
+                - jwt_header_Authorization: []
     /care-navigation/v1/managed-organizations:
         get:
             tags:
@@ -3430,7 +3546,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse27'
+                                $ref: '#/components/schemas/ErrorResponse28'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3563,7 +3679,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse28'
+                                $ref: '#/components/schemas/ErrorResponse29'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3727,7 +3843,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse29'
+                                $ref: '#/components/schemas/ErrorResponse30'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3827,7 +3943,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse30'
+                                $ref: '#/components/schemas/ErrorResponse31'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -3935,7 +4051,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse25'
+                                $ref: '#/components/schemas/ErrorResponse26'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4035,7 +4151,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse26'
+                                $ref: '#/components/schemas/ErrorResponse27'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4147,6 +4263,7 @@ paths:
                                       patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
                                       priorityCode: 1
                                       referralNumber: "23456"
+                                      referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                                       referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       state: pending
                                       status: approved
@@ -4159,6 +4276,7 @@ paths:
                                       patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
                                       priorityCode: 1
                                       referralNumber: "34567"
+                                      referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                                       referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                                       state: pending
                                       status: approved
@@ -4204,7 +4322,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse20'
+                                $ref: '#/components/schemas/ErrorResponse21'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4369,7 +4487,9 @@ paths:
                                 - High
                             priorityCode: 1
                             referralNumber: "12345"
+                            referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                             referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            referringProviderNpi: "1234567893"
                             state: authorized
                             status: approved
                             targetDate: "2030-01-01"
@@ -4508,7 +4628,9 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                referringProviderNpi: "1234567893"
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -4560,7 +4682,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse22'
+                                $ref: '#/components/schemas/ErrorResponse23'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4723,7 +4845,9 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                referringProviderNpi: "1234567893"
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -4766,7 +4890,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse21'
+                                $ref: '#/components/schemas/ErrorResponse22'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -4941,7 +5065,9 @@ paths:
                                 - High
                             priorityCode: 1
                             referralNumber: "12345"
+                            referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                             referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            referringProviderNpi: "1234567893"
                             state: authorized
                             status: approved
                             targetDate: "2030-01-01"
@@ -5080,7 +5206,9 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                referringProviderNpi: "1234567893"
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -5132,7 +5260,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse23'
+                                $ref: '#/components/schemas/ErrorResponse24'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -5302,7 +5430,9 @@ paths:
                                 - High
                             priorityCode: 1
                             referralNumber: "12345"
+                            referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                             referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                            referringProviderNpi: "1234567893"
                             state: authorized
                             status: approved
                             targetDate: "2030-01-01"
@@ -5441,7 +5571,9 @@ paths:
                                     - High
                                 priorityCode: 1
                                 referralNumber: "12345"
+                                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                                referringProviderNpi: "1234567893"
                                 state: authorized
                                 status: approved
                                 targetDate: "2030-01-01"
@@ -5493,7 +5625,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse24'
+                                $ref: '#/components/schemas/ErrorResponse25'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -5605,7 +5737,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse31'
+                                $ref: '#/components/schemas/ErrorResponse32'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -5682,7 +5814,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse32'
+                                $ref: '#/components/schemas/ErrorResponse33'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -5793,7 +5925,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse33'
+                                $ref: '#/components/schemas/ErrorResponse34'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -5873,7 +6005,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ErrorResponse34'
+                                $ref: '#/components/schemas/ErrorResponse35'
                             example:
                                 isTemporary: true
                                 name: Too Many Requests
@@ -7348,7 +7480,7 @@ components:
                         the lifecycle state of the Appointment, set by WellHive
                         * draft - the Appointment starts in this state when it is first created, waiting to be submitted to a ProviderService
                         * submitted - indicates that the the Appointment was successfully submitted to a ProviderService to be booked, at which point the appointmentDetails.status field reports the Apppointment status from the ProviderService
-                        * completed - indicates the Appointment is in a final state, whether fulfilled, cancelled, or noshow reported by the ProviderService, or cancelled by a WellHive user or API client
+                        * completed - indicates the Appointment is in a final state, whether fulfilled, checked-out, cancelled, or noshow reported by the ProviderService, or cancelled by a WellHive user or API client
                     example: submitted
                     enum:
                         - draft
@@ -7455,6 +7587,7 @@ components:
                         - noshow
                         - entered-in-error
                         - checked-in
+                        - checked-out
                         - pending-booking
                         - pending-cancel
                         - booking-failed
@@ -7589,7 +7722,7 @@ components:
                         the lifecycle state of the Appointment, set by WellHive
                         * draft - the Appointment starts in this state when it is first created, waiting to be submitted to a ProviderService
                         * submitted - indicates that the the Appointment was successfully submitted to a ProviderService to be booked, at which point the appointmentDetails.status field reports the Apppointment status from the ProviderService
-                        * completed - indicates the Appointment is in a final state, whether fulfilled, cancelled, or noshow reported by the ProviderService, or cancelled by a WellHive user or API client
+                        * completed - indicates the Appointment is in a final state, whether fulfilled, checked-out, cancelled, or noshow reported by the ProviderService, or cancelled by a WellHive user or API client
                     example: submitted
                     enum:
                         - draft
@@ -9766,6 +9899,35 @@ components:
                 name: Too Many Requests
             required:
                 - name
+        ErrorResponse35:
+            type: object
+            properties:
+                isFault:
+                    type: boolean
+                    description: if true, indicates the error is a server-side fault
+                    example: true
+                isTemporary:
+                    type: boolean
+                    description: if true, indicates the error is temporary
+                    example: true
+                isTimeout:
+                    type: boolean
+                    description: if true, indicates the error is a timeout
+                    example: true
+                message:
+                    type: string
+                    description: provides explanation for the error
+                    example: internal server error
+                name:
+                    type: string
+                    description: name of error used by goa to encode response
+                    example: Internal
+            description: returned when an error occurs processing a request
+            example:
+                isTemporary: true
+                name: Too Many Requests
+            required:
+                - name
         GeoLocation:
             type: object
             properties:
@@ -9936,6 +10098,44 @@ components:
                 name: Acme Cardiology - Anywhere, USA
                 stateCode: FL
                 timezone: America/New_York
+        ManagedLocationResult:
+            type: object
+            properties:
+                address:
+                    type: string
+                    example: 123 Main Street, Suite 1, Anywhere USA 12345
+                id:
+                    type: string
+                    description: the identifier of the ManagedLocation; for a location from your own integration, this is your own identifier for it
+                    example: downtown-clinic
+                latitude:
+                    type: number
+                    example: 90
+                    format: double
+                longitude:
+                    type: number
+                    example: 180
+                    format: double
+                name:
+                    type: string
+                    example: Acme Cardiology - Anywhere, USA
+                stateCode:
+                    type: string
+                    description: the two-letter code of the state the location is in
+                    example: FL
+                timezone:
+                    type: string
+                    example: America/New_York
+            example:
+                address: 123 Main Street, Suite 1, Anywhere USA 12345
+                id: downtown-clinic
+                latitude: 90
+                longitude: 180
+                name: Acme Cardiology - Anywhere, USA
+                stateCode: FL
+                timezone: America/New_York
+            required:
+                - id
         ManagedOrganization:
             type: object
             properties:
@@ -11070,10 +11270,18 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                referringLocationId:
+                    type: string
+                    description: the ID of the Location the Patient was referred from
+                    example: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId:
                     type: string
                     description: the ID of the Organization that referred the Patient
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi:
+                    type: string
+                    description: the 10-digit NPI of the clinician who made the referral; a value that is not a 10-digit NPI is ignored
+                    example: "1234567893"
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -11220,7 +11428,9 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi: "1234567893"
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -11285,10 +11495,18 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringLocationId:
+                    type: string
+                    description: the ID of the Location the Patient was referred from
+                    example: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId:
                     type: string
                     description: the ID of the Organization that referred the Patient
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi:
+                    type: string
+                    description: the 10-digit NPI of the clinician who made the referral; a value that is not a 10-digit NPI is ignored
+                    example: "1234567893"
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -11440,7 +11658,9 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi: "1234567893"
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -11707,10 +11927,18 @@ components:
                     type: string
                     description: a value for People to use when identifying a Referral
                     example: "12345"
+                referringLocationId:
+                    type: string
+                    description: the ID of the Location the Patient was referred from
+                    example: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId:
                     type: string
                     description: the ID of the Organization that referred the Patient
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi:
+                    type: string
+                    description: the 10-digit NPI of the clinician who made the referral; a value that is not a 10-digit NPI is ignored
+                    example: "1234567893"
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -11857,7 +12085,9 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi: "1234567893"
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -11892,6 +12122,7 @@ components:
                           patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
                           priorityCode: 1
                           referralNumber: "23456"
+                          referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                           referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           state: pending
                           status: approved
@@ -11904,6 +12135,7 @@ components:
                           patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
                           priorityCode: 1
                           referralNumber: "34567"
+                          referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                           referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                           state: pending
                           status: approved
@@ -11925,6 +12157,7 @@ components:
                       patientId: e7c4a9c2-e7d9-46a5-8c5a-3596d5a403ca
                       priorityCode: 1
                       referralNumber: "23456"
+                      referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                       referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       state: pending
                       status: approved
@@ -11937,6 +12170,7 @@ components:
                       patientId: 8a5fe127-82f1-48aa-8b70-0249cf9880fc
                       priorityCode: 1
                       referralNumber: "34567"
+                      referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                       referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
                       state: pending
                       status: approved
@@ -12000,10 +12234,18 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringLocationId:
+                    type: string
+                    description: the ID of the Location the Patient was referred from
+                    example: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId:
                     type: string
                     description: the ID of the Organization that referred the Patient
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi:
+                    type: string
+                    description: the 10-digit NPI of the clinician who made the referral; a value that is not a 10-digit NPI is ignored
+                    example: "1234567893"
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -12155,7 +12397,9 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi: "1234567893"
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -12221,10 +12465,18 @@ components:
                     description: a value for People to use when identifying a Referral
                     example: "12345"
                     minLength: 1
+                referringLocationId:
+                    type: string
+                    description: the ID of the Location the Patient was referred from
+                    example: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId:
                     type: string
                     description: the ID of the Organization that referred the Patient
                     example: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi:
+                    type: string
+                    description: the 10-digit NPI of the clinician who made the referral; a value that is not a 10-digit NPI is ignored
+                    example: "1234567893"
                 state:
                     type: string
                     description: the lifecycle state of the Referral
@@ -12390,7 +12642,9 @@ components:
                     - High
                 priorityCode: 1
                 referralNumber: "12345"
+                referringLocationId: 3f2a9c4e-8d1b-4e6f-a7c2-5b9d0e1f2a3c
                 referringOrganizationId: b6cc1875-5313-4ca8-af8b-74adac0c5d0c
+                referringProviderNpi: "1234567893"
                 state: authorized
                 status: approved
                 targetDate: "2030-01-01"
@@ -12705,6 +12959,8 @@ tags:
       description: a group of ProviderServices, member of one or more Networks
     - name: Appointment
       description: an appointment to receive care from a ProviderService
+    - name: ManagedLocation
+      description: a location managed by your own organization, such as a facility a referral can come from; ManagedLocations belong to your organization, and may come from WellHive or from your own integration
     - name: Referral
       description: an order to send a Patient to a ProviderService, ProviderOrganization, or Network; can be backed by a customer system integration
     - name: ReferralMatch
